@@ -1,0 +1,21 @@
+{{ define "title" }}公司介紹{{ end }}
+
+{{ define "main" }}
+<div class="container">
+    <div class="article-header" style="text-align: center; margin-top: 4rem;">
+        <h1>About Us</h1>
+        <p style="max-width: 600px; margin: 0 auto;">We are more than just a company. We are a collective of passionate creators, engineers, and visionaries.</p>
+    </div>
+
+    <!-- The content from about/_index.md will be inserted here if any, otherwise you can hardcode HTML -->
+    <div class="glass" style="margin-top: 3rem;">
+        {{ .Content }}
+        
+        <h2>Our Mission</h2>
+        <p>To deliver modern, high-performance web experiences that delight users and drive business growth.</p>
+
+        <h2 style="margin-top: 2rem;">Our Story</h2>
+        <p>Founded with a passion for excellence, we have been pushing the boundaries of what is possible on the web. Our team consists of industry veterans who have worked on some of the most challenging projects across the globe.</p>
+    </div>
+</div>
+{{ end }}

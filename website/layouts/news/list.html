@@ -1,0 +1,24 @@
+{{ define "title" }}最新消息{{ end }}
+
+{{ define "main" }}
+<div class="container">
+    <div class="article-header" style="text-align: center; margin-top: 4rem;">
+        <h1>Latest News</h1>
+        <p>Stay up to date with our latest announcements, product releases, and company insights.</p>
+    </div>
+
+    <!-- Render Markdown articles from content/news/ -->
+    <div class="grid" style="grid-template-columns: 1fr; max-width: 800px; margin: 0 auto;">
+        {{ range .Pages }}
+        <div class="glass" style="padding: 2.5rem;">
+            <div class="article-meta">{{ .PublishDate.Format "January 2, 2006" }}</div>
+            <h2 style="font-size: 2rem; margin-bottom: 1rem;">
+                <a href="{{ .RelPermalink }}" style="color: var(--text-primary);">{{ .Title }}</a>
+            </h2>
+            <p>{{ .Summary }}</p>
+            <a href="{{ .RelPermalink }}" style="font-weight: 600; display: inline-block; margin-top: 1rem;">Read More &rarr;</a>
+        </div>
+        {{ end }}
+    </div>
+</div>
+{{ end }}

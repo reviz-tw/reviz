@@ -1,0 +1,37 @@
+{{ define "title" }}{{ .Title }} | Portfolio{{ end }}
+
+{{ define "main" }}
+<div class="container">
+    <div class="glass" style="max-width: 1000px; margin: 4rem auto; padding: 4rem;">
+        <div class="article-header">
+            <a href="{{ "/portfolio/" | relURL }}" style="display: inline-block; margin-bottom: 2rem;">&larr; Back to Portfolio</a>
+            
+            <h1 style="font-size: 3rem;">{{ .Title }}</h1>
+            
+            <div style="display: flex; gap: 2rem; margin-top: 2rem; border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border); padding: 1rem 0;">
+                <div>
+                    <div style="font-weight: 600; color: var(--text-secondary); font-size: 0.875rem;">Client</div>
+                    <div>{{ .Params.client | default "Internal" }}</div>
+                </div>
+                <div>
+                    <div style="font-weight: 600; color: var(--text-secondary); font-size: 0.875rem;">Year</div>
+                    <div>{{ .Date.Format "2006" }}</div>
+                </div>
+                <div>
+                    <div style="font-weight: 600; color: var(--text-secondary); font-size: 0.875rem;">Role</div>
+                    <div>{{ .Params.role | default "Full-stack Development" }}</div>
+                </div>
+            </div>
+        </div>
+        
+        {{ if .Params.image }}
+        <img src="{{ .Params.image | relURL }}" style="width: 100%; border-radius: 12px; margin-bottom: 3rem; box-shadow: var(--shadow-md);" alt="{{ .Title }}">
+        {{ end }}
+
+        <div class="article-content" style="max-width: none;">
+            <!-- This injects the compiled Markdown content -->
+            {{ .Content }}
+        </div>
+    </div>
+</div>
+{{ end }}

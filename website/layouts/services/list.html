@@ -1,0 +1,44 @@
+{{ define "title" }}服務項目{{ end }}
+
+{{ define "main" }}
+<div class="container">
+    <div class="article-header" style="text-align: center; margin-top: 4rem;">
+        <h1>Our Services</h1>
+        <p>Comprehensive digital solutions tailored to your business needs.</p>
+    </div>
+
+    {{ .Content }}
+
+    <div class="grid">
+        <div class="glass" style="border-top: 4px solid var(--accent-color);">
+            <h2>Web Development</h2>
+            <p>We build blazing fast, highly secure, and extremely scalable web applications using modern technologies like React, Next.js, and Hugo.</p>
+            <ul>
+                <li style="color: var(--text-secondary); margin-left: 1.5rem;">Custom Web Apps</li>
+                <li style="color: var(--text-secondary); margin-left: 1.5rem;">E-Commerce Solutions</li>
+                <li style="color: var(--text-secondary); margin-left: 1.5rem;">Headless CMS Integration</li>
+            </ul>
+        </div>
+        
+        <div class="glass" style="border-top: 4px solid #a78bfa;">
+            <h2>UI/UX Design</h2>
+            <p>Our design team crafts intuitive and stunning user interfaces that provide exceptional user experiences and increase engagement.</p>
+            <ul>
+                <li style="color: var(--text-secondary); margin-left: 1.5rem;">Wireframing & Prototyping</li>
+                <li style="color: var(--text-secondary); margin-left: 1.5rem;">Design Systems</li>
+                <li style="color: var(--text-secondary); margin-left: 1.5rem;">User Research</li>
+            </ul>
+        </div>
+
+        <div class="glass" style="border-top: 4px solid #34d399;">
+            <h2>SEO & Marketing</h2>
+            <p>We don't just build websites; we ensure they are found. Our SEO strategies are built directly into the core architecture of our projects.</p>
+            <ul>
+                <li style="color: var(--text-secondary); margin-left: 1.5rem;">Technical SEO</li>
+                <li style="color: var(--text-secondary); margin-left: 1.5rem;">Performance Optimization</li>
+                <li style="color: var(--text-secondary); margin-left: 1.5rem;">Content Strategy</li>
+            </ul>
+        </div>
+    </div>
+</div>
+{{ end }}

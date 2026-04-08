@@ -1,0 +1,8 @@
+baseURL = 'https://example.com/'
+languageCode = 'zh-TW'
+title = 'Company Official Website'
+theme = '' # We are building our own custom layout, no theme needed
+
+[params]
+  description = "Welcome to our premium corporate website."
+  author = "Company Team"
