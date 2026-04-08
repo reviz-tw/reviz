@@ -1,4 +1,4 @@
-baseURL = 'https://example.com/'
+baseURL = 'https://reviz-tw.github.io/reviz/'
 languageCode = 'zh-TW'
 title = 'Company Official Website'
 # We are building our own custom layout, no theme needed
