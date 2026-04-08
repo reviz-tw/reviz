@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Company Official Website</title>
+    <link>https://reviz-tw.github.io/reviz/</link>
+    <description>Recent content on Company Official Website</description>
+    <generator>Hugo</generator>
+    <language>zh-TW</language>
+    <lastBuildDate>Wed, 08 Apr 2026 12:00:00 +0800</lastBuildDate>
+    <atom:link href="https://reviz-tw.github.io/reviz/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Welcome to Our New Website</title>
+      <link>https://reviz-tw.github.io/reviz/news/hello-world/</link>
+      <pubDate>Wed, 08 Apr 2026 12:00:00 +0800</pubDate>
+      <guid>https://reviz-tw.github.io/reviz/news/hello-world/</guid>
+      <description>We are thrilled to announce the launch of our brand new corporate website built with Hugo and modern design principles.</description>
+    </item>
+    <item>
+      <title>Project Alpha: Revolutionizing E-Commerce</title>
+      <link>https://reviz-tw.github.io/reviz/portfolio/project-alpha/</link>
+      <pubDate>Sun, 15 Mar 2026 10:00:00 +0800</pubDate>
+      <guid>https://reviz-tw.github.io/reviz/portfolio/project-alpha/</guid>
+      <description>A complete overhaul of a legacy e-commerce platform, resulting in a 300% increase in conversion rates.</description>
+    </item>
+  </channel>
+</rss>
