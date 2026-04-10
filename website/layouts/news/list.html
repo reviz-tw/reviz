@@ -1,36 +1,44 @@
-{{ define "title" }}最新消息 | Reviz{{ end }}
+{{ define "title" }}最新消息 | ReViz{{ end }}
 
 {{ define "main" }}
 
-<div class="page-header">
-    <div class="container">
-        <div class="page-header-inner">
-            <div>
-                <span class="page-label">News & Insights</span>
-                <h1>最新消息</h1>
-            </div>
-            <p>業界洞察、案例分享與公司動態——<br>掌握數位趨勢，與 Reviz 一同成長。</p>
-        </div>
-    </div>
+<div class="page-hero">
+  <div class="container">
+    <div class="page-hero-label">News &amp; Insights</div>
+    <h1>最新<br><em style="font-style:italic;color:var(--lime)">消息</em></h1>
+    <p>業界洞察、案例分享與公司動態——<br>掌握數位趨勢，與 ReViz 一同成長。</p>
+  </div>
 </div>
 
-<section style="padding: 4rem 0;">
-    <div class="container">
-        <div class="posts-grid">
-            {{ range .Pages }}
-            <div class="post-card">
-                <div class="post-date">{{ .PublishDate.Format "2006 / 01 / 02" }}</div>
-                <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-                <p>{{ .Summary }}</p>
-                <a href="{{ .RelPermalink }}" class="post-link">閱讀更多 →</a>
-            </div>
-            {{ else }}
-            <div class="post-card" style="grid-column: 1 / -1;">
-                <p style="color: var(--ink-soft);">目前尚無文章，敬請期待。</p>
-            </div>
-            {{ end }}
-        </div>
+<section style="background:var(--ink);padding:6rem 0 8rem;">
+  <div class="container">
+    <div class="news-list">
+      {{ range .Pages }}
+      <div class="news-card reveal">
+        <div class="news-date">{{ .PublishDate.Format "2006 / 01 / 02" }}</div>
+        <div class="news-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
+        <div class="news-arrow">→</div>
+      </div>
+      {{ else }}
+      <!-- Placeholder news items -->
+      <div class="news-card reveal">
+        <div class="news-date">2024 / 03 / 15</div>
+        <div class="news-title">ReViz 正式成立，開始承接數位轉型專案</div>
+        <div class="news-arrow">→</div>
+      </div>
+      <div class="news-card reveal reveal-delay-1">
+        <div class="news-date">2024 / 06 / 20</div>
+        <div class="news-title">如何選擇適合您企業的 CMS 系統？</div>
+        <div class="news-arrow">→</div>
+      </div>
+      <div class="news-card reveal reveal-delay-2">
+        <div class="news-date">2024 / 09 / 08</div>
+        <div class="news-title">從傳統網站到 JAMstack：一個製造業的轉型案例</div>
+        <div class="news-arrow">→</div>
+      </div>
+      {{ end }}
     </div>
+  </div>
 </section>
 
 {{ end }}

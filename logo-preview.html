@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ReViz — Logo Preview v8</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#111;font-family:'Syne',sans-serif;color:#ccc;padding:56px 48px}
+.page-label{font-size:.6rem;font-weight:800;text-transform:uppercase;letter-spacing:.24em;color:#444;margin-bottom:44px;display:flex;align-items:center;gap:12px}
+.page-label::after{content:'';flex:1;height:1px;background:rgba(255,255,255,.08)}
+.cell-tag{position:absolute;top:14px;left:18px;font-size:.55rem;font-weight:700;text-transform:uppercase;letter-spacing:.16em;opacity:.35}
+.lt{color:#0D0D0D}.dk{color:#fff}
+.grid{display:grid;gap:3px;margin-bottom:3px}
+.col2{grid-template-columns:1fr 1fr}
+.col4{grid-template-columns:1fr 1fr 1fr 1fr}
+.col-main{grid-template-columns:2fr 1fr}
+.cell{display:flex;align-items:center;justify-content:center;padding:64px 48px;position:relative;overflow:hidden}
+.on-w{background:#fff}.on-dk{background:#0a0a0a}
+/* letter-spacing 加大：0.12em */
+.wm{font-family:'Playfair Display',serif;font-weight:600;line-height:1;letter-spacing:.12em}
+.wm-dk{color:#111}.wm-wh{color:#fff}
+.h-lock{display:flex;align-items:center;gap:24px}
+.v-lock{display:flex;flex-direction:column;align-items:center;gap:16px}
+.strip{background:#0a0a0a;display:flex;align-items:flex-end;gap:40px;padding:44px 48px;flex-wrap:wrap;margin-bottom:3px}
+.sz{display:flex;flex-direction:column;align-items:center;gap:10px}
+.sz span{font-size:.55rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:#444}
+.swatch-row{display:flex;gap:3px;margin-bottom:3px}
+.swatch{flex:1;height:88px;display:flex;align-items:flex-end;padding:12px 16px}
+.swatch-label{font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;line-height:1.5}
+.note{margin-top:40px;font-size:.78rem;line-height:1.85;color:#555;max-width:720px}
+.note strong{color:#888}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:3px;vertical-align:middle}
+</style>
+</head>
+<body>
+
+<div class="page-label">ReViz — Logo Preview v8 &nbsp;·&nbsp; 賦格截斷 · 字距加大</div>
+
+<!--
+  ═══════════════════════════════════════════════════════════════
+  WAVE LOGIC v8
+
+  viewBox="0 2 120 65"  T=60  A=5
+
+  clipPath 裁剪（viewBox 寬度120，1/5 = 24）：
+    clip-w13  x=[0,  96]   波浪 1&3 右邊裁掉 1/5 (從96截斷)
+    clip-w24  x=[24, 120]  波浪 2&4 左邊裁掉 1/5 (從24截斷)
+
+  所有波浪路徑均延伸出裁剪範圍，截面無圓帽。
+
+  配色：
+    W1  #f0fa66  Volt Lime
+    W2  #a6fa66  Electric Green
+    W3  #fab966  Amber Flash
+    W4  #66a6fa  Sky Blue
+  ═══════════════════════════════════════════════════════════════
+-->
+
+<svg width="0" height="0" style="position:absolute">
+<defs>
+
+  <!-- 裁剪矩形 (userSpaceOnUse，配合 viewBox 座標系) -->
+  <clipPath id="clip-w13" clipPathUnits="userSpaceOnUse">
+    <!-- 波浪 1&3：x=[0, 96]，右邊裁掉 24（1/5） -->
+    <rect x="-500" y="-500" width="596" height="1000"/>
+  </clipPath>
+  <clipPath id="clip-w24" clipPathUnits="userSpaceOnUse">
+    <!-- 波浪 2&4：x=[24, 120]，左邊裁掉 24（1/5） -->
+    <rect x="24" y="-500" width="600" height="1000"/>
+  </clipPath>
+
+  <!--
+    波浪路徑：
+      W1&3 從 x=-15（波谷）出發，路徑延伸至 x=135（遠超裁剪點96）
+      W2&4 從 x=0 出發，路徑延伸至 x=155（遠超裁剪點120）
+      截斷點由 clipPath 決定，均為截面（無圓帽）
+  -->
+
+  <!-- COLOR VARIANT -->
+  <g id="mark-color">
+    <!-- W1 & W3 → clip-w13 (x: 0~96) -->
+    <g clip-path="url(#clip-w13)">
+      <!-- W1 · #f0fa66 · Y=11 · Y+A=16 Y-A=6 -->
+      <path fill="none" stroke="#f0fa66" stroke-width="5.5" stroke-linecap="round"
+        d="M -15,16 C -5,16 5,6 15,6 C 25,6 35,16 45,16 C 55,16 65,6 75,6 C 85,6 95,16 105,16 C 115,16 125,6 135,6"/>
+      <!-- W3 · #fab966 · Y=41 · Y+A=46 Y-A=36 -->
+      <path fill="none" stroke="#fab966" stroke-width="5.5" stroke-linecap="round"
+        d="M -15,46 C -5,46 5,36 15,36 C 25,36 35,46 45,46 C 55,46 65,36 75,36 C 85,36 95,46 105,46 C 115,46 125,36 135,36"/>
+    </g>
+    <!-- W2 & W4 → clip-w24 (x: 24~120) -->
+    <g clip-path="url(#clip-w24)">
+      <!-- W2 · #a6fa66 · Y=26 · Y+A=31 Y-A=21 -->
+      <path fill="none" stroke="#a6fa66" stroke-width="5.5" stroke-linecap="round"
+        d="M 0,26 C 10,21 20,21 30,26 C 40,31 50,31 60,26 C 70,21 80,21 90,26 C 100,31 110,31 120,26 C 130,21 140,21 150,26"/>
+      <!-- W4 · #66a6fa · Y=56 · Y+A=61 Y-A=51 -->
+      <path fill="none" stroke="#66a6fa" stroke-width="5.5" stroke-linecap="round"
+        d="M 0,56 C 10,51 20,51 30,56 C 40,61 50,61 60,56 C 70,51 80,51 90,56 C 100,61 110,61 120,56 C 130,51 140,51 150,56"/>
+    </g>
+  </g>
+
+  <!-- WHITE VARIANT -->
+  <g id="mark-white">
+    <g clip-path="url(#clip-w13)">
+      <path fill="none" stroke="rgba(255,255,255,.90)" stroke-width="5.5" stroke-linecap="round"
+        d="M -15,16 C -5,16 5,6 15,6 C 25,6 35,16 45,16 C 55,16 65,6 75,6 C 85,6 95,16 105,16 C 115,16 125,6 135,6"/>
+      <path fill="none" stroke="rgba(255,255,255,.45)" stroke-width="5.5" stroke-linecap="round"
+        d="M -15,46 C -5,46 5,36 15,36 C 25,36 35,46 45,46 C 55,46 65,36 75,36 C 85,36 95,46 105,46 C 115,46 125,36 135,36"/>
+    </g>
+    <g clip-path="url(#clip-w24)">
+      <path fill="none" stroke="rgba(255,255,255,.65)" stroke-width="5.5" stroke-linecap="round"
+        d="M 0,26 C 10,21 20,21 30,26 C 40,31 50,31 60,26 C 70,21 80,21 90,26 C 100,31 110,31 120,26 C 130,21 140,21 150,26"/>
+      <path fill="none" stroke="rgba(255,255,255,.22)" stroke-width="5.5" stroke-linecap="round"
+        d="M 0,56 C 10,51 20,51 30,56 C 40,61 50,61 60,56 C 70,51 80,51 90,56 C 100,61 110,61 120,56 C 130,51 140,51 150,56"/>
+    </g>
+  </g>
+
+  <!-- DARK VARIANT (for light bg) -->
+  <g id="mark-dark">
+    <g clip-path="url(#clip-w13)">
+      <path fill="none" stroke="rgba(0,0,0,.75)" stroke-width="5.5" stroke-linecap="round"
+        d="M -15,16 C -5,16 5,6 15,6 C 25,6 35,16 45,16 C 55,16 65,6 75,6 C 85,6 95,16 105,16 C 115,16 125,6 135,6"/>
+      <path fill="none" stroke="rgba(0,0,0,.38)" stroke-width="5.5" stroke-linecap="round"
+        d="M -15,46 C -5,46 5,36 15,36 C 25,36 35,46 45,46 C 55,46 65,36 75,36 C 85,36 95,46 105,46 C 115,46 125,36 135,36"/>
+    </g>
+    <g clip-path="url(#clip-w24)">
+      <path fill="none" stroke="rgba(0,0,0,.55)" stroke-width="5.5" stroke-linecap="round"
+        d="M 0,26 C 10,21 20,21 30,26 C 40,31 50,31 60,26 C 70,21 80,21 90,26 C 100,31 110,31 120,26 C 130,21 140,21 150,26"/>
+      <path fill="none" stroke="rgba(0,0,0,.18)" stroke-width="5.5" stroke-linecap="round"
+        d="M 0,56 C 10,51 20,51 30,56 C 40,61 50,61 60,56 C 70,51 80,51 90,56 C 100,61 110,61 120,56 C 130,51 140,51 150,56"/>
+    </g>
+  </g>
+
+</defs>
+</svg>
+
+<!-- ════ PRIMARY: DARK ════ -->
+<div class="grid col-main">
+  <div class="cell on-dk" style="padding:88px 64px">
+    <span class="cell-tag dk">Primary · Dark</span>
+    <div class="h-lock">
+      <svg width="130" height="70" viewBox="0 2 120 65" xmlns="http://www.w3.org/2000/svg" style="overflow:hidden;display:block">
+        <use href="#mark-color"/>
+      </svg>
+      <div class="wm wm-wh" style="font-size:3.4rem">
+        Re<span style="color:#f0fa66">Viz</span>
+      </div>
+    </div>
+  </div>
+  <div class="cell on-w">
+    <span class="cell-tag lt">Primary · White</span>
+    <div class="h-lock">
+      <svg width="88" height="48" viewBox="0 2 120 65" style="overflow:hidden;display:block">
+        <use href="#mark-color"/>
+      </svg>
+      <div class="wm wm-dk" style="font-size:2.2rem">
+        Re<span style="color:#111">Viz</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ MARK ONLY ════ -->
+<div class="grid col2">
+  <div class="cell on-dk" style="padding:72px 48px">
+    <span class="cell-tag dk">Mark · Dark</span>
+    <svg width="240" height="130" viewBox="0 2 120 65" style="overflow:hidden;display:block">
+      <use href="#mark-color"/>
+    </svg>
+  </div>
+  <div class="cell on-w" style="padding:72px 48px">
+    <span class="cell-tag lt">Mark · White BG</span>
+    <svg width="240" height="130" viewBox="0 2 120 65" style="overflow:hidden;display:block">
+      <use href="#mark-color"/>
+    </svg>
+  </div>
+</div>
+
+<!-- ════ WORDMARK ════ -->
+<div class="grid col2">
+  <div class="cell on-dk">
+    <span class="cell-tag dk">Wordmark · Dark</span>
+    <div class="wm wm-wh" style="font-size:4.8rem">Re<span style="color:#f0fa66">Viz</span></div>
+  </div>
+  <div class="cell on-w">
+    <span class="cell-tag lt">Wordmark · White</span>
+    <div class="wm wm-dk" style="font-size:4.8rem">Re<span style="color:#111">Viz</span></div>
+  </div>
+</div>
+
+<!-- ════ ON EACH COLOR ════ -->
+<div class="grid col4">
+  <div class="cell" style="background:#f0fa66;padding:48px 16px">
+    <span class="cell-tag lt">Volt Lime</span>
+    <div class="v-lock">
+      <svg width="118" height="64" viewBox="0 2 120 65" style="overflow:hidden;display:block">
+        <use href="#mark-dark"/>
+      </svg>
+      <div class="wm wm-dk" style="font-size:1.6rem">ReViz</div>
+    </div>
+  </div>
+  <div class="cell" style="background:#a6fa66;padding:48px 16px">
+    <span class="cell-tag lt">Electric Green</span>
+    <div class="v-lock">
+      <svg width="118" height="64" viewBox="0 2 120 65" style="overflow:hidden;display:block">
+        <use href="#mark-dark"/>
+      </svg>
+      <div class="wm wm-dk" style="font-size:1.6rem">ReViz</div>
+    </div>
+  </div>
+  <div class="cell" style="background:#fab966;padding:48px 16px">
+    <span class="cell-tag lt">Amber Flash</span>
+    <div class="v-lock">
+      <svg width="118" height="64" viewBox="0 2 120 65" style="overflow:hidden;display:block">
+        <use href="#mark-dark"/>
+      </svg>
+      <div class="wm wm-dk" style="font-size:1.6rem">ReViz</div>
+    </div>
+  </div>
+  <div class="cell" style="background:#66a6fa;padding:48px 16px">
+    <span class="cell-tag lt">Sky Blue</span>
+    <div class="v-lock">
+      <svg width="118" height="64" viewBox="0 2 120 65" style="overflow:hidden;display:block">
+        <use href="#mark-dark"/>
+      </svg>
+      <div class="wm wm-dk" style="font-size:1.6rem">ReViz</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ SIZES ════ -->
+<div class="strip">
+  <div style="width:100%;color:#444;font-size:.55rem;font-weight:700;text-transform:uppercase;letter-spacing:.2em;margin-bottom:8px">Size Scale</div>
+  <div class="sz">
+    <svg width="240" height="130" viewBox="0 2 120 65" style="overflow:hidden;display:block"><use href="#mark-color"/></svg>
+    <span>240px</span>
+  </div>
+  <div class="sz">
+    <svg width="160" height="87" viewBox="0 2 120 65" style="overflow:hidden;display:block"><use href="#mark-color"/></svg>
+    <span>160px</span>
+  </div>
+  <div class="sz">
+    <svg width="110" height="60" viewBox="0 2 120 65" style="overflow:hidden;display:block"><use href="#mark-color"/></svg>
+    <span>110px</span>
+  </div>
+  <div class="sz">
+    <svg width="72" height="39" viewBox="0 2 120 65" style="overflow:hidden;display:block"><use href="#mark-color"/></svg>
+    <span>72px</span>
+  </div>
+  <div class="sz">
+    <svg width="48" height="26" viewBox="0 2 120 65" style="overflow:hidden;display:block"><use href="#mark-color"/></svg>
+    <span>48px</span>
+  </div>
+</div>
+
+<!-- ════ APP ICONS ════ -->
+<div class="strip">
+  <div style="width:100%;color:#444;font-size:.55rem;font-weight:700;text-transform:uppercase;letter-spacing:.2em;margin-bottom:8px">App Icons</div>
+  <div class="sz">
+    <svg width="96" height="96" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+      <rect width="96" height="96" rx="22" fill="#0a0a0a"/>
+      <svg x="3" y="18" width="90" height="49" viewBox="0 2 120 65" style="overflow:hidden">
+        <use href="#mark-color"/>
+      </svg>
+    </svg>
+    <span>Dark</span>
+  </div>
+  <div class="sz">
+    <svg width="96" height="96" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+      <rect width="96" height="96" rx="22" fill="#fff"/>
+      <svg x="3" y="18" width="90" height="49" viewBox="0 2 120 65" style="overflow:hidden">
+        <use href="#mark-color"/>
+      </svg>
+    </svg>
+    <span>Light</span>
+  </div>
+  <div class="sz">
+    <svg width="96" height="96" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+      <rect width="96" height="96" rx="22" fill="#f0fa66"/>
+      <svg x="3" y="18" width="90" height="49" viewBox="0 2 120 65" style="overflow:hidden">
+        <use href="#mark-dark"/>
+      </svg>
+    </svg>
+    <span>Lime</span>
+  </div>
+  <div class="sz">
+    <svg width="96" height="96" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+      <rect width="96" height="96" rx="22" fill="#66a6fa"/>
+      <svg x="3" y="18" width="90" height="49" viewBox="0 2 120 65" style="overflow:hidden">
+        <use href="#mark-dark"/>
+      </svg>
+    </svg>
+    <span>Sky</span>
+  </div>
+  <div class="sz">
+    <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+      <rect width="48" height="48" rx="11" fill="#0a0a0a"/>
+      <svg x="1" y="9" width="46" height="25" viewBox="0 2 120 65" style="overflow:hidden">
+        <use href="#mark-color"/>
+      </svg>
+    </svg>
+    <span>48px</span>
+  </div>
+  <div class="sz">
+    <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+      <rect width="32" height="32" rx="7" fill="#0a0a0a"/>
+      <svg x="1" y="6" width="30" height="16" viewBox="0 2 120 65" style="overflow:hidden">
+        <use href="#mark-color"/>
+      </svg>
+    </svg>
+    <span>32px</span>
+  </div>
+</div>
+
+<!-- ════ PALETTE ════ -->
+<div class="swatch-row">
+  <div class="swatch" style="background:#f0fa66">
+    <div class="swatch-label" style="color:#333">Volt Lime<br>#f0fa66</div>
+  </div>
+  <div class="swatch" style="background:#a6fa66">
+    <div class="swatch-label" style="color:#333">Electric Green<br>#a6fa66</div>
+  </div>
+  <div class="swatch" style="background:#fab966">
+    <div class="swatch-label" style="color:#333">Amber Flash<br>#fab966</div>
+  </div>
+  <div class="swatch" style="background:#66a6fa">
+    <div class="swatch-label" style="color:#333">Sky Blue ★<br>#66a6fa</div>
+  </div>
+</div>
+
+<!-- ════ NOTES ════ -->
+<div class="note">
+  <strong>v8 修正說明</strong><br><br>
+  <strong>字距：</strong> letter-spacing 從 −0.02em 改為 0.12em，字母間距明顯加寬。<br><br>
+  <strong>波浪截斷（clipPath）：</strong>
+  viewBox 寬 120，1/5 = 24。
+  Wave 1&3 用 clipPath 裁掉右側 24（可視 x：0→96）；
+  Wave 2&4 裁掉左側 24（可視 x：24→120）。
+  兩組重疊區為 x=24→96，各自延伸 24 個單位超出另一組範圍，截面均無圓帽。
+</div>
+
+</body>
+</html>

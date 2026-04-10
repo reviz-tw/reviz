@@ -1,7 +1,93 @@
-{{ define "title" }}ReViz — 網站開發 · 數位轉型 · 科技顧問{{ end }}
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> | </title>
+    <meta name="description" content="">
 
-{{ define "main" }}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,900;1,500;1,700&family=Syne:wght@400;600;700;800&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="">
+</head>
+<body>
 
+<!-- SVG defs: wave mark shared across page -->
+<svg class="svg-defs" aria-hidden="true">
+<defs>
+  <clipPath id="clip-w13" clipPathUnits="userSpaceOnUse">
+    <rect x="-500" y="-500" width="596" height="1000"/>
+  </clipPath>
+  <clipPath id="clip-w24" clipPathUnits="userSpaceOnUse">
+    <rect x="24" y="-500" width="600" height="1000"/>
+  </clipPath>
+
+  <g id="mark-color">
+    <g clip-path="url(#clip-w13)">
+      <path fill="none" stroke="#f0fa66" stroke-width="5.5" stroke-linecap="round"
+        d="M -15,16 C -5,16 5,6 15,6 C 25,6 35,16 45,16 C 55,16 65,6 75,6 C 85,6 95,16 105,16 C 115,16 125,6 135,6"/>
+      <path fill="none" stroke="#fab966" stroke-width="5.5" stroke-linecap="round"
+        d="M -15,46 C -5,46 5,36 15,36 C 25,36 35,46 45,46 C 55,46 65,36 75,36 C 85,36 95,46 105,46 C 115,46 125,36 135,36"/>
+    </g>
+    <g clip-path="url(#clip-w24)">
+      <path fill="none" stroke="#a6fa66" stroke-width="5.5" stroke-linecap="round"
+        d="M 0,26 C 10,21 20,21 30,26 C 40,31 50,31 60,26 C 70,21 80,21 90,26 C 100,31 110,31 120,26 C 130,21 140,21 150,26"/>
+      <path fill="none" stroke="#66a6fa" stroke-width="5.5" stroke-linecap="round"
+        d="M 0,56 C 10,51 20,51 30,56 C 40,61 50,61 60,56 C 70,51 80,51 90,56 C 100,61 110,61 120,56 C 130,51 140,51 150,56"/>
+    </g>
+  </g>
+
+  <g id="mark-white">
+    <g clip-path="url(#clip-w13)">
+      <path fill="none" stroke="rgba(255,255,255,.85)" stroke-width="5.5" stroke-linecap="round"
+        d="M -15,16 C -5,16 5,6 15,6 C 25,6 35,16 45,16 C 55,16 65,6 75,6 C 85,6 95,16 105,16 C 115,16 125,6 135,6"/>
+      <path fill="none" stroke="rgba(255,255,255,.42)" stroke-width="5.5" stroke-linecap="round"
+        d="M -15,46 C -5,46 5,36 15,36 C 25,36 35,46 45,46 C 55,46 65,36 75,36 C 85,36 95,46 105,46 C 115,46 125,36 135,36"/>
+    </g>
+    <g clip-path="url(#clip-w24)">
+      <path fill="none" stroke="rgba(255,255,255,.62)" stroke-width="5.5" stroke-linecap="round"
+        d="M 0,26 C 10,21 20,21 30,26 C 40,31 50,31 60,26 C 70,21 80,21 90,26 C 100,31 110,31 120,26 C 130,21 140,21 150,26"/>
+      <path fill="none" stroke="rgba(255,255,255,.22)" stroke-width="5.5" stroke-linecap="round"
+        d="M 0,56 C 10,51 20,51 30,56 C 40,61 50,61 60,56 C 70,51 80,51 90,56 C 100,61 110,61 120,56 C 130,51 140,51 150,56"/>
+    </g>
+  </g>
+
+  <g id="mark-dark">
+    <g clip-path="url(#clip-w13)">
+      <path fill="none" stroke="rgba(0,0,0,.7)" stroke-width="5.5" stroke-linecap="round"
+        d="M -15,16 C -5,16 5,6 15,6 C 25,6 35,16 45,16 C 55,16 65,6 75,6 C 85,6 95,16 105,16 C 115,16 125,6 135,6"/>
+      <path fill="none" stroke="rgba(0,0,0,.35)" stroke-width="5.5" stroke-linecap="round"
+        d="M -15,46 C -5,46 5,36 15,36 C 25,36 35,46 45,46 C 55,46 65,36 75,36 C 85,36 95,46 105,46 C 115,46 125,36 135,36"/>
+    </g>
+    <g clip-path="url(#clip-w24)">
+      <path fill="none" stroke="rgba(0,0,0,.5)" stroke-width="5.5" stroke-linecap="round"
+        d="M 0,26 C 10,21 20,21 30,26 C 40,31 50,31 60,26 C 70,21 80,21 90,26 C 100,31 110,31 120,26 C 130,21 140,21 150,26"/>
+      <path fill="none" stroke="rgba(0,0,0,.18)" stroke-width="5.5" stroke-linecap="round"
+        d="M 0,56 C 10,51 20,51 30,56 C 40,61 50,61 60,56 C 70,51 80,51 90,56 C 100,61 110,61 120,56 C 130,51 140,51 150,56"/>
+    </g>
+  </g>
+</defs>
+</svg>
+
+<nav class="nav">
+    <a href="" class="nav-logo">
+        <svg width="72" height="39" viewBox="0 2 120 65" style="overflow:hidden;display:block">
+            <use href="#mark-color"/>
+        </svg>
+        <span class="nav-wordmark">Re<em>Viz</em></span>
+    </a>
+    <div class="nav-links">
+        <a href="">服務項目</a>
+        <a href="">Portfolio</a>
+        <a href="">公司介紹</a>
+        <a href="">最新消息</a>
+        <a href="" class="nav-cta">聯絡我們 →</a>
+    </div>
+</nav>
+
+<main>
+    
 <!-- ══ HERO ══════════════════════════════════════════════ -->
 <section class="hero">
   <div class="hero-left">
@@ -15,8 +101,8 @@
       ReViz 提供網站開發、數位轉型與科技顧問服務——從構想到落地，讓複雜的技術成為您最強的競爭優勢。
     </p>
     <div class="hero-actions">
-      <a href="{{ "services/" | relURL }}" class="btn-primary">探索服務 →</a>
-      <a href="{{ "portfolio/" | relURL }}" class="btn-ghost">查看作品集</a>
+      <a href="" class="btn-primary">探索服務 →</a>
+      <a href="" class="btn-ghost">查看作品集</a>
     </div>
     <div class="hero-scroll">Scroll</div>
   </div>
@@ -82,7 +168,7 @@
         <span class="section-label-sm">Services / 服務項目</span>
         <h2 class="section-title">我們能為<br>您做什麼</h2>
       </div>
-      <a href="{{ "services/" | relURL }}" class="section-link">所有服務 →</a>
+      <a href="" class="section-link">所有服務 →</a>
     </div>
 
     <div class="service-list">
@@ -167,7 +253,7 @@
         <span class="section-label-sm">Selected Work / 精選作品</span>
         <h2 class="section-title">我們做過<br>的事</h2>
       </div>
-      <a href="{{ "portfolio/" | relURL }}" class="section-link">所有作品 →</a>
+      <a href="" class="section-link">所有作品 →</a>
     </div>
   </div>
 
@@ -264,10 +350,91 @@
       <div class="cta-right">
         <p class="cta-sub">第一次諮詢完全免費<br>無論專案大小都歡迎</p>
         <a href="mailto:hello@reviz.tw" class="cta-email">hello@reviz.tw</a>
-        <a href="{{ "about/" | relURL }}" class="btn-dark">開始合作 →</a>
+        <a href="" class="btn-dark">開始合作 →</a>
       </div>
     </div>
   </div>
 </section>
 
-{{ end }}
+
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-top">
+            <div class="footer-logo-wrap">
+                <a href="" class="footer-logo-link">
+                    <svg width="56" height="30" viewBox="0 2 120 65" style="overflow:hidden;display:block">
+                        <use href="#mark-color"/>
+                    </svg>
+                    <span class="footer-wordmark">Re<em>Viz</em></span>
+                </a>
+                <p class="footer-tagline">
+                    打造驅動成長的數位體驗——網站開發、數位轉型與科技顧問，讓您的品牌在數位時代脫穎而出。
+                </p>
+            </div>
+            <div class="footer-col">
+                <h5>服務</h5>
+                <ul>
+                    <li><a href="">網站開發</a></li>
+                    <li><a href="">數位轉型</a></li>
+                    <li><a href="">科技顧問</a></li>
+                    <li><a href="">Portfolio</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>公司</h5>
+                <ul>
+                    <li><a href="">關於我們</a></li>
+                    <li><a href="">最新消息</a></li>
+                    <li><a href="">聯絡我們</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>聯繫</h5>
+                <ul>
+                    <li><a href="mailto:hello@reviz.tw">hello@reviz.tw</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span class="footer-copy">©  ReViz. All rights reserved.</span>
+            <span class="footer-badge">Taiwan — Based</span>
+        </div>
+    </div>
+</footer>
+
+<script>
+// Reveal on scroll
+const revealObs = new IntersectionObserver(
+  entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); }),
+  { threshold: 0.10 }
+);
+document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+// Process step line animation
+const processObs = new IntersectionObserver(
+  entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); }),
+  { threshold: 0.3 }
+);
+document.querySelectorAll('.process-step').forEach(el => processObs.observe(el));
+
+// Nav scroll effect
+const nav = document.querySelector('.nav');
+if (nav) {
+  let lastY = 0;
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    if (y > 80) {
+      nav.style.setProperty('--nav-alpha', '.96');
+    } else {
+      nav.style.setProperty('--nav-alpha', '.88');
+    }
+    lastY = y;
+  }, { passive: true });
+}
+</script>
+</body>
+</html>

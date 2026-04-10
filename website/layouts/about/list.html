@@ -1,70 +1,72 @@
-{{ define "title" }}公司介紹 | Reviz{{ end }}
+{{ define "title" }}公司介紹 | ReViz{{ end }}
 
 {{ define "main" }}
 
-<div class="page-header">
-    <div class="container">
-        <div class="page-header-inner">
+<div class="page-hero">
+  <div class="container">
+    <div class="page-hero-label">Who We Are</div>
+    <h1>關於<br><em style="font-style:italic;color:var(--lime)">ReViz</em></h1>
+    <p>ReViz 是一支熱愛科技、專注創新的數位團隊，<br>致力於幫助企業在數位時代找到自己的聲音。</p>
+  </div>
+</div>
+
+<section style="background:var(--ink);padding:8rem 0;">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:7rem;align-items:start;">
+
+      <div class="reveal">
+        <h2 style="font-family:var(--f-serif);font-size:clamp(2rem,3.5vw,3.5rem);font-weight:700;color:var(--white);line-height:1.05;margin-bottom:2.5rem;">我們的<br><em style="color:var(--lime);font-style:italic">使命</em></h2>
+        <p style="font-family:var(--f-body);font-size:.95rem;line-height:1.9;color:rgba(255,255,255,.42);margin-bottom:1.5rem;">我們相信，每一個企業都值得擁有卓越的數位存在。ReViz 的使命是透過精準的技術執行與策略思維，幫助客戶將數位願景化為可衡量的商業成果。</p>
+        <p style="font-family:var(--f-body);font-size:.95rem;line-height:1.9;color:rgba(255,255,255,.42);margin-bottom:3rem;">我們不只是服務提供者，我們是您長期的數位夥伴。</p>
+
+        <div style="display:flex;flex-direction:column;gap:2.5rem;margin-top:3rem;">
+          <div style="display:flex;gap:1.5rem;align-items:flex-start;" class="reveal reveal-delay-1">
+            <div style="width:8px;height:8px;border-radius:50%;background:var(--lime);flex-shrink:0;margin-top:.4rem;"></div>
             <div>
-                <span class="page-label">Who We Are</span>
-                <h1>公司介紹</h1>
+              <h4 style="font-family:var(--f-sans);font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.16em;color:var(--white);margin-bottom:.5rem;">透明溝通</h4>
+              <p style="font-family:var(--f-body);font-size:.9rem;line-height:1.8;color:rgba(255,255,255,.38);">我們重視誠實的溝通，定期同步進度，讓您隨時掌握專案狀況。</p>
             </div>
-            <p>Reviz 是一支熱愛科技、專注創新的數位團隊，<br>致力於幫助企業在數位時代找到自己的聲音。</p>
+          </div>
+          <div style="display:flex;gap:1.5rem;align-items:flex-start;" class="reveal reveal-delay-2">
+            <div style="width:8px;height:8px;border-radius:50%;background:var(--amber);flex-shrink:0;margin-top:.4rem;"></div>
+            <div>
+              <h4 style="font-family:var(--f-sans);font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.16em;color:var(--white);margin-bottom:.5rem;">品質至上</h4>
+              <p style="font-family:var(--f-body);font-size:.9rem;line-height:1.8;color:rgba(255,255,255,.38);">每一行程式碼、每一個像素，都經過嚴格的品質把關。</p>
+            </div>
+          </div>
+          <div style="display:flex;gap:1.5rem;align-items:flex-start;" class="reveal reveal-delay-3">
+            <div style="width:8px;height:8px;border-radius:50%;background:var(--sky);flex-shrink:0;margin-top:.4rem;"></div>
+            <div>
+              <h4 style="font-family:var(--f-sans);font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.16em;color:var(--white);margin-bottom:.5rem;">持續創新</h4>
+              <p style="font-family:var(--f-body);font-size:.9rem;line-height:1.8;color:rgba(255,255,255,.38);">我們持續學習新技術，確保為客戶帶來最前沿的解決方案。</p>
+            </div>
+          </div>
+          <div style="display:flex;gap:1.5rem;align-items:flex-start;" class="reveal reveal-delay-4">
+            <div style="width:8px;height:8px;border-radius:50%;background:var(--green);flex-shrink:0;margin-top:.4rem;"></div>
+            <div>
+              <h4 style="font-family:var(--f-sans);font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.16em;color:var(--white);margin-bottom:.5rem;">長期夥伴</h4>
+              <p style="font-family:var(--f-body);font-size:.9rem;line-height:1.8;color:rgba(255,255,255,.38);">專案結束不是終點，我們提供持續的技術支援與成長諮詢。</p>
+            </div>
+          </div>
         </div>
-    </div>
-</div>
+      </div>
 
-<div class="about-grid">
-    <div class="about-col">
-        <h2>我們的使命</h2>
-        <p>我們相信，每一個企業都值得擁有卓越的數位存在。Reviz 的使命是透過精準的技術執行與策略思維，幫助客戶將數位願景化為可衡量的商業成果。</p>
-        <p>我們不只是服務提供者，我們是您長期的數位夥伴。</p>
-
-        <div class="value-list">
-            <div class="value-item">
-                <div class="value-dot"></div>
-                <div>
-                    <h4>透明溝通</h4>
-                    <p>我們重視誠實的溝通，定期同步進度，讓您隨時掌握專案狀況。</p>
-                </div>
-            </div>
-            <div class="value-item">
-                <div class="value-dot" style="background: var(--flow-lavender);"></div>
-                <div>
-                    <h4>品質至上</h4>
-                    <p>每一行程式碼、每一個像素，都經過嚴格的品質把關。</p>
-                </div>
-            </div>
-            <div class="value-item">
-                <div class="value-dot" style="background: var(--vibrant);"></div>
-                <div>
-                    <h4>持續創新</h4>
-                    <p>我們持續學習新技術，確保為客戶帶來最前沿的解決方案。</p>
-                </div>
-            </div>
-            <div class="value-item">
-                <div class="value-dot" style="background: var(--sky-ethereal);"></div>
-                <div>
-                    <h4>長期夥伴</h4>
-                    <p>專案結束不是終點，我們提供持續的技術支援與成長諮詢。</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="about-col">
-        <h2>我們的故事</h2>
+      <div class="reveal reveal-delay-1">
+        <h2 style="font-family:var(--f-serif);font-size:clamp(2rem,3.5vw,3.5rem);font-weight:700;color:var(--white);line-height:1.05;margin-bottom:2.5rem;">我們的<br><em style="color:var(--amber);font-style:italic">故事</em></h2>
         {{ .Content }}
-        <p style="margin-top: 2rem;">我們的團隊由具備豐富實戰經驗的工程師、設計師與策略顧問組成，曾服務橫跨金融、零售、製造與新創等多元產業的客戶。</p>
+        <p style="font-family:var(--f-body);font-size:.95rem;line-height:1.9;color:rgba(255,255,255,.42);margin-top:1.5rem;">我們的團隊由具備豐富實戰經驗的工程師、設計師與策略顧問組成，曾服務橫跨金融、零售、製造與新創等多元產業的客戶。</p>
 
-        <div style="margin-top: 3rem; padding: 2.5rem; background: var(--deep-core);">
-            <h4 style="color: rgba(255,255,255,0.5); margin-bottom: 1.5rem; font-size: 0.7rem; letter-spacing: 0.15em;">聯絡我們</h4>
-            <p style="color: rgba(255,255,255,0.8); font-size: 0.95rem; margin-bottom: 0.5rem;">📧 hello@reviz.tw</p>
-            <p style="color: rgba(255,255,255,0.8); font-size: 0.95rem; margin-bottom: 0.5rem;">📍 台灣，台北市</p>
-            <p style="color: rgba(255,255,255,0.8); font-size: 0.95rem; margin-bottom: 2rem;">🕐 週一至週五，09:00 – 18:00</p>
-            <a href="mailto:hello@reviz.tw" class="btn btn-white" style="font-size: 0.8rem;">發送訊息 →</a>
+        <div style="margin-top:3.5rem;padding:3rem;background:var(--ink3);border:1px solid var(--border);border-top:3px solid var(--lime);">
+          <h4 style="font-family:var(--f-sans);font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.22em;color:rgba(255,255,255,.3);margin-bottom:2rem;">聯絡我們</h4>
+          <p style="font-family:var(--f-body);font-size:.95rem;color:rgba(255,255,255,.6);margin-bottom:.75rem;">hello@reviz.tw</p>
+          <p style="font-family:var(--f-body);font-size:.95rem;color:rgba(255,255,255,.6);margin-bottom:.75rem;">台灣，台北市</p>
+          <p style="font-family:var(--f-body);font-size:.95rem;color:rgba(255,255,255,.6);margin-bottom:2.5rem;">週一至週五，09:00 – 18:00</p>
+          <a href="mailto:hello@reviz.tw" class="btn-primary">發送訊息 →</a>
         </div>
+      </div>
+
     </div>
-</div>
+  </div>
+</section>
 
 {{ end }}

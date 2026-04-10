@@ -1,105 +1,102 @@
-{{ define "title" }}服務項目 | Reviz{{ end }}
+{{ define "title" }}服務項目 | ReViz{{ end }}
 
 {{ define "main" }}
 
-<div class="page-header">
-    <div class="container">
-        <div class="page-header-inner">
-            <div>
-                <span class="page-label">What We Do</span>
-                <h1>服務項目</h1>
-            </div>
-            <p>從前端介面到後端架構，從策略規劃到數位轉型，<br>Reviz 提供全方位的數位解決方案。</p>
-        </div>
-    </div>
+<div class="page-hero">
+  <div class="container">
+    <div class="page-hero-label">What We Do</div>
+    <h1>我們的<br><em style="font-style:italic;color:var(--lime)">服務</em></h1>
+    <p>從前端介面到後端架構，從策略規劃到數位轉型，<br>ReViz 提供全方位的數位解決方案。</p>
+  </div>
 </div>
 
 <section class="services-page">
-    <div class="container">
+  <div class="container">
 
-        {{ .Content }}
+    <div class="services-list-full">
 
-        <div class="services-list-full">
-
-            <div class="service-item-full">
-                <div class="sif-num">01</div>
-                <div class="sif-name">
-                    <h3>網站開發</h3>
-                </div>
-                <div class="sif-desc">
-                    <p>我們打造從企業形象網站到複雜 Web Application 的完整解決方案。採用現代技術棧（React、Next.js、Hugo）確保高效能、高安全性與可擴展性，並內建 SEO 最佳實踐，讓您的網站在搜尋引擎上脫穎而出。</p>
-                </div>
-                <div class="sif-tags">
-                    <span class="sif-tag">React / Next.js</span>
-                    <span class="sif-tag">Hugo / JAMstack</span>
-                    <span class="sif-tag">E-Commerce</span>
-                    <span class="sif-tag">CMS 整合</span>
-                </div>
-            </div>
-
-            <div class="service-item-full">
-                <div class="sif-num">02</div>
-                <div class="sif-name">
-                    <h3>數位轉型</h3>
-                </div>
-                <div class="sif-desc">
-                    <p>協助企業系統性地從傳統運營模式轉向數位化。我們透過深度流程分析、數據驅動決策與自動化工具導入，幫助您提升效率、降低成本，並在數位時代創造新的競爭優勢。</p>
-                </div>
-                <div class="sif-tags">
-                    <span class="sif-tag">流程自動化</span>
-                    <span class="sif-tag">數據分析</span>
-                    <span class="sif-tag">系統整合</span>
-                    <span class="sif-tag">雲端遷移</span>
-                </div>
-            </div>
-
-            <div class="service-item-full">
-                <div class="sif-num">03</div>
-                <div class="sif-name">
-                    <h3>科技顧問</h3>
-                </div>
-                <div class="sif-desc">
-                    <p>提供客觀、獨立的技術策略建議。無論是技術選型、架構評估或供應商評估，我們幫助您做出正確的科技投資決策，避免昂貴的錯誤，加速您的數位成長路徑。</p>
-                </div>
-                <div class="sif-tags">
-                    <span class="sif-tag">技術選型</span>
-                    <span class="sif-tag">架構規劃</span>
-                    <span class="sif-tag">雲端策略</span>
-                    <span class="sif-tag">團隊培訓</span>
-                </div>
-            </div>
-
-            <div class="service-item-full">
-                <div class="sif-num">04</div>
-                <div class="sif-name">
-                    <h3>UI / UX 設計</h3>
-                </div>
-                <div class="sif-desc">
-                    <p>以使用者為中心的設計思維，打造直覺且美觀的數位介面。從線框圖到高保真原型，我們的設計師確保每個互動都有意義，每個視覺元素都服務於業務目標。</p>
-                </div>
-                <div class="sif-tags">
-                    <span class="sif-tag">使用者研究</span>
-                    <span class="sif-tag">介面設計</span>
-                    <span class="sif-tag">設計系統</span>
-                    <span class="sif-tag">原型測試</span>
-                </div>
-            </div>
-
+      <div class="service-item-full reveal">
+        <div class="sif-num">01</div>
+        <div class="sif-name">
+          <h3>網站開發</h3>
         </div>
+        <div class="sif-desc">
+          <p>我們打造從企業形象網站到複雜 Web Application 的完整解決方案。採用現代技術棧（React、Next.js、Hugo）確保高效能、高安全性與可擴展性，並內建 SEO 最佳實踐，讓您的網站在搜尋引擎上脫穎而出。</p>
+        </div>
+        <div class="sif-tags">
+          <span class="sif-tag">React / Next.js</span>
+          <span class="sif-tag">Hugo / JAMstack</span>
+          <span class="sif-tag">E-Commerce</span>
+          <span class="sif-tag">CMS 整合</span>
+        </div>
+      </div>
+
+      <div class="service-item-full reveal reveal-delay-1">
+        <div class="sif-num">02</div>
+        <div class="sif-name">
+          <h3>數位轉型</h3>
+        </div>
+        <div class="sif-desc">
+          <p>協助企業系統性地從傳統運營模式轉向數位化。我們透過深度流程分析、數據驅動決策與自動化工具導入，幫助您提升效率、降低成本，並在數位時代創造新的競爭優勢。</p>
+        </div>
+        <div class="sif-tags">
+          <span class="sif-tag">流程自動化</span>
+          <span class="sif-tag">數據分析</span>
+          <span class="sif-tag">系統整合</span>
+          <span class="sif-tag">雲端遷移</span>
+        </div>
+      </div>
+
+      <div class="service-item-full reveal reveal-delay-2">
+        <div class="sif-num">03</div>
+        <div class="sif-name">
+          <h3>科技顧問</h3>
+        </div>
+        <div class="sif-desc">
+          <p>提供客觀、獨立的技術策略建議。無論是技術選型、架構評估或供應商評估，我們幫助您做出正確的科技投資決策，避免昂貴的錯誤，加速您的數位成長路徑。</p>
+        </div>
+        <div class="sif-tags">
+          <span class="sif-tag">技術選型</span>
+          <span class="sif-tag">架構規劃</span>
+          <span class="sif-tag">雲端策略</span>
+          <span class="sif-tag">團隊培訓</span>
+        </div>
+      </div>
+
+      <div class="service-item-full reveal reveal-delay-3">
+        <div class="sif-num">04</div>
+        <div class="sif-name">
+          <h3>UI / UX 設計</h3>
+        </div>
+        <div class="sif-desc">
+          <p>以使用者為中心的設計思維，打造直覺且美觀的數位介面。從線框圖到高保真原型，我們的設計師確保每個互動都有意義，每個視覺元素都服務於業務目標。</p>
+        </div>
+        <div class="sif-tags">
+          <span class="sif-tag">使用者研究</span>
+          <span class="sif-tag">介面設計</span>
+          <span class="sif-tag">設計系統</span>
+          <span class="sif-tag">原型測試</span>
+        </div>
+      </div>
+
     </div>
+  </div>
 </section>
 
-<!-- CTA -->
 <section class="cta-section">
-    <div class="container">
-        <div class="cta-inner">
-            <div>
-                <h2>找不到您需要的服務？</h2>
-                <p>告訴我們您的挑戰，我們一起找出最佳解法。</p>
-            </div>
-            <a href="{{ "about/" | relURL }}" class="btn btn-outline" style="border-color: var(--ink);">聯絡我們 →</a>
-        </div>
+  <svg class="cta-wave-bg" viewBox="0 2 120 65" style="overflow:hidden;display:block" aria-hidden="true">
+    <use href="#mark-dark"/>
+  </svg>
+  <div class="container">
+    <div class="cta-inner reveal">
+      <h2 class="cta-title">找不到<br>您需要的<br><em>服務？</em></h2>
+      <div class="cta-right">
+        <p class="cta-sub">告訴我們您的挑戰<br>我們一起找出最佳解法</p>
+        <a href="mailto:hello@reviz.tw" class="cta-email">hello@reviz.tw</a>
+        <a href="{{ "about/" | relURL }}" class="btn-dark">聯絡我們 →</a>
+      </div>
     </div>
+  </div>
 </section>
 
 {{ end }}
