@@ -1,24 +1,36 @@
-{{ define "title" }}最新消息{{ end }}
+{{ define "title" }}最新消息 | Reviz{{ end }}
 
 {{ define "main" }}
-<div class="container">
-    <div class="article-header" style="text-align: center; margin-top: 4rem;">
-        <h1>Latest News</h1>
-        <p>Stay up to date with our latest announcements, product releases, and company insights.</p>
-    </div>
 
-    <!-- Render Markdown articles from content/news/ -->
-    <div class="grid" style="grid-template-columns: 1fr; max-width: 800px; margin: 0 auto;">
-        {{ range .Pages }}
-        <div class="glass" style="padding: 2.5rem;">
-            <div class="article-meta">{{ .PublishDate.Format "January 2, 2006" }}</div>
-            <h2 style="font-size: 2rem; margin-bottom: 1rem;">
-                <a href="{{ .RelPermalink }}" style="color: var(--text-primary);">{{ .Title }}</a>
-            </h2>
-            <p>{{ .Summary }}</p>
-            <a href="{{ .RelPermalink }}" style="font-weight: 600; display: inline-block; margin-top: 1rem;">Read More &rarr;</a>
+<div class="page-header">
+    <div class="container">
+        <div class="page-header-inner">
+            <div>
+                <span class="page-label">News & Insights</span>
+                <h1>最新消息</h1>
+            </div>
+            <p>業界洞察、案例分享與公司動態——<br>掌握數位趨勢，與 Reviz 一同成長。</p>
         </div>
-        {{ end }}
     </div>
 </div>
+
+<section style="padding: 4rem 0;">
+    <div class="container">
+        <div class="posts-grid">
+            {{ range .Pages }}
+            <div class="post-card">
+                <div class="post-date">{{ .PublishDate.Format "2006 / 01 / 02" }}</div>
+                <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                <p>{{ .Summary }}</p>
+                <a href="{{ .RelPermalink }}" class="post-link">閱讀更多 →</a>
+            </div>
+            {{ else }}
+            <div class="post-card" style="grid-column: 1 / -1;">
+                <p style="color: var(--ink-soft);">目前尚無文章，敬請期待。</p>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
 {{ end }}

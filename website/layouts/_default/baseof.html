@@ -4,38 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ block "title" . }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
-    <!-- Import Google Fonts: Inter -->
+    <meta name="description" content="{{ .Site.Params.description }}">
+
+    <!-- Fonts: Syne (display) + Noto Sans TC (body/CJK) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
 </head>
 <body>
+
     <header>
         <div class="container">
             <nav>
-                <a href="{{ "" | relURL }}" class="logo">{{ .Site.Title }}</a>
+                <a href="{{ "" | relURL }}" class="logo">
+                    Re<span>viz</span>
+                </a>
                 <ul>
                     <li><a href="{{ "services/" | relURL }}">服務項目</a></li>
                     <li><a href="{{ "portfolio/" | relURL }}">Portfolio</a></li>
                     <li><a href="{{ "about/" | relURL }}">公司介紹</a></li>
                     <li><a href="{{ "news/" | relURL }}">最新消息</a></li>
+                    <li><a href="{{ "about/" | relURL }}" class="nav-cta">聯絡我們</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        {{ block "main" . }}
-        <!-- Main content will be rendered here -->
-        {{ end }}
+        {{ block "main" . }}{{ end }}
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; {{ now.Year }} {{ .Site.Title }}. All rights reserved. Crafted with excellence.</p>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="{{ "" | relURL }}" class="logo">Re<span>viz</span></a>
+                    <p>打造卓越數位體驗——網站開發、數位轉型與科技顧問，讓您的品牌在數位時代脫穎而出。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>服務</h4>
+                    <ul>
+                        <li><a href="{{ "services/" | relURL }}">網站開發</a></li>
+                        <li><a href="{{ "services/" | relURL }}">數位轉型</a></li>
+                        <li><a href="{{ "services/" | relURL }}">科技顧問</a></li>
+                        <li><a href="{{ "portfolio/" | relURL }}">Portfolio</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>公司</h4>
+                    <ul>
+                        <li><a href="{{ "about/" | relURL }}">關於我們</a></li>
+                        <li><a href="{{ "news/" | relURL }}">最新消息</a></li>
+                        <li><a href="{{ "about/" | relURL }}">聯絡我們</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; {{ now.Year }} Reviz. All rights reserved.</p>
+                <span class="footer-badge">Taiwan — Based</span>
+            </div>
         </div>
     </footer>
+
 </body>
 </html>

@@ -1,26 +1,177 @@
+{{ define "title" }}Reviz — 網站開發 · 數位轉型 · 科技顧問{{ end }}
+
 {{ define "main" }}
-<div class="hero">
-    <div class="container">
-        <h1>Transforming Ideas into Reality</h1>
-        <p>We are a premium digital agency providing top-tier solutions to elevate your brand to the next level.</p>
-        <a href="{{ "services/" | relURL }}" class="btn">Discover Our Services</a>
+
+<!-- ======= HERO ======= -->
+<section class="hero">
+    <div class="hero-content container" style="max-width: none; padding: 6rem 3rem 6rem calc((100vw - 1200px) / 2 + 2rem);">
+        <span class="hero-eyebrow">數位創新夥伴</span>
+        <h1>讓您的<br><em>數位願景</em><br>成為現實</h1>
+        <p class="hero-desc">Reviz 提供端到端的網站開發、數位轉型策略與科技顧問服務——從構想到落地，我們陪您走每一步。</p>
+        <div class="hero-actions">
+            <a href="{{ "services/" | relURL }}" class="btn btn-primary">探索服務 →</a>
+            <a href="{{ "portfolio/" | relURL }}" class="btn btn-outline">查看作品</a>
+        </div>
+    </div>
+
+    <div class="hero-visual">
+        <div class="hero-visual-bg"></div>
+        <span class="hero-tag">Since 2020</span>
+        <ul class="hero-services-list">
+            <li>
+                <span class="svc-num">01</span>
+                網站開發 Web Development
+                <span class="svc-arrow">→</span>
+            </li>
+            <li>
+                <span class="svc-num">02</span>
+                數位轉型 Digital Transformation
+                <span class="svc-arrow">→</span>
+            </li>
+            <li>
+                <span class="svc-num">03</span>
+                科技顧問 Technology Consulting
+                <span class="svc-arrow">→</span>
+            </li>
+        </ul>
+        <div class="hero-visual-stat">
+            <div class="big-number">03</div>
+        </div>
+    </div>
+</section>
+
+<!-- ======= TICKER ======= -->
+<div class="ticker">
+    <div class="ticker-track">
+        <span class="ticker-item">網站開發</span>
+        <span class="ticker-item">數位轉型</span>
+        <span class="ticker-item">科技顧問</span>
+        <span class="ticker-item">UI / UX Design</span>
+        <span class="ticker-item">品牌數位化</span>
+        <span class="ticker-item">系統整合</span>
+        <span class="ticker-item">雲端架構</span>
+        <span class="ticker-item">效能優化</span>
+        <!-- duplicate for seamless loop -->
+        <span class="ticker-item">網站開發</span>
+        <span class="ticker-item">數位轉型</span>
+        <span class="ticker-item">科技顧問</span>
+        <span class="ticker-item">UI / UX Design</span>
+        <span class="ticker-item">品牌數位化</span>
+        <span class="ticker-item">系統整合</span>
+        <span class="ticker-item">雲端架構</span>
+        <span class="ticker-item">效能優化</span>
     </div>
 </div>
 
-<div class="container">
-    <div class="grid">
-        <div class="glass">
-            <h3>Innovation</h3>
-            <p>We leverage cutting-edge technology to build solutions that are both beautiful and incredibly functional.</p>
+<!-- ======= SERVICES ======= -->
+<section class="services-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">服務項目</span>
+            <h2>我們能為您<br>做什麼</h2>
+            <a href="{{ "services/" | relURL }}" class="section-link">所有服務 →</a>
         </div>
-        <div class="glass">
-            <h3>Excellence</h3>
-            <p>Our commitment to quality ensures that every project we deliver exceeds expectations.</p>
-        </div>
-        <div class="glass">
-            <h3>Integrity</h3>
-            <p>We believe in transparent communication and building long-lasting partnerships with our clients.</p>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <span class="service-num">01 — Web Development</span>
+                <h3>網站開發</h3>
+                <p>從企業形象網站到複雜的 Web Application，我們使用現代技術棧打造高效能、安全且可擴展的數位產品。</p>
+                <div class="service-tags">
+                    <span class="service-tag">React / Next.js</span>
+                    <span class="service-tag">Hugo</span>
+                    <span class="service-tag">頭部 CMS</span>
+                </div>
+            </div>
+            <div class="service-card">
+                <span class="service-num">02 — Digital Transformation</span>
+                <h3>數位轉型</h3>
+                <p>協助企業從傳統流程轉型至數位化運營，透過數據分析與自動化，提升效率並開創新商機。</p>
+                <div class="service-tags">
+                    <span class="service-tag">流程自動化</span>
+                    <span class="service-tag">數據分析</span>
+                    <span class="service-tag">系統整合</span>
+                </div>
+            </div>
+            <div class="service-card">
+                <span class="service-num">03 — Technology Consulting</span>
+                <h3>科技顧問</h3>
+                <p>提供客觀的技術策略建議，幫助您選擇最適合的解決方案，避免昂貴的決策錯誤，加速數位成長。</p>
+                <div class="service-tags">
+                    <span class="service-tag">技術選型</span>
+                    <span class="service-tag">架構規劃</span>
+                    <span class="service-tag">雲端策略</span>
+                </div>
+            </div>
         </div>
     </div>
-</div>
+</section>
+
+<!-- ======= NUMBERS ======= -->
+<section class="numbers-section">
+    <div class="container">
+        <div class="numbers-grid">
+            <div class="number-item">
+                <span class="num">50+</span>
+                <span class="num-label">完成專案</span>
+            </div>
+            <div class="number-item">
+                <span class="num">30+</span>
+                <span class="num-label">滿意客戶</span>
+            </div>
+            <div class="number-item">
+                <span class="num">5+</span>
+                <span class="num-label">年深耕經驗</span>
+            </div>
+            <div class="number-item">
+                <span class="num">98%</span>
+                <span class="num-label">客戶好評率</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ======= PROCESS ======= -->
+<section class="process-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">合作流程</span>
+            <h2>我們如何<br>一起工作</h2>
+        </div>
+        <div class="process-steps">
+            <div class="process-step">
+                <h4>探索需求</h4>
+                <p>深入了解您的業務目標、使用者痛點與技術現況，建立共同的專案願景。</p>
+            </div>
+            <div class="process-step">
+                <h4>策略規劃</h4>
+                <p>擬定清晰的技術路線圖、里程碑與成功指標，確保方向正確。</p>
+            </div>
+            <div class="process-step">
+                <h4>設計開發</h4>
+                <p>以敏捷方式迭代，定期展示成果，即時調整確保品質與進度。</p>
+            </div>
+            <div class="process-step">
+                <h4>上線支援</h4>
+                <p>上線後持續監測效能，提供技術支援，陪伴您長期穩定成長。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ======= CTA ======= -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-inner">
+            <div>
+                <h2>準備好啟動<br>您的數位專案了嗎？</h2>
+                <p>讓我們來談談您的需求，第一次諮詢完全免費。</p>
+            </div>
+            <div>
+                <a href="{{ "about/" | relURL }}" class="btn btn-outline" style="border-color: var(--ink);">開始合作 →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
 {{ end }}

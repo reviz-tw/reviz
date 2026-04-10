@@ -1,35 +1,52 @@
-{{ define "title" }}Portfolio{{ end }}
+{{ define "title" }}Portfolio | Reviz{{ end }}
 
 {{ define "main" }}
-<div class="container">
-    <div class="article-header" style="text-align: center; margin-top: 4rem;">
-        <h1>Our Portfolio</h1>
-        <p>A selection of our finest work. Showcasing innovation and design excellence.</p>
-    </div>
 
-    <!-- Render Markdown articles from content/portfolio/ -->
-    <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));">
-        {{ range .Pages }}
-        <div class="glass" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
-            <!-- Attempt to load a cover image from the frontmatter or provide a fallback -->
-            <div style="height: 200px; background-color: var(--glass-border); display: flex; align-items: center; justify-content: center; font-size: 0.8rem; color: var(--text-secondary);">
-                {{ if .Params.image }}
-                <img src="{{ .Params.image | relURL }}" style="width: 100%; height: 100%; object-fit: cover;" alt="{{ .Title }}">
-                {{ else }}
-                [ Project Image Placeholder ]
-                {{ end }}
+<div class="page-header">
+    <div class="container">
+        <div class="page-header-inner">
+            <div>
+                <span class="page-label">Selected Work</span>
+                <h1>Portfolio</h1>
             </div>
-            
-            <div style="padding: 2rem; flex: 1; display: flex; flex-direction: column;">
-                <div class="article-meta" style="color: var(--accent-color); font-weight: 600;">{{ .Params.client | default "Case Study" }}</div>
-                <h2 style="font-size: 1.5rem; margin-bottom: 1rem;">
-                    <a href="{{ .RelPermalink }}" style="color: var(--text-primary);">{{ .Title }}</a>
-                </h2>
-                <p style="flex: 1;">{{ .Summary }}</p>
-                <a href="{{ .RelPermalink }}" class="btn" style="text-align: center; width: 100%; margin-top: 1rem;">View Project</a>
-            </div>
+            <p>精選專案案例——每一個作品都代表著<br>我們對卓越品質的承諾。</p>
         </div>
-        {{ end }}
     </div>
 </div>
+
+<section style="padding: 4rem 0 6rem;">
+    <div class="container">
+        <div class="services-list-full" style="border-top: 2px solid var(--ink);">
+            {{ range .Pages }}
+            <div class="portfolio-item">
+                <div class="portfolio-thumb">
+                    {{ if .Params.image }}
+                    <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" style="width:100%; height:100%; object-fit:cover; position:absolute; inset:0;">
+                    {{ else }}
+                    <div class="portfolio-thumb-inner">
+                        <span>{{ substr .Title 0 2 }}</span>
+                    </div>
+                    {{ end }}
+                </div>
+                <div class="portfolio-info">
+                    <div>
+                        <div class="tags">
+                            <span class="tag">{{ .Params.client | default "Case Study" }}</span>
+                            {{ range .Params.tags }}<span class="tag" style="background: var(--flow-lavender); color: var(--ink);">{{ . }}</span>{{ end }}
+                        </div>
+                        <h3><a href="{{ .RelPermalink }}" style="color: var(--ink);">{{ .Title }}</a></h3>
+                        <p>{{ .Summary }}</p>
+                    </div>
+                    <a href="{{ .RelPermalink }}" class="btn btn-outline" style="align-self: flex-start; margin-top: 1.5rem;">查看專案 →</a>
+                </div>
+            </div>
+            {{ else }}
+            <div style="padding: 4rem 0; text-align: center;">
+                <p style="color: var(--ink-soft);">作品集即將更新，敬請期待。</p>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
 {{ end }}

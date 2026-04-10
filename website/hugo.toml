@@ -1,8 +1,8 @@
 baseURL = 'https://reviz-tw.github.io/reviz/'
 languageCode = 'zh-TW'
-title = 'Company Official Website'
+title = 'Reviz'
 # We are building our own custom layout, no theme needed
 
 [params]
-  description = "Welcome to our premium corporate website."
-  author = "Company Team"
+  description = "Reviz — 網站開發、數位轉型與科技顧問。打造卓越數位體驗，讓您的品牌在數位時代脫穎而出。"
+  author = "Reviz Team"

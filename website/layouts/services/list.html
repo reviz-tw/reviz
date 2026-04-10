@@ -1,44 +1,105 @@
-{{ define "title" }}服務項目{{ end }}
+{{ define "title" }}服務項目 | Reviz{{ end }}
 
 {{ define "main" }}
-<div class="container">
-    <div class="article-header" style="text-align: center; margin-top: 4rem;">
-        <h1>Our Services</h1>
-        <p>Comprehensive digital solutions tailored to your business needs.</p>
-    </div>
 
-    {{ .Content }}
-
-    <div class="grid">
-        <div class="glass" style="border-top: 4px solid var(--accent-color);">
-            <h2>Web Development</h2>
-            <p>We build blazing fast, highly secure, and extremely scalable web applications using modern technologies like React, Next.js, and Hugo.</p>
-            <ul>
-                <li style="color: var(--text-secondary); margin-left: 1.5rem;">Custom Web Apps</li>
-                <li style="color: var(--text-secondary); margin-left: 1.5rem;">E-Commerce Solutions</li>
-                <li style="color: var(--text-secondary); margin-left: 1.5rem;">Headless CMS Integration</li>
-            </ul>
-        </div>
-        
-        <div class="glass" style="border-top: 4px solid #a78bfa;">
-            <h2>UI/UX Design</h2>
-            <p>Our design team crafts intuitive and stunning user interfaces that provide exceptional user experiences and increase engagement.</p>
-            <ul>
-                <li style="color: var(--text-secondary); margin-left: 1.5rem;">Wireframing & Prototyping</li>
-                <li style="color: var(--text-secondary); margin-left: 1.5rem;">Design Systems</li>
-                <li style="color: var(--text-secondary); margin-left: 1.5rem;">User Research</li>
-            </ul>
-        </div>
-
-        <div class="glass" style="border-top: 4px solid #34d399;">
-            <h2>SEO & Marketing</h2>
-            <p>We don't just build websites; we ensure they are found. Our SEO strategies are built directly into the core architecture of our projects.</p>
-            <ul>
-                <li style="color: var(--text-secondary); margin-left: 1.5rem;">Technical SEO</li>
-                <li style="color: var(--text-secondary); margin-left: 1.5rem;">Performance Optimization</li>
-                <li style="color: var(--text-secondary); margin-left: 1.5rem;">Content Strategy</li>
-            </ul>
+<div class="page-header">
+    <div class="container">
+        <div class="page-header-inner">
+            <div>
+                <span class="page-label">What We Do</span>
+                <h1>服務項目</h1>
+            </div>
+            <p>從前端介面到後端架構，從策略規劃到數位轉型，<br>Reviz 提供全方位的數位解決方案。</p>
         </div>
     </div>
 </div>
+
+<section class="services-page">
+    <div class="container">
+
+        {{ .Content }}
+
+        <div class="services-list-full">
+
+            <div class="service-item-full">
+                <div class="sif-num">01</div>
+                <div class="sif-name">
+                    <h3>網站開發</h3>
+                </div>
+                <div class="sif-desc">
+                    <p>我們打造從企業形象網站到複雜 Web Application 的完整解決方案。採用現代技術棧（React、Next.js、Hugo）確保高效能、高安全性與可擴展性，並內建 SEO 最佳實踐，讓您的網站在搜尋引擎上脫穎而出。</p>
+                </div>
+                <div class="sif-tags">
+                    <span class="sif-tag">React / Next.js</span>
+                    <span class="sif-tag">Hugo / JAMstack</span>
+                    <span class="sif-tag">E-Commerce</span>
+                    <span class="sif-tag">CMS 整合</span>
+                </div>
+            </div>
+
+            <div class="service-item-full">
+                <div class="sif-num">02</div>
+                <div class="sif-name">
+                    <h3>數位轉型</h3>
+                </div>
+                <div class="sif-desc">
+                    <p>協助企業系統性地從傳統運營模式轉向數位化。我們透過深度流程分析、數據驅動決策與自動化工具導入，幫助您提升效率、降低成本，並在數位時代創造新的競爭優勢。</p>
+                </div>
+                <div class="sif-tags">
+                    <span class="sif-tag">流程自動化</span>
+                    <span class="sif-tag">數據分析</span>
+                    <span class="sif-tag">系統整合</span>
+                    <span class="sif-tag">雲端遷移</span>
+                </div>
+            </div>
+
+            <div class="service-item-full">
+                <div class="sif-num">03</div>
+                <div class="sif-name">
+                    <h3>科技顧問</h3>
+                </div>
+                <div class="sif-desc">
+                    <p>提供客觀、獨立的技術策略建議。無論是技術選型、架構評估或供應商評估，我們幫助您做出正確的科技投資決策，避免昂貴的錯誤，加速您的數位成長路徑。</p>
+                </div>
+                <div class="sif-tags">
+                    <span class="sif-tag">技術選型</span>
+                    <span class="sif-tag">架構規劃</span>
+                    <span class="sif-tag">雲端策略</span>
+                    <span class="sif-tag">團隊培訓</span>
+                </div>
+            </div>
+
+            <div class="service-item-full">
+                <div class="sif-num">04</div>
+                <div class="sif-name">
+                    <h3>UI / UX 設計</h3>
+                </div>
+                <div class="sif-desc">
+                    <p>以使用者為中心的設計思維，打造直覺且美觀的數位介面。從線框圖到高保真原型，我們的設計師確保每個互動都有意義，每個視覺元素都服務於業務目標。</p>
+                </div>
+                <div class="sif-tags">
+                    <span class="sif-tag">使用者研究</span>
+                    <span class="sif-tag">介面設計</span>
+                    <span class="sif-tag">設計系統</span>
+                    <span class="sif-tag">原型測試</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-inner">
+            <div>
+                <h2>找不到您需要的服務？</h2>
+                <p>告訴我們您的挑戰，我們一起找出最佳解法。</p>
+            </div>
+            <a href="{{ "about/" | relURL }}" class="btn btn-outline" style="border-color: var(--ink);">聯絡我們 →</a>
+        </div>
+    </div>
+</section>
+
 {{ end }}

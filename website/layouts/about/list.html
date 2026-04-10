@@ -1,15 +1,70 @@
-{{ define "title" }}公司介紹{{ end }}
+{{ define "title" }}公司介紹 | Reviz{{ end }}
 
 {{ define "main" }}
-<div class="container">
-    <div class="article-header" style="text-align: center; margin-top: 4rem;">
-        <h1>About Us</h1>
-        <p style="max-width: 600px; margin: 0 auto;">We are more than just a company. We are a collective of passionate creators, engineers, and visionaries.</p>
-    </div>
 
-    <!-- The content from about/_index.md will be inserted here if any, otherwise you can hardcode HTML -->
-    <div class="glass" style="margin-top: 3rem;">
-        {{ .Content }}
+<div class="page-header">
+    <div class="container">
+        <div class="page-header-inner">
+            <div>
+                <span class="page-label">Who We Are</span>
+                <h1>公司介紹</h1>
+            </div>
+            <p>Reviz 是一支熱愛科技、專注創新的數位團隊，<br>致力於幫助企業在數位時代找到自己的聲音。</p>
+        </div>
     </div>
 </div>
+
+<div class="about-grid">
+    <div class="about-col">
+        <h2>我們的使命</h2>
+        <p>我們相信，每一個企業都值得擁有卓越的數位存在。Reviz 的使命是透過精準的技術執行與策略思維，幫助客戶將數位願景化為可衡量的商業成果。</p>
+        <p>我們不只是服務提供者，我們是您長期的數位夥伴。</p>
+
+        <div class="value-list">
+            <div class="value-item">
+                <div class="value-dot"></div>
+                <div>
+                    <h4>透明溝通</h4>
+                    <p>我們重視誠實的溝通，定期同步進度，讓您隨時掌握專案狀況。</p>
+                </div>
+            </div>
+            <div class="value-item">
+                <div class="value-dot" style="background: var(--flow-lavender);"></div>
+                <div>
+                    <h4>品質至上</h4>
+                    <p>每一行程式碼、每一個像素，都經過嚴格的品質把關。</p>
+                </div>
+            </div>
+            <div class="value-item">
+                <div class="value-dot" style="background: var(--vibrant);"></div>
+                <div>
+                    <h4>持續創新</h4>
+                    <p>我們持續學習新技術，確保為客戶帶來最前沿的解決方案。</p>
+                </div>
+            </div>
+            <div class="value-item">
+                <div class="value-dot" style="background: var(--sky-ethereal);"></div>
+                <div>
+                    <h4>長期夥伴</h4>
+                    <p>專案結束不是終點，我們提供持續的技術支援與成長諮詢。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-col">
+        <h2>我們的故事</h2>
+        {{ .Content }}
+        <p style="margin-top: 2rem;">我們的團隊由具備豐富實戰經驗的工程師、設計師與策略顧問組成，曾服務橫跨金融、零售、製造與新創等多元產業的客戶。</p>
+
+        <div style="margin-top: 3rem; padding: 2.5rem; background: var(--deep-core);">
+            <h4 style="color: rgba(255,255,255,0.5); margin-bottom: 1.5rem; font-size: 0.7rem; letter-spacing: 0.15em;">聯絡我們</h4>
+            <p style="color: rgba(255,255,255,0.8); font-size: 0.95rem; margin-bottom: 0.5rem;">📧 hello@reviz.tw</p>
+            <p style="color: rgba(255,255,255,0.8); font-size: 0.95rem; margin-bottom: 0.5rem;">📍 台灣，台北市</p>
+            <p style="color: rgba(255,255,255,0.8); font-size: 0.95rem; margin-bottom: 2rem;">🕐 週一至週五，09:00 – 18:00</p>
+            <a href="mailto:hello@reviz.tw" class="btn btn-white" style="font-size: 0.8rem;">發送訊息 →</a>
+        </div>
+    </div>
+</div>
+
 {{ end }}
