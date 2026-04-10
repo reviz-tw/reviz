@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ReViz — Logo Preview v8</title>
+<title>ReViz — Logo Mark v9 — 4-Wave Flat Design · 最終版 · 新設計</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
@@ -38,13 +38,13 @@ body{background:#111;font-family:'Syne',sans-serif;color:#ccc;padding:56px 48px}
 </head>
 <body>
 
-<div class="page-label">ReViz — Logo Preview v8 &nbsp;·&nbsp; 賦格截斷 · 字距加大</div>
+<div class="page-label">ReViz — Logo v9 · 最終版 · 新設計 &nbsp;·&nbsp; 平行四波浪 · 無截斷 · round caps</div>
 
 <!--
   ═══════════════════════════════════════════════════════════════
   WAVE LOGIC v8
 
-  viewBox="0 2 120 65"  T=60  A=5
+  viewBox="0 0 200 124"  T=60  A=5
 
   clipPath 裁剪（viewBox 寬度120，1/5 = 24）：
     clip-w13  x=[0,  96]   波浪 1&3 右邊裁掉 1/5 (從96截斷)
@@ -60,78 +60,61 @@ body{background:#111;font-family:'Syne',sans-serif;color:#ccc;padding:56px 48px}
   ═══════════════════════════════════════════════════════════════
 -->
 
+<!--
+  ═══════════════════════════════════════════════════════════════
+  WAVE MARK v9 — 4-Wave Flat Design (新版 logo)
+
+  viewBox: 0 0 200 124
+  4 parallel waves — 無截斷、無 clipPath，全部完整顯示
+  Amplitude ±8 | Period 94 | stroke-width 10 | round caps
+
+  W1 #2B5F75  Deep Teal   (頂)
+  W2 #81C7D4  Sky Teal
+  W3 #EEA9A9  Sakura Pink
+  W4 #F7D94C  Citrine Yellow (底)
+  ═══════════════════════════════════════════════════════════════
+-->
 <svg width="0" height="0" style="position:absolute">
 <defs>
 
-  <!-- 裁剪矩形 (userSpaceOnUse，配合 viewBox 座標系) -->
-  <clipPath id="clip-w13" clipPathUnits="userSpaceOnUse">
-    <!-- 波浪 1&3：x=[0, 96]，右邊裁掉 24（1/5） -->
-    <rect x="-500" y="-500" width="596" height="1000"/>
-  </clipPath>
-  <clipPath id="clip-w24" clipPathUnits="userSpaceOnUse">
-    <!-- 波浪 2&4：x=[24, 120]，左邊裁掉 24（1/5） -->
-    <rect x="24" y="-500" width="600" height="1000"/>
-  </clipPath>
-
-  <!--
-    波浪路徑：
-      W1&3 從 x=-15（波谷）出發，路徑延伸至 x=135（遠超裁剪點96）
-      W2&4 從 x=0 出發，路徑延伸至 x=155（遠超裁剪點120）
-      截斷點由 clipPath 決定，均為截面（無圓帽）
-  -->
-
   <!-- COLOR VARIANT -->
   <g id="mark-color">
-    <!-- W1 & W3 → clip-w13 (x: 0~96) -->
-    <g clip-path="url(#clip-w13)">
-      <!-- W1 · #f0fa66 · Y=11 · Y+A=16 Y-A=6 -->
-      <path fill="none" stroke="#f0fa66" stroke-width="5.5" stroke-linecap="round"
-        d="M -15,16 C -5,16 5,6 15,6 C 25,6 35,16 45,16 C 55,16 65,6 75,6 C 85,6 95,16 105,16 C 115,16 125,6 135,6"/>
-      <!-- W3 · #fab966 · Y=41 · Y+A=46 Y-A=36 -->
-      <path fill="none" stroke="#fab966" stroke-width="5.5" stroke-linecap="round"
-        d="M -15,46 C -5,46 5,36 15,36 C 25,36 35,46 45,46 C 55,46 65,36 75,36 C 85,36 95,46 105,46 C 115,46 125,36 135,36"/>
-    </g>
-    <!-- W2 & W4 → clip-w24 (x: 24~120) -->
-    <g clip-path="url(#clip-w24)">
-      <!-- W2 · #a6fa66 · Y=26 · Y+A=31 Y-A=21 -->
-      <path fill="none" stroke="#a6fa66" stroke-width="5.5" stroke-linecap="round"
-        d="M 0,26 C 10,21 20,21 30,26 C 40,31 50,31 60,26 C 70,21 80,21 90,26 C 100,31 110,31 120,26 C 130,21 140,21 150,26"/>
-      <!-- W4 · #66a6fa · Y=56 · Y+A=61 Y-A=51 -->
-      <path fill="none" stroke="#66a6fa" stroke-width="5.5" stroke-linecap="round"
-        d="M 0,56 C 10,51 20,51 30,56 C 40,61 50,61 60,56 C 70,51 80,51 90,56 C 100,61 110,61 120,56 C 130,51 140,51 150,56"/>
-    </g>
+    <!-- W1 · #2B5F75 · Deep Teal -->
+    <path fill="none" stroke="#2B5F75" stroke-width="10" stroke-linecap="round"
+      d="M 6,24 C 23,24 36,8 53,8 C 70,8 83,24 100,24 C 117,24 130,8 147,8 C 164,8 177,24 194,24"/>
+    <!-- W2 · #81C7D4 · Sky Teal -->
+    <path fill="none" stroke="#81C7D4" stroke-width="10" stroke-linecap="round"
+      d="M 6,54 C 23,54 36,38 53,38 C 70,38 83,54 100,54 C 117,54 130,38 147,38 C 164,38 177,54 194,54"/>
+    <!-- W3 · #EEA9A9 · Sakura Pink -->
+    <path fill="none" stroke="#EEA9A9" stroke-width="10" stroke-linecap="round"
+      d="M 6,84 C 23,84 36,68 53,68 C 70,68 83,84 100,84 C 117,84 130,68 147,68 C 164,68 177,84 194,84"/>
+    <!-- W4 · #F7D94C · Citrine Yellow -->
+    <path fill="none" stroke="#F7D94C" stroke-width="10" stroke-linecap="round"
+      d="M 6,114 C 23,114 36,98 53,98 C 70,98 83,114 100,114 C 117,114 130,98 147,98 C 164,98 177,114 194,114"/>
   </g>
 
   <!-- WHITE VARIANT -->
   <g id="mark-white">
-    <g clip-path="url(#clip-w13)">
-      <path fill="none" stroke="rgba(255,255,255,.90)" stroke-width="5.5" stroke-linecap="round"
-        d="M -15,16 C -5,16 5,6 15,6 C 25,6 35,16 45,16 C 55,16 65,6 75,6 C 85,6 95,16 105,16 C 115,16 125,6 135,6"/>
-      <path fill="none" stroke="rgba(255,255,255,.45)" stroke-width="5.5" stroke-linecap="round"
-        d="M -15,46 C -5,46 5,36 15,36 C 25,36 35,46 45,46 C 55,46 65,36 75,36 C 85,36 95,46 105,46 C 115,46 125,36 135,36"/>
-    </g>
-    <g clip-path="url(#clip-w24)">
-      <path fill="none" stroke="rgba(255,255,255,.65)" stroke-width="5.5" stroke-linecap="round"
-        d="M 0,26 C 10,21 20,21 30,26 C 40,31 50,31 60,26 C 70,21 80,21 90,26 C 100,31 110,31 120,26 C 130,21 140,21 150,26"/>
-      <path fill="none" stroke="rgba(255,255,255,.22)" stroke-width="5.5" stroke-linecap="round"
-        d="M 0,56 C 10,51 20,51 30,56 C 40,61 50,61 60,56 C 70,51 80,51 90,56 C 100,61 110,61 120,56 C 130,51 140,51 150,56"/>
-    </g>
+    <path fill="none" stroke="rgba(255,255,255,.90)" stroke-width="10" stroke-linecap="round"
+      d="M 6,24 C 23,24 36,8 53,8 C 70,8 83,24 100,24 C 117,24 130,8 147,8 C 164,8 177,24 194,24"/>
+    <path fill="none" stroke="rgba(255,255,255,.65)" stroke-width="10" stroke-linecap="round"
+      d="M 6,54 C 23,54 36,38 53,38 C 70,38 83,54 100,54 C 117,54 130,38 147,38 C 164,38 177,54 194,54"/>
+    <path fill="none" stroke="rgba(255,255,255,.45)" stroke-width="10" stroke-linecap="round"
+      d="M 6,84 C 23,84 36,68 53,68 C 70,68 83,84 100,84 C 117,84 130,68 147,68 C 164,68 177,84 194,84"/>
+    <path fill="none" stroke="rgba(255,255,255,.22)" stroke-width="10" stroke-linecap="round"
+      d="M 6,114 C 23,114 36,98 53,98 C 70,98 83,114 100,114 C 117,114 130,98 147,98 C 164,98 177,114 194,114"/>
   </g>
 
-  <!-- DARK VARIANT (for light bg) -->
+  <!-- DARK VARIANT (for yellow CTA section) -->
   <g id="mark-dark">
-    <g clip-path="url(#clip-w13)">
-      <path fill="none" stroke="rgba(0,0,0,.75)" stroke-width="5.5" stroke-linecap="round"
-        d="M -15,16 C -5,16 5,6 15,6 C 25,6 35,16 45,16 C 55,16 65,6 75,6 C 85,6 95,16 105,16 C 115,16 125,6 135,6"/>
-      <path fill="none" stroke="rgba(0,0,0,.38)" stroke-width="5.5" stroke-linecap="round"
-        d="M -15,46 C -5,46 5,36 15,36 C 25,36 35,46 45,46 C 55,46 65,36 75,36 C 85,36 95,46 105,46 C 115,46 125,36 135,36"/>
-    </g>
-    <g clip-path="url(#clip-w24)">
-      <path fill="none" stroke="rgba(0,0,0,.55)" stroke-width="5.5" stroke-linecap="round"
-        d="M 0,26 C 10,21 20,21 30,26 C 40,31 50,31 60,26 C 70,21 80,21 90,26 C 100,31 110,31 120,26 C 130,21 140,21 150,26"/>
-      <path fill="none" stroke="rgba(0,0,0,.18)" stroke-width="5.5" stroke-linecap="round"
-        d="M 0,56 C 10,51 20,51 30,56 C 40,61 50,61 60,56 C 70,51 80,51 90,56 C 100,61 110,61 120,56 C 130,51 140,51 150,56"/>
-    </g>
+    <path fill="none" stroke="rgba(0,0,0,.75)" stroke-width="10" stroke-linecap="round"
+      d="M 6,24 C 23,24 36,8 53,8 C 70,8 83,24 100,24 C 117,24 130,8 147,8 C 164,8 177,24 194,24"/>
+    <path fill="none" stroke="rgba(0,0,0,.55)" stroke-width="10" stroke-linecap="round"
+      d="M 6,54 C 23,54 36,38 53,38 C 70,38 83,54 100,54 C 117,54 130,38 147,38 C 164,38 177,54 194,54"/>
+    <path fill="none" stroke="rgba(0,0,0,.38)" stroke-width="10" stroke-linecap="round"
+      d="M 6,84 C 23,84 36,68 53,68 C 70,68 83,84 100,84 C 117,84 130,68 147,68 C 164,68 177,84 194,84"/>
+    <path fill="none" stroke="rgba(0,0,0,.18)" stroke-width="10" stroke-linecap="round"
+      d="M 6,114 C 23,114 36,98 53,98 C 70,98 83,114 100,114 C 117,114 130,98 147,98 C 164,98 177,114 194,114"/>
   </g>
 
 </defs>
@@ -142,18 +125,18 @@ body{background:#111;font-family:'Syne',sans-serif;color:#ccc;padding:56px 48px}
   <div class="cell on-dk" style="padding:88px 64px">
     <span class="cell-tag dk">Primary · Dark</span>
     <div class="h-lock">
-      <svg width="130" height="70" viewBox="0 2 120 65" xmlns="http://www.w3.org/2000/svg" style="overflow:hidden;display:block">
+      <svg width="130" height="70" viewBox="0 0 200 124" xmlns="http://www.w3.org/2000/svg" style="overflow:hidden;display:block">
         <use href="#mark-color"/>
       </svg>
       <div class="wm wm-wh" style="font-size:3.4rem">
-        Re<span style="color:#f0fa66">Viz</span>
+        Re<span style="color:#F7D94C">Viz</span>
       </div>
     </div>
   </div>
   <div class="cell on-w">
     <span class="cell-tag lt">Primary · White</span>
     <div class="h-lock">
-      <svg width="88" height="48" viewBox="0 2 120 65" style="overflow:hidden;display:block">
+      <svg width="88" height="48" viewBox="0 0 200 124" style="overflow:hidden;display:block">
         <use href="#mark-color"/>
       </svg>
       <div class="wm wm-dk" style="font-size:2.2rem">
@@ -167,13 +150,13 @@ body{background:#111;font-family:'Syne',sans-serif;color:#ccc;padding:56px 48px}
 <div class="grid col2">
   <div class="cell on-dk" style="padding:72px 48px">
     <span class="cell-tag dk">Mark · Dark</span>
-    <svg width="240" height="130" viewBox="0 2 120 65" style="overflow:hidden;display:block">
+    <svg width="240" height="130" viewBox="0 0 200 124" style="overflow:hidden;display:block">
       <use href="#mark-color"/>
     </svg>
   </div>
   <div class="cell on-w" style="padding:72px 48px">
     <span class="cell-tag lt">Mark · White BG</span>
-    <svg width="240" height="130" viewBox="0 2 120 65" style="overflow:hidden;display:block">
+    <svg width="240" height="130" viewBox="0 0 200 124" style="overflow:hidden;display:block">
       <use href="#mark-color"/>
     </svg>
   </div>
@@ -193,37 +176,37 @@ body{background:#111;font-family:'Syne',sans-serif;color:#ccc;padding:56px 48px}
 
 <!-- ════ ON EACH COLOR ════ -->
 <div class="grid col4">
-  <div class="cell" style="background:#f0fa66;padding:48px 16px">
-    <span class="cell-tag lt">Volt Lime</span>
+  <div class="cell" style="background:#2B5F75;padding:48px 16px">
+    <span class="cell-tag" style="color:#fff">Deep Teal</span>
     <div class="v-lock">
-      <svg width="118" height="64" viewBox="0 2 120 65" style="overflow:hidden;display:block">
+      <svg width="118" height="64" viewBox="0 0 200 124" style="overflow:hidden;display:block">
+        <use href="#mark-white"/>
+      </svg>
+      <div class="wm wm-wh" style="font-size:1.6rem">Re<span style="color:#F7D94C">Viz</span></div>
+    </div>
+  </div>
+  <div class="cell" style="background:#81C7D4;padding:48px 16px">
+    <span class="cell-tag lt">Sky Teal</span>
+    <div class="v-lock">
+      <svg width="118" height="64" viewBox="0 0 200 124" style="overflow:hidden;display:block">
         <use href="#mark-dark"/>
       </svg>
       <div class="wm wm-dk" style="font-size:1.6rem">ReViz</div>
     </div>
   </div>
-  <div class="cell" style="background:#a6fa66;padding:48px 16px">
-    <span class="cell-tag lt">Electric Green</span>
+  <div class="cell" style="background:#EEA9A9;padding:48px 16px">
+    <span class="cell-tag lt">Sakura Pink</span>
     <div class="v-lock">
-      <svg width="118" height="64" viewBox="0 2 120 65" style="overflow:hidden;display:block">
+      <svg width="118" height="64" viewBox="0 0 200 124" style="overflow:hidden;display:block">
         <use href="#mark-dark"/>
       </svg>
       <div class="wm wm-dk" style="font-size:1.6rem">ReViz</div>
     </div>
   </div>
-  <div class="cell" style="background:#fab966;padding:48px 16px">
-    <span class="cell-tag lt">Amber Flash</span>
+  <div class="cell" style="background:#F7D94C;padding:48px 16px">
+    <span class="cell-tag lt">Citrine</span>
     <div class="v-lock">
-      <svg width="118" height="64" viewBox="0 2 120 65" style="overflow:hidden;display:block">
-        <use href="#mark-dark"/>
-      </svg>
-      <div class="wm wm-dk" style="font-size:1.6rem">ReViz</div>
-    </div>
-  </div>
-  <div class="cell" style="background:#66a6fa;padding:48px 16px">
-    <span class="cell-tag lt">Sky Blue</span>
-    <div class="v-lock">
-      <svg width="118" height="64" viewBox="0 2 120 65" style="overflow:hidden;display:block">
+      <svg width="118" height="64" viewBox="0 0 200 124" style="overflow:hidden;display:block">
         <use href="#mark-dark"/>
       </svg>
       <div class="wm wm-dk" style="font-size:1.6rem">ReViz</div>
@@ -235,23 +218,23 @@ body{background:#111;font-family:'Syne',sans-serif;color:#ccc;padding:56px 48px}
 <div class="strip">
   <div style="width:100%;color:#444;font-size:.55rem;font-weight:700;text-transform:uppercase;letter-spacing:.2em;margin-bottom:8px">Size Scale</div>
   <div class="sz">
-    <svg width="240" height="130" viewBox="0 2 120 65" style="overflow:hidden;display:block"><use href="#mark-color"/></svg>
+    <svg width="240" height="130" viewBox="0 0 200 124" style="overflow:hidden;display:block"><use href="#mark-color"/></svg>
     <span>240px</span>
   </div>
   <div class="sz">
-    <svg width="160" height="87" viewBox="0 2 120 65" style="overflow:hidden;display:block"><use href="#mark-color"/></svg>
+    <svg width="160" height="87" viewBox="0 0 200 124" style="overflow:hidden;display:block"><use href="#mark-color"/></svg>
     <span>160px</span>
   </div>
   <div class="sz">
-    <svg width="110" height="60" viewBox="0 2 120 65" style="overflow:hidden;display:block"><use href="#mark-color"/></svg>
+    <svg width="110" height="60" viewBox="0 0 200 124" style="overflow:hidden;display:block"><use href="#mark-color"/></svg>
     <span>110px</span>
   </div>
   <div class="sz">
-    <svg width="72" height="39" viewBox="0 2 120 65" style="overflow:hidden;display:block"><use href="#mark-color"/></svg>
+    <svg width="72" height="39" viewBox="0 0 200 124" style="overflow:hidden;display:block"><use href="#mark-color"/></svg>
     <span>72px</span>
   </div>
   <div class="sz">
-    <svg width="48" height="26" viewBox="0 2 120 65" style="overflow:hidden;display:block"><use href="#mark-color"/></svg>
+    <svg width="48" height="26" viewBox="0 0 200 124" style="overflow:hidden;display:block"><use href="#mark-color"/></svg>
     <span>48px</span>
   </div>
 </div>
@@ -262,7 +245,7 @@ body{background:#111;font-family:'Syne',sans-serif;color:#ccc;padding:56px 48px}
   <div class="sz">
     <svg width="96" height="96" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
       <rect width="96" height="96" rx="22" fill="#0a0a0a"/>
-      <svg x="3" y="18" width="90" height="49" viewBox="0 2 120 65" style="overflow:hidden">
+      <svg x="3" y="18" width="90" height="49" viewBox="0 0 200 124" style="overflow:hidden">
         <use href="#mark-color"/>
       </svg>
     </svg>
@@ -271,7 +254,7 @@ body{background:#111;font-family:'Syne',sans-serif;color:#ccc;padding:56px 48px}
   <div class="sz">
     <svg width="96" height="96" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
       <rect width="96" height="96" rx="22" fill="#fff"/>
-      <svg x="3" y="18" width="90" height="49" viewBox="0 2 120 65" style="overflow:hidden">
+      <svg x="3" y="18" width="90" height="49" viewBox="0 0 200 124" style="overflow:hidden">
         <use href="#mark-color"/>
       </svg>
     </svg>
@@ -279,26 +262,26 @@ body{background:#111;font-family:'Syne',sans-serif;color:#ccc;padding:56px 48px}
   </div>
   <div class="sz">
     <svg width="96" height="96" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
-      <rect width="96" height="96" rx="22" fill="#f0fa66"/>
-      <svg x="3" y="18" width="90" height="49" viewBox="0 2 120 65" style="overflow:hidden">
+      <rect width="96" height="96" rx="22" fill="#F7D94C"/>
+      <svg x="3" y="18" width="90" height="49" viewBox="0 0 200 124" style="overflow:hidden">
         <use href="#mark-dark"/>
       </svg>
     </svg>
-    <span>Lime</span>
+    <span>Citrine</span>
   </div>
   <div class="sz">
     <svg width="96" height="96" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
-      <rect width="96" height="96" rx="22" fill="#66a6fa"/>
-      <svg x="3" y="18" width="90" height="49" viewBox="0 2 120 65" style="overflow:hidden">
-        <use href="#mark-dark"/>
+      <rect width="96" height="96" rx="22" fill="#2B5F75"/>
+      <svg x="3" y="18" width="90" height="49" viewBox="0 0 200 124" style="overflow:hidden">
+        <use href="#mark-white"/>
       </svg>
     </svg>
-    <span>Sky</span>
+    <span>Teal</span>
   </div>
   <div class="sz">
     <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
       <rect width="48" height="48" rx="11" fill="#0a0a0a"/>
-      <svg x="1" y="9" width="46" height="25" viewBox="0 2 120 65" style="overflow:hidden">
+      <svg x="1" y="9" width="46" height="25" viewBox="0 0 200 124" style="overflow:hidden">
         <use href="#mark-color"/>
       </svg>
     </svg>
@@ -307,7 +290,7 @@ body{background:#111;font-family:'Syne',sans-serif;color:#ccc;padding:56px 48px}
   <div class="sz">
     <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
       <rect width="32" height="32" rx="7" fill="#0a0a0a"/>
-      <svg x="1" y="6" width="30" height="16" viewBox="0 2 120 65" style="overflow:hidden">
+      <svg x="1" y="6" width="30" height="16" viewBox="0 0 200 124" style="overflow:hidden">
         <use href="#mark-color"/>
       </svg>
     </svg>
@@ -317,29 +300,31 @@ body{background:#111;font-family:'Syne',sans-serif;color:#ccc;padding:56px 48px}
 
 <!-- ════ PALETTE ════ -->
 <div class="swatch-row">
-  <div class="swatch" style="background:#f0fa66">
-    <div class="swatch-label" style="color:#333">Volt Lime<br>#f0fa66</div>
+  <div class="swatch" style="background:#2B5F75">
+    <div class="swatch-label" style="color:#fff">Wave 1 · Deep Teal<br>#2B5F75<br><span style="font-size:.52rem;opacity:.6">--sky</span></div>
   </div>
-  <div class="swatch" style="background:#a6fa66">
-    <div class="swatch-label" style="color:#333">Electric Green<br>#a6fa66</div>
+  <div class="swatch" style="background:#81C7D4">
+    <div class="swatch-label" style="color:#333">Wave 2 · Sky Teal<br>#81C7D4<br><span style="font-size:.52rem;opacity:.6">--green</span></div>
   </div>
-  <div class="swatch" style="background:#fab966">
-    <div class="swatch-label" style="color:#333">Amber Flash<br>#fab966</div>
+  <div class="swatch" style="background:#EEA9A9">
+    <div class="swatch-label" style="color:#333">Wave 3 · Sakura Pink<br>#EEA9A9<br><span style="font-size:.52rem;opacity:.6">--amber</span></div>
   </div>
-  <div class="swatch" style="background:#66a6fa">
-    <div class="swatch-label" style="color:#333">Sky Blue ★<br>#66a6fa</div>
+  <div class="swatch" style="background:#F7D94C">
+    <div class="swatch-label" style="color:#333">Wave 4 · Citrine<br>#F7D94C<br><span style="font-size:.52rem;opacity:.6">--lime (主色)</span></div>
   </div>
 </div>
 
 <!-- ════ NOTES ════ -->
 <div class="note">
-  <strong>v8 修正說明</strong><br><br>
-  <strong>字距：</strong> letter-spacing 從 −0.02em 改為 0.12em，字母間距明顯加寬。<br><br>
-  <strong>波浪截斷（clipPath）：</strong>
-  viewBox 寬 120，1/5 = 24。
-  Wave 1&3 用 clipPath 裁掉右側 24（可視 x：0→96）；
-  Wave 2&4 裁掉左側 24（可視 x：24→120）。
-  兩組重疊區為 x=24→96，各自延伸 24 個單位超出另一組範圍，截面均無圓帽。
+  <strong>新標準色（正式版）</strong><br><br>
+  <span class="dot" style="background:#2B5F75"></span><strong>#2B5F75</strong> Deep Teal — Wave 1（賦格聲部一）・最深主調・頁面錨色<br>
+  <span class="dot" style="background:#81C7D4"></span><strong>#81C7D4</strong> Sky Teal — Wave 2（賦格聲部二）・輕盈輔助色<br>
+  <span class="dot" style="background:#EEA9A9"></span><strong>#EEA9A9</strong> Sakura Pink — Wave 3（賦格聲部三）・溫暖對比色<br>
+  <span class="dot" style="background:#F7D94C"></span><strong>#F7D94C</strong> Citrine — Wave 4（賦格聲部四）・網站主色・CTA 按鈕・互動 highlight<br><br>
+  <strong>Logo 規格：</strong><br>
+  字標字型：Playfair Display · weight 600 · letter-spacing 0.12em<br>
+  波浪標記：viewBox 0 0 200 124 · stroke-width 10 · stroke-linecap round · 無 clipPath<br>
+  賦格截斷：clip-w13 (Wave 1&3，右側 1/5 截斷，可視 x：0→96）/ clip-w24 (Wave 2&4，左側 1/5 截斷，可視 x：24→120）<br>
 </div>
 
 </body>

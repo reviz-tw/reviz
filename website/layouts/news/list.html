@@ -10,35 +10,45 @@
   </div>
 </div>
 
-<section style="background:var(--ink);padding:0 0 10rem">
+<section class="news-page">
   <div class="wrap">
-    <div class="news-list">
+    <div class="news-inner-grid">
       {{ range .Pages }}
-      <div class="news-row rv">
-        <span class="nr-date">{{ .PublishDate.Format "2006 / 01 / 02" }}</span>
-        <div class="nr-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
-        <span class="nr-arrow">→</span>
+      <div class="news-card rv">
+        <span class="news-card-tag">{{ .Params.category | default "最新消息" }}</span>
+        <span class="news-card-date">{{ .PublishDate.Format "2006 / 01 / 02" }}</span>
+        <h3 class="news-card-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <p class="news-card-excerpt">{{ .Summary }}</p>
+        <a href="{{ .RelPermalink }}" class="news-card-link">閱讀更多</a>
       </div>
       {{ else }}
-      <div class="news-row rv">
-        <span class="nr-date">2024 / 03 / 15</span>
-        <div class="nr-title">ReViz 正式成立，開始承接數位轉型專案</div>
-        <span class="nr-arrow">→</span>
+      <div class="news-card rv">
+        <span class="news-card-tag">公司動態</span>
+        <span class="news-card-date">2025 / 01 / 12</span>
+        <h3 class="news-card-title">ReViz 正式成立，開始承接數位轉型專案</h3>
+        <p class="news-card-excerpt">我們很高興宣布 ReViz 正式成立，專注於為台灣企業提供高品質的數位解決方案，從網站開發到全面數位轉型。</p>
+        <a href="#" class="news-card-link">閱讀更多</a>
       </div>
-      <div class="news-row rv rv-d1">
-        <span class="nr-date">2024 / 06 / 20</span>
-        <div class="nr-title">如何選擇適合您企業的 CMS 系統？</div>
-        <span class="nr-arrow">→</span>
+      <div class="news-card rv rv-d1">
+        <span class="news-card-tag">業界洞察</span>
+        <span class="news-card-date">2024 / 09 / 08</span>
+        <h3 class="news-card-title">從傳統網站到 JAMstack：一個製造業的轉型案例</h3>
+        <p class="news-card-excerpt">深入探討一家傳統製造業如何透過 JAMstack 架構，將網站載入速度提升 8 倍，並大幅降低維護成本。</p>
+        <a href="#" class="news-card-link">閱讀更多</a>
       </div>
-      <div class="news-row rv rv-d2">
-        <span class="nr-date">2024 / 09 / 08</span>
-        <div class="nr-title">從傳統網站到 JAMstack：一個製造業的轉型案例</div>
-        <span class="nr-arrow">→</span>
+      <div class="news-card rv rv-d2">
+        <span class="news-card-tag">趨勢分析</span>
+        <span class="news-card-date">2024 / 06 / 20</span>
+        <h3 class="news-card-title">如何選擇適合您企業的 CMS 系統？</h3>
+        <p class="news-card-excerpt">市面上 CMS 系統琳瑯滿目，本文從維護成本、技術彈性、擴充性三個維度，協助您做出正確選擇。</p>
+        <a href="#" class="news-card-link">閱讀更多</a>
       </div>
-      <div class="news-row rv rv-d3">
-        <span class="nr-date">2025 / 01 / 12</span>
-        <div class="nr-title">2025 企業數位轉型趨勢展望</div>
-        <span class="nr-arrow">→</span>
+      <div class="news-card rv rv-d3">
+        <span class="news-card-tag">趨勢分析</span>
+        <span class="news-card-date">2025 / 01 / 12</span>
+        <h3 class="news-card-title">2025 企業數位轉型趨勢展望</h3>
+        <p class="news-card-excerpt">AI、自動化與新世代客戶體驗的交匯點——掌握未來一年的關鍵數位趨勢，提前部署，贏在起跑點。</p>
+        <a href="#" class="news-card-link">閱讀更多</a>
       </div>
       {{ end }}
     </div>
