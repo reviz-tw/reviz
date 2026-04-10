@@ -3,38 +3,42 @@
 {{ define "main" }}
 
 <div class="page-hero">
-  <div class="container">
-    <div class="page-hero-label">News &amp; Insights</div>
-    <h1>最新<br><em style="font-style:italic;color:var(--lime)">消息</em></h1>
+  <div class="wrap">
+    <div class="page-hero-tag">News &amp; Insights</div>
+    <h1>最新<br>消息</h1>
     <p>業界洞察、案例分享與公司動態——<br>掌握數位趨勢，與 ReViz 一同成長。</p>
   </div>
 </div>
 
-<section style="background:var(--ink);padding:6rem 0 8rem;">
-  <div class="container">
+<section style="background:var(--ink);padding:0 0 10rem">
+  <div class="wrap">
     <div class="news-list">
       {{ range .Pages }}
-      <div class="news-card reveal">
-        <div class="news-date">{{ .PublishDate.Format "2006 / 01 / 02" }}</div>
-        <div class="news-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
-        <div class="news-arrow">→</div>
+      <div class="news-row rv">
+        <span class="nr-date">{{ .PublishDate.Format "2006 / 01 / 02" }}</span>
+        <div class="nr-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
+        <span class="nr-arrow">→</span>
       </div>
       {{ else }}
-      <!-- Placeholder news items -->
-      <div class="news-card reveal">
-        <div class="news-date">2024 / 03 / 15</div>
-        <div class="news-title">ReViz 正式成立，開始承接數位轉型專案</div>
-        <div class="news-arrow">→</div>
+      <div class="news-row rv">
+        <span class="nr-date">2024 / 03 / 15</span>
+        <div class="nr-title">ReViz 正式成立，開始承接數位轉型專案</div>
+        <span class="nr-arrow">→</span>
       </div>
-      <div class="news-card reveal reveal-delay-1">
-        <div class="news-date">2024 / 06 / 20</div>
-        <div class="news-title">如何選擇適合您企業的 CMS 系統？</div>
-        <div class="news-arrow">→</div>
+      <div class="news-row rv rv-d1">
+        <span class="nr-date">2024 / 06 / 20</span>
+        <div class="nr-title">如何選擇適合您企業的 CMS 系統？</div>
+        <span class="nr-arrow">→</span>
       </div>
-      <div class="news-card reveal reveal-delay-2">
-        <div class="news-date">2024 / 09 / 08</div>
-        <div class="news-title">從傳統網站到 JAMstack：一個製造業的轉型案例</div>
-        <div class="news-arrow">→</div>
+      <div class="news-row rv rv-d2">
+        <span class="nr-date">2024 / 09 / 08</span>
+        <div class="nr-title">從傳統網站到 JAMstack：一個製造業的轉型案例</div>
+        <span class="nr-arrow">→</span>
+      </div>
+      <div class="news-row rv rv-d3">
+        <span class="nr-date">2025 / 01 / 12</span>
+        <div class="nr-title">2025 企業數位轉型趨勢展望</div>
+        <span class="nr-arrow">→</span>
       </div>
       {{ end }}
     </div>

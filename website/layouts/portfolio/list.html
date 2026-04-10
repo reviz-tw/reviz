@@ -3,65 +3,53 @@
 {{ define "main" }}
 
 <div class="page-hero">
-  <div class="container">
-    <div class="page-hero-label">Selected Work</div>
-    <h1>精選<br><em style="font-style:italic;color:var(--lime)">作品</em></h1>
+  <div class="wrap">
+    <div class="page-hero-tag">Selected Work</div>
+    <h1>精選<br>作品集</h1>
     <p>每一個作品都代表著我們對卓越品質的承諾。</p>
   </div>
 </div>
 
-<section style="background:var(--ink2);padding:6rem 0 8rem;">
-  <div class="container">
-    <div class="portfolio-grid">
+<section style="background:var(--ink);padding:0 0 10rem">
+  <div class="wrap">
+    <div class="portfolio-list">
       {{ range .Pages }}
-      <div class="portfolio-card reveal">
-        <div class="portfolio-card-body">
-          <span class="portfolio-card-cat">{{ .Params.client | default "Case Study" }}</span>
-          <div class="portfolio-card-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
-          <div class="portfolio-card-sub">{{ .Summary }}</div>
-        </div>
+      <div class="portfolio-row rv">
+        <span class="pr-num">→</span>
+        <div class="pr-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
+        <span class="pr-cat">{{ .Params.client | default "Case Study" }}</span>
+        <span class="pr-arrow">→</span>
       </div>
       {{ else }}
-      <!-- Placeholder cards when no portfolio items exist -->
-      <div class="portfolio-card reveal">
-        <div style="position:absolute;inset:0;opacity:.06;display:flex;align-items:center;justify-content:center;">
-          <svg viewBox="0 2 120 65" style="width:140%;height:auto"><use href="#mark-white"/></svg>
-        </div>
-        <div class="portfolio-card-body">
-          <span class="portfolio-card-cat" style="background:var(--lime);color:var(--ink);">網站開發</span>
-          <div class="portfolio-card-title">某科技集團品牌官網重塑</div>
-          <div class="portfolio-card-sub">React · Next.js · Headless CMS</div>
-        </div>
+      <div class="portfolio-row rv">
+        <span class="pr-num">01</span>
+        <div class="pr-title">某科技集團品牌官網重塑</div>
+        <span class="pr-cat">網站開發</span>
+        <span class="pr-arrow">→</span>
       </div>
-      <div class="portfolio-card reveal reveal-delay-1">
-        <div style="position:absolute;inset:0;opacity:.06;display:flex;align-items:center;justify-content:center;">
-          <svg viewBox="0 2 120 65" style="width:140%;height:auto"><use href="#mark-white"/></svg>
-        </div>
-        <div class="portfolio-card-body">
-          <span class="portfolio-card-cat" style="background:var(--amber);color:var(--ink);">數位轉型</span>
-          <div class="portfolio-card-title">傳產製造業系統數位化</div>
-          <div class="portfolio-card-sub">ERP 整合 · 流程自動化</div>
-        </div>
+      <div class="portfolio-row rv rv-d1">
+        <span class="pr-num">02</span>
+        <div class="pr-title">傳產製造業系統數位化</div>
+        <span class="pr-cat">數位轉型</span>
+        <span class="pr-arrow">→</span>
       </div>
-      <div class="portfolio-card reveal reveal-delay-2">
-        <div style="position:absolute;inset:0;opacity:.06;display:flex;align-items:center;justify-content:center;">
-          <svg viewBox="0 2 120 65" style="width:140%;height:auto"><use href="#mark-white"/></svg>
-        </div>
-        <div class="portfolio-card-body">
-          <span class="portfolio-card-cat" style="background:var(--sky);color:var(--ink);">科技顧問</span>
-          <div class="portfolio-card-title">新創公司技術架構規劃</div>
-          <div class="portfolio-card-sub">雲端策略 · AWS · CI/CD</div>
-        </div>
+      <div class="portfolio-row rv rv-d2">
+        <span class="pr-num">03</span>
+        <div class="pr-title">新創公司技術架構規劃</div>
+        <span class="pr-cat">科技顧問</span>
+        <span class="pr-arrow">→</span>
       </div>
-      <div class="portfolio-card reveal reveal-delay-3">
-        <div style="position:absolute;inset:0;opacity:.06;display:flex;align-items:center;justify-content:center;">
-          <svg viewBox="0 2 120 65" style="width:140%;height:auto"><use href="#mark-white"/></svg>
-        </div>
-        <div class="portfolio-card-body">
-          <span class="portfolio-card-cat" style="background:var(--green);color:var(--ink);">效能優化</span>
-          <div class="portfolio-card-title">電商平台效能優化專案</div>
-          <div class="portfolio-card-sub">Core Web Vitals · 效能提升 60%</div>
-        </div>
+      <div class="portfolio-row rv rv-d3">
+        <span class="pr-num">04</span>
+        <div class="pr-title">電商平台效能優化專案</div>
+        <span class="pr-cat">效能優化</span>
+        <span class="pr-arrow">→</span>
+      </div>
+      <div class="portfolio-row rv rv-d4">
+        <span class="pr-num">05</span>
+        <div class="pr-title">零售連鎖品牌 App 重新設計</div>
+        <span class="pr-cat">UI / UX 設計</span>
+        <span class="pr-arrow">→</span>
       </div>
       {{ end }}
     </div>

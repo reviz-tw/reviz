@@ -2,57 +2,36 @@
 
 {{ define "main" }}
 
-<!-- ══ HERO ══════════════════════════════════════════════ -->
+<!-- ══ HERO ═══════════════════════════════════════════════════ -->
 <section class="hero">
-  <div class="hero-left">
-    <div class="hero-eyebrow">數位轉型夥伴 · Taiwan</div>
-    <h1 class="hero-h1">
+
+  <!-- atmospheric wave mark in the background -->
+  <svg class="hero-mark-bg" viewBox="0 2 120 65" aria-hidden="true" focusable="false">
+    <use href="#mark-white"/>
+  </svg>
+  <svg class="hero-mark-color" viewBox="0 2 120 65" aria-hidden="true" focusable="false">
+    <use href="#mark-color"/>
+  </svg>
+
+  <div class="hero-content">
+    <h1 class="hero-h1 rv">
       打造讓<br>
-      <em>成長發生</em><br>
-      的數位力量
+      <span class="accent">成長</span><br>
+      發生的力量
     </h1>
-    <p class="hero-desc">
-      ReViz 提供網站開發、數位轉型與科技顧問服務——從構想到落地，讓複雜的技術成為您最強的競爭優勢。
-    </p>
-    <div class="hero-actions">
-      <a href="{{ "services/" | relURL }}" class="btn-primary">探索服務 →</a>
-      <a href="{{ "portfolio/" | relURL }}" class="btn-ghost">查看作品集</a>
-    </div>
-    <div class="hero-scroll">Scroll</div>
-  </div>
-
-  <div class="hero-right">
-    <div class="hero-mark-wrap">
-      <svg class="hero-mark-bg" viewBox="0 2 120 65" style="overflow:hidden;width:100%;display:block" aria-hidden="true">
-        <use href="#mark-white"/>
-      </svg>
-      <svg class="hero-mark-color" viewBox="0 2 120 65" style="overflow:hidden;width:100%;display:block" aria-hidden="true">
-        <use href="#mark-color"/>
-      </svg>
-    </div>
-  </div>
-
-  <div class="hero-bottom">
-    <div class="hero-stat">
-      <span class="hero-stat-num">50+</span>
-      <span class="hero-stat-label">完成專案</span>
-    </div>
-    <div class="hero-stat">
-      <span class="hero-stat-num">30+</span>
-      <span class="hero-stat-label">滿意客戶</span>
-    </div>
-    <div class="hero-stat">
-      <span class="hero-stat-num">5+</span>
-      <span class="hero-stat-label">年深耕經驗</span>
-    </div>
-    <div class="hero-stat">
-      <span class="hero-stat-num">98%</span>
-      <span class="hero-stat-label">客戶好評率</span>
+    <div class="hero-meta rv rv-d2">
+      <p class="hero-desc">
+        ReViz 是台灣的數位顧問公司——網站開發、數位轉型、科技顧問，幫助企業把數位願景化為可衡量的商業成果。
+      </p>
+      <div class="hero-cta">
+        <a href="{{ "services/" | relURL }}" class="btn-primary">探索服務 →</a>
+        <a href="{{ "portfolio/" | relURL }}" class="btn-text">查看作品集</a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ══ MARQUEE ════════════════════════════════════════════ -->
+<!-- ══ MARQUEE ════════════════════════════════════════════════ -->
 <div class="marquee" aria-hidden="true">
   <div class="marquee-track">
     <span class="marquee-item">網站開發</span>
@@ -74,71 +53,125 @@
   </div>
 </div>
 
-<!-- ══ SERVICES ═══════════════════════════════════════════ -->
-<section class="services-section">
-  <div class="container">
-    <div class="section-header reveal">
-      <div>
-        <span class="section-label-sm">Services / 服務項目</span>
-        <h2 class="section-title">我們能為<br>您做什麼</h2>
-      </div>
-      <a href="{{ "services/" | relURL }}" class="section-link">所有服務 →</a>
+<!-- ══ SELECTED WORK ══════════════════════════════════════════ -->
+<section class="work-section">
+  <div class="wrap">
+
+    <div class="section-head rv">
+      <span class="eyebrow">Selected Work / 精選作品</span>
+      <a href="{{ "portfolio/" | relURL }}" class="section-link-sm">所有作品 →</a>
     </div>
 
-    <div class="service-list">
-      <div class="service-row reveal">
-        <span class="svc-num">01</span>
-        <div><div class="svc-title">網站開發</div></div>
-        <div>
-          <p class="svc-body">從企業形象網站到複雜的 Web Application，使用現代技術棧打造高效能、安全且可擴展的數位產品。</p>
-          <div class="svc-tags">
-            <span class="svc-tag">React / Next.js</span>
-            <span class="svc-tag">Hugo</span>
-            <span class="svc-tag">Headless CMS</span>
-            <span class="svc-tag">TypeScript</span>
-          </div>
-        </div>
-        <span class="svc-arrow">→</span>
+    <div class="work-list" style="margin-top:0">
+
+      <div class="work-row rv">
+        <span class="wr-num">01</span>
+        <div class="wr-title">某科技集團<br><em>品牌官網重塑</em></div>
+        <span class="wr-cat">網站開發</span>
+        <span class="wr-arrow">→</span>
       </div>
 
-      <div class="service-row reveal reveal-delay-1">
-        <span class="svc-num">02</span>
-        <div><div class="svc-title">數位轉型</div></div>
-        <div>
-          <p class="svc-body">協助企業從傳統流程轉型至數位化運營，透過數據分析與自動化提升效率，開創新商機。</p>
-          <div class="svc-tags">
-            <span class="svc-tag">流程自動化</span>
-            <span class="svc-tag">數據分析</span>
-            <span class="svc-tag">系統整合</span>
-            <span class="svc-tag">API 設計</span>
-          </div>
-        </div>
-        <span class="svc-arrow">→</span>
+      <div class="work-row rv rv-d1">
+        <span class="wr-num">02</span>
+        <div class="wr-title">傳產製造業<br><em>系統數位化</em></div>
+        <span class="wr-cat">數位轉型</span>
+        <span class="wr-arrow">→</span>
       </div>
 
-      <div class="service-row reveal reveal-delay-2">
-        <span class="svc-num">03</span>
-        <div><div class="svc-title">科技顧問</div></div>
-        <div>
-          <p class="svc-body">提供客觀的技術策略建議，幫助您選擇最適合的解決方案，避免昂貴的決策錯誤，加速數位成長。</p>
-          <div class="svc-tags">
-            <span class="svc-tag">技術選型</span>
-            <span class="svc-tag">架構規劃</span>
-            <span class="svc-tag">雲端策略</span>
-            <span class="svc-tag">團隊培訓</span>
-          </div>
-        </div>
-        <span class="svc-arrow">→</span>
+      <div class="work-row rv rv-d2">
+        <span class="wr-num">03</span>
+        <div class="wr-title">新創公司<br><em>技術架構規劃</em></div>
+        <span class="wr-cat">科技顧問</span>
+        <span class="wr-arrow">→</span>
       </div>
+
+      <div class="work-row rv rv-d3">
+        <span class="wr-num">04</span>
+        <div class="wr-title">電商平台<br><em>效能優化專案</em></div>
+        <span class="wr-cat">效能優化</span>
+        <span class="wr-arrow">→</span>
+      </div>
+
     </div>
   </div>
 </section>
 
-<!-- ══ NUMBERS ════════════════════════════════════════════ -->
+<!-- ══ SERVICES ══════════════════════════════════════════════ -->
+<section class="svc-section">
+  <div class="wrap">
+
+    <div class="section-head rv">
+      <span class="eyebrow">Our Services / 我們的服務</span>
+      <a href="{{ "services/" | relURL }}" class="section-link-sm">所有服務 →</a>
+    </div>
+
+    <div class="svc-list" style="margin-top:0">
+
+      <div class="svc-row rv">
+        <span class="sr-num">01</span>
+        <div class="sr-name">網站開發</div>
+        <div>
+          <p class="sr-body">從企業形象網站到複雜 Web Application，使用現代技術棧打造高效能、安全且可擴展的數位產品。</p>
+          <div class="sr-tags">
+            <span class="sr-tag">React / Next.js</span>
+            <span class="sr-tag">Hugo</span>
+            <span class="sr-tag">Headless CMS</span>
+          </div>
+        </div>
+        <span class="sr-arrow">→</span>
+      </div>
+
+      <div class="svc-row rv rv-d1">
+        <span class="sr-num">02</span>
+        <div class="sr-name">數位轉型</div>
+        <div>
+          <p class="sr-body">協助企業系統性地從傳統流程轉型至數位化運營，透過數據分析與自動化提升效率、開創新商機。</p>
+          <div class="sr-tags">
+            <span class="sr-tag">流程自動化</span>
+            <span class="sr-tag">數據分析</span>
+            <span class="sr-tag">系統整合</span>
+          </div>
+        </div>
+        <span class="sr-arrow">→</span>
+      </div>
+
+      <div class="svc-row rv rv-d2">
+        <span class="sr-num">03</span>
+        <div class="sr-name">科技顧問</div>
+        <div>
+          <p class="sr-body">提供客觀、獨立的技術策略建議，幫助您選擇正確的科技投資方向，避免昂貴的決策錯誤。</p>
+          <div class="sr-tags">
+            <span class="sr-tag">技術選型</span>
+            <span class="sr-tag">架構規劃</span>
+            <span class="sr-tag">雲端策略</span>
+          </div>
+        </div>
+        <span class="sr-arrow">→</span>
+      </div>
+
+      <div class="svc-row rv rv-d3">
+        <span class="sr-num">04</span>
+        <div class="sr-name">UI / UX 設計</div>
+        <div>
+          <p class="sr-body">以使用者為中心的設計思維，從線框圖到高保真原型，確保每個介面都直覺、美觀且服務於業務目標。</p>
+          <div class="sr-tags">
+            <span class="sr-tag">使用者研究</span>
+            <span class="sr-tag">介面設計</span>
+            <span class="sr-tag">設計系統</span>
+          </div>
+        </div>
+        <span class="sr-arrow">→</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ NUMBERS ════════════════════════════════════════════════ -->
 <section class="numbers-section">
-  <div class="container">
-    <div class="numbers-label reveal">Our Impact / 我們的成績</div>
-    <div class="numbers-grid reveal">
+  <div class="wrap">
+    <p class="eyebrow rv" style="color:#aaa;margin-bottom:3.5rem">Our Impact / 我們的成績</p>
+    <div class="numbers-grid rv">
       <div class="num-item">
         <span class="num-big">50+</span>
         <span class="num-label">完成專案</span>
@@ -159,107 +192,17 @@
   </div>
 </section>
 
-<!-- ══ SELECTED WORK ══════════════════════════════════════ -->
-<section class="work-section">
-  <div class="container">
-    <div class="section-header reveal">
-      <div>
-        <span class="section-label-sm">Selected Work / 精選作品</span>
-        <h2 class="section-title">我們做過<br>的事</h2>
-      </div>
-      <a href="{{ "portfolio/" | relURL }}" class="section-link">所有作品 →</a>
-    </div>
-  </div>
-
-  <div class="work-grid" style="margin-top:3.5rem">
-    <div class="work-item reveal">
-      <div class="work-art" aria-hidden="true">
-        <svg viewBox="0 2 120 65" style="overflow:hidden;width:140%;height:auto"><use href="#mark-white"/></svg>
-      </div>
-      <div class="work-item-body">
-        <span class="work-item-cat">網站開發</span>
-        <div class="work-item-title">某科技集團<br>品牌官網重塑</div>
-        <div class="work-item-sub">React · Next.js · Headless CMS</div>
-      </div>
-    </div>
-    <div class="work-item reveal reveal-delay-1">
-      <div class="work-art" aria-hidden="true">
-        <svg viewBox="0 2 120 65" style="overflow:hidden;width:140%;height:auto"><use href="#mark-white"/></svg>
-      </div>
-      <div class="work-item-body">
-        <span class="work-item-cat">數位轉型</span>
-        <div class="work-item-title">傳產製造業<br>系統數位化</div>
-        <div class="work-item-sub">ERP 整合 · 流程自動化</div>
-      </div>
-    </div>
-    <div class="work-item reveal reveal-delay-2">
-      <div class="work-art" aria-hidden="true">
-        <svg viewBox="0 2 120 65" style="overflow:hidden;width:140%;height:auto"><use href="#mark-white"/></svg>
-      </div>
-      <div class="work-item-body">
-        <span class="work-item-cat">科技顧問</span>
-        <div class="work-item-title">新創公司<br>技術架構規劃</div>
-        <div class="work-item-sub">雲端策略 · AWS · CI/CD</div>
-      </div>
-    </div>
-    <div class="work-item reveal reveal-delay-3">
-      <div class="work-art" aria-hidden="true">
-        <svg viewBox="0 2 120 65" style="overflow:hidden;width:140%;height:auto"><use href="#mark-white"/></svg>
-      </div>
-      <div class="work-item-body">
-        <span class="work-item-cat">效能優化</span>
-        <div class="work-item-title">電商平台<br>效能優化專案</div>
-        <div class="work-item-sub">Core Web Vitals · 效能提升 60%</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ PROCESS ════════════════════════════════════════════ -->
-<section class="process-section">
-  <div class="container">
-    <div class="section-header reveal">
-      <div>
-        <span class="section-label-sm">How We Work / 合作流程</span>
-        <h2 class="section-title-dark">我們如何<br>一起工作</h2>
-      </div>
-    </div>
-    <div class="process-grid">
-      <div class="process-step reveal">
-        <div class="process-num">01</div>
-        <div class="process-title">探索需求</div>
-        <p class="process-body">深入了解您的業務目標、使用者痛點與技術現況，建立共同的專案願景。</p>
-      </div>
-      <div class="process-step reveal reveal-delay-1">
-        <div class="process-num">02</div>
-        <div class="process-title">策略規劃</div>
-        <p class="process-body">擬定清晰的技術路線圖、里程碑與成功指標，確保每一步都方向正確。</p>
-      </div>
-      <div class="process-step reveal reveal-delay-2">
-        <div class="process-num">03</div>
-        <div class="process-title">設計開發</div>
-        <p class="process-body">以敏捷方式迭代，定期展示成果，即時調整確保品質與進度如期推進。</p>
-      </div>
-      <div class="process-step reveal reveal-delay-3">
-        <div class="process-num">04</div>
-        <div class="process-title">上線支援</div>
-        <p class="process-body">上線後持續監測效能，提供技術支援，陪伴您長期穩定成長。</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ CTA ════════════════════════════════════════════════ -->
+<!-- ══ CTA ════════════════════════════════════════════════════ -->
 <section class="cta-section">
-  <svg class="cta-wave-bg" viewBox="0 2 120 65" style="overflow:hidden;display:block" aria-hidden="true">
+  <svg class="cta-mark" viewBox="0 2 120 65" aria-hidden="true">
     <use href="#mark-dark"/>
   </svg>
-  <div class="container">
-    <div class="cta-inner reveal">
-      <h2 class="cta-title">
-        準備好讓<br>
-        <em>數位轉型</em><br>
-        發生了嗎？
+  <div class="wrap">
+    <div class="cta-inner rv">
+      <h2 class="cta-h2">
+        準備好<br>
+        開始了<br>
+        <em>嗎？</em>
       </h2>
       <div class="cta-right">
         <p class="cta-sub">第一次諮詢完全免費<br>無論專案大小都歡迎</p>
