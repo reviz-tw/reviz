@@ -1,8 +1,8 @@
-{{ define "title" }}reviz — 數位接案工作室{{ end }}
+{{ define "title" }}reviz — {{ i18n "tagline" }}{{ end }}
 
 {{ define "main" }}
+{{ $d := index .Site.Data (.Site.Language.Lang | lower) }}
 
-<!-- ── HERO ────────────────────────────────────────────────── -->
 <section class="hero">
   <div class="hero-cmd">
     <span class="cmd-prompt">$</span> hugo serve <span class="cmd-arg">--port 1313</span>
@@ -11,15 +11,15 @@
   <div class="hero-grid">
     <div class="hero-copy">
       <h1 class="hero-h1">
-        我們做<span class="accent">數位產品</span>、<br>
-        品牌、互動、AI 落地；<br>
-        工具預設開源，<br>
-        <em>過程隨時可被檢查<span class="caret"></span></em>
+        {{ i18n "hero_h1_line1" | safeHTML }}<br>
+        {{ i18n "hero_h1_line2" | safeHTML }}<br>
+        {{ i18n "hero_h1_line3" | safeHTML }}<br>
+        <em>{{ i18n "hero_h1_line4" }}<span class="caret"></span></em>
       </h1>
 
       <div class="hero-actions">
-        <a href="{{ "portfolio/" | relURL }}" class="btn-primary">► 查看作品 (6)</a>
-        <a href="mailto:hello@reviz.tw" class="btn-ghost">$ 寄信給我們</a>
+        <a href="{{ "portfolio/" | relLangURL }}" class="btn-primary">{{ i18n "hero_view_work" }}</a>
+        <a href="mailto:hello@reviz.tw" class="btn-ghost">{{ i18n "hero_send_mail" }}</a>
       </div>
     </div>
 
@@ -29,7 +29,7 @@
         <div class="card-lights" aria-hidden="true">
           <span class="lt lt-r"></span><span class="lt lt-y"></span><span class="lt lt-g"></span>
         </div>
-        <pre class="card-code"><span class="syn-cmt"># 六人團隊 · 2018 起接案</span>
+        <pre class="card-code"><span class="syn-cmt">{{ i18n "config_comment" }}</span>
 <span class="syn-key">[studio]</span>
 title    = <span class="syn-str">"reviz"</span>
 since    = <span class="syn-num">2018</span>
@@ -43,25 +43,24 @@ email    = <span class="syn-str">"hello@reviz.tw"</span></pre>
     </div>
   </div>
 
-  <!-- Live ticker -->
   <div class="ticker">
     <div class="ticker-cell">
-      <div class="tk-key">// 進行中</div>
+      <div class="tk-key">// {{ i18n "ticker_active" }}</div>
       <div class="tk-val">4</div>
-      <div class="tk-sub">專案</div>
+      <div class="tk-sub">{{ i18n "ticker_active_sub" }}</div>
     </div>
     <div class="ticker-cell">
-      <div class="tk-key">// 本月發佈</div>
+      <div class="tk-key">// {{ i18n "ticker_commits" }}</div>
       <div class="tk-val">12</div>
       <div class="tk-sub">commits</div>
     </div>
     <div class="ticker-cell">
-      <div class="tk-key">// 年資</div>
+      <div class="tk-key">// {{ i18n "ticker_years" }}</div>
       <div class="tk-val">8</div>
-      <div class="tk-sub">運作中</div>
+      <div class="tk-sub">{{ i18n "ticker_years_sub" }}</div>
     </div>
     <div class="ticker-cell">
-      <div class="tk-key">// 伺服器時間</div>
+      <div class="tk-key">// {{ i18n "ticker_server_time" }}</div>
       <div class="tk-val tk-val--live" id="js-ticker-clock">--:--:--</div>
       <div class="tk-sub">asia/taipei</div>
     </div>
@@ -69,53 +68,40 @@ email    = <span class="syn-str">"hello@reviz.tw"</span></pre>
 </section>
 
 
-<!-- ── SECTION PREVIEWS ────────────────────────────────────── -->
 <section class="previews">
-  <a href="{{ "services/" | relURL }}" class="prev-card">
+  <a href="{{ "services/" | relLangURL }}" class="prev-card">
     <div class="prev-head">
       <span>§01 · /services/</span>
       <span class="prev-arrow">→</span>
     </div>
-    <h3 class="prev-title">七項服務</h3>
+    <h3 class="prev-title">{{ i18n "prev_services_title" }}</h3>
     <div class="prev-list">
-      <div class="prev-row"><span class="prev-dot" style="--c:#ff7eb6"></span><span class="prev-n">01</span><span class="prev-name">網站開發</span><span class="prev-en">· Web Engineering</span></div>
-      <div class="prev-row"><span class="prev-dot" style="--c:#82aaff"></span><span class="prev-n">02</span><span class="prev-name">互動開發</span><span class="prev-en">· Interactive</span></div>
-      <div class="prev-row"><span class="prev-dot" style="--c:#82e0aa"></span><span class="prev-n">03</span><span class="prev-name">視覺設計</span><span class="prev-en">· Visual Design</span></div>
-      <div class="prev-row"><span class="prev-dot" style="--c:#ffcb6b"></span><span class="prev-n">04</span><span class="prev-name">資料分析</span><span class="prev-en">· Data Analysis</span></div>
-      <div class="prev-row"><span class="prev-dot" style="--c:#c792ea"></span><span class="prev-n">05</span><span class="prev-name">資料新聞</span><span class="prev-en">· Data Journalism</span></div>
-      <div class="prev-row"><span class="prev-dot" style="--c:#5dd6c5"></span><span class="prev-n">06</span><span class="prev-name">AI 顧問</span><span class="prev-en">· AI Advisory</span></div>
-      <div class="prev-row"><span class="prev-dot" style="--c:#ff9e64"></span><span class="prev-n">07</span><span class="prev-name">數位轉型</span><span class="prev-en">· Digital Transformation</span></div>
+      {{ range $d.services }}
+      <div class="prev-row">
+        <span class="prev-dot" style="--c:{{ .dot }}"></span>
+        <span class="prev-n">{{ .n }}</span>
+        <span class="prev-name">{{ .name }}</span>
+        <span class="prev-en">· {{ .en }}</span>
+      </div>
+      {{ end }}
     </div>
   </a>
 
-  <a href="{{ "portfolio/" | relURL }}" class="prev-card">
+  <a href="{{ "portfolio/" | relLangURL }}" class="prev-card">
     <div class="prev-head">
       <span>§02 · /work/</span>
       <span class="prev-arrow">→</span>
     </div>
-    <h3 class="prev-title">近期六個案例</h3>
+    <h3 class="prev-title">{{ i18n "prev_work_title" }}</h3>
     <div class="work-list">
+      {{ range first 4 $d.work }}
       <div class="work-row">
-        <span class="wk-year">2025</span>
-        <span class="wk-title">財富管理顧問儀表板系統</span>
-        <span class="wk-cat">網站開發</span>
+        <span class="wk-year">{{ .year }}</span>
+        <span class="wk-title">{{ .title }}</span>
+        <span class="wk-cat">{{ .cat }}</span>
       </div>
-      <div class="work-row">
-        <span class="wk-year">2024</span>
-        <span class="wk-title">品牌官網改版與設計系統</span>
-        <span class="wk-cat">視覺設計</span>
-      </div>
-      <div class="work-row">
-        <span class="wk-year">2024</span>
-        <span class="wk-title">門市管理系統與儀表板</span>
-        <span class="wk-cat">數位轉型</span>
-      </div>
-      <div class="work-row">
-        <span class="wk-year">2023</span>
-        <span class="wk-title">互動式調查報導《關稅戰》</span>
-        <span class="wk-cat">互動開發</span>
-      </div>
-      <div class="work-more">+ 2 more →</div>
+      {{ end }}
+      <div class="work-more">{{ i18n "prev_more" }}</div>
     </div>
   </a>
 </section>
