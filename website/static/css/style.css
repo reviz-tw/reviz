@@ -226,9 +226,9 @@ html.theme-light .bg-scan { display: none; }
 .hero-h1 {
   font-family: var(--f-disp);
   font-weight: 600;
-  font-size: clamp(56px, 7vw, 104px);
-  line-height: 0.98;
-  letter-spacing: -0.035em;
+  font-size: clamp(40px, 5.2vw, 76px);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
   color: var(--ink);
 }
 .hero-h1 .accent { color: var(--accent); }
