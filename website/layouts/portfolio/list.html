@@ -1,58 +1,56 @@
-{{ define "title" }}Portfolio | ReViz{{ end }}
+{{ define "title" }}過往作品 | reviz{{ end }}
 
 {{ define "main" }}
 
-<div class="page-hero">
-  <div class="wrap">
-    <div class="page-hero-tag">Selected Work</div>
-    <h1>精選<br>作品集</h1>
-    <p>每一個作品都代表著我們對卓越品質的承諾。</p>
+<div class="page-head">
+  <div class="ph-crumb">
+    <a href="{{ "" | relURL }}" class="ph-tilde">~</a>
+    <span class="ph-slash">/</span>
+    <span class="ph-section">work</span>
+    <span class="ph-slash">·</span>
+    <span>§02</span>
   </div>
+  <h1 class="ph-title">過往作品<span class="ph-dot">.</span></h1>
+  <p class="ph-sub">近兩年精選六個案例。完整 52 個案例（含 NDA）請寄信索取。</p>
 </div>
 
-<section style="background:var(--bg);padding:3rem 0 10rem">
-  <div class="wrap">
-    <div class="portfolio-list">
-      {{ range .Pages }}
-      <div class="portfolio-row rv">
-        <span class="pr-num">→</span>
-        <div class="pr-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
-        <span class="pr-cat">{{ .Params.client | default "Case Study" }}</span>
-        <span class="pr-arrow">→</span>
+<section class="work-page">
+  {{ $items := slice
+    (dict "year" "2025" "idx" 1 "client" "某金控數位金融部" "title" "財富管理顧問儀表板系統" "cat" "網站開發" "kpi" "日活 1,200 顧問")
+    (dict "year" "2024" "idx" 2 "client" "上市生技公司"     "title" "品牌官網改版與設計系統"     "cat" "視覺設計" "kpi" "LCP 1.1s · A+ Lighthouse")
+    (dict "year" "2024" "idx" 3 "client" "連鎖零售集團"     "title" "門市管理系統與儀表板"         "cat" "數位轉型" "kpi" "480 間門市 · 9 國")
+    (dict "year" "2023" "idx" 4 "client" "某全國性媒體"     "title" "互動式調查報導《關稅戰》"     "cat" "互動開發" "kpi" "230 萬次互動")
+    (dict "year" "2023" "idx" 5 "client" "某政府機關"       "title" "AI 客服與內部知識庫"           "cat" "AI 顧問" "kpi" "回應時間 -67%")
+    (dict "year" "2022" "idx" 6 "client" "電商新創"         "title" "資料倉儲與 BI 系統建置"       "cat" "資料分析" "kpi" "GMV +34%")
+  }}
+
+  {{ range $year := (slice "2025" "2024" "2023" "2022") }}
+    {{ $byYear := where $items "year" $year }}
+    <div class="wk-year-group">
+      <div class="wk-year-head">
+        <span class="wk-year-num">{{ $year }}</span>
+        <span class="wk-year-count">· {{ len $byYear }} 件</span>
       </div>
-      {{ else }}
-      <div class="portfolio-row rv">
-        <span class="pr-num">01</span>
-        <div class="pr-title">某科技集團品牌官網重塑</div>
-        <span class="pr-cat">網站開發</span>
-        <span class="pr-arrow">→</span>
-      </div>
-      <div class="portfolio-row rv rv-d1">
-        <span class="pr-num">02</span>
-        <div class="pr-title">傳產製造業系統數位化</div>
-        <span class="pr-cat">數位轉型</span>
-        <span class="pr-arrow">→</span>
-      </div>
-      <div class="portfolio-row rv rv-d2">
-        <span class="pr-num">03</span>
-        <div class="pr-title">新創公司技術架構規劃</div>
-        <span class="pr-cat">科技顧問</span>
-        <span class="pr-arrow">→</span>
-      </div>
-      <div class="portfolio-row rv rv-d3">
-        <span class="pr-num">04</span>
-        <div class="pr-title">電商平台效能優化專案</div>
-        <span class="pr-cat">效能優化</span>
-        <span class="pr-arrow">→</span>
-      </div>
-      <div class="portfolio-row rv rv-d4">
-        <span class="pr-num">05</span>
-        <div class="pr-title">零售連鎖品牌 App 重新設計</div>
-        <span class="pr-cat">UI / UX 設計</span>
-        <span class="pr-arrow">→</span>
-      </div>
+      {{ range $byYear }}
+      <a class="wk-row" href="#">
+        <span class="wk-hex">
+          <span class="wk-hex-prefix">{{ printf "%02x" .idx }}</span>{{ printf "%06x" (add (mul .idx 17) 912) }}
+        </span>
+        <div class="wk-name">
+          <div class="wk-client"><span class="wk-client-k">client:</span> {{ .client }}</div>
+          <div class="wk-title">{{ .title }}</div>
+        </div>
+        <span class="wk-tag"><span class="wk-hash">#</span>{{ replace (lower .cat) " " "-" }}</span>
+        <span class="wk-kpi"><span class="wk-star">★</span> {{ .kpi }}</span>
+        <span class="wk-arrow">→</span>
+      </a>
       {{ end }}
     </div>
+  {{ end }}
+
+  <div class="wk-foot">
+    <span class="wk-prompt">$</span> ls content/work/ | wc -l<br>
+    <span class="wk-foot-v">52</span>    <span class="wk-foot-c">// 其餘 46 個案例請寄信索取</span>
   </div>
 </section>
 
