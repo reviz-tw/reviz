@@ -44,26 +44,37 @@
 
       <span class="nav-divider"></span>
 
-      <div class="lang-switch">
-        {{ $current := . }}
-        {{ $labels := dict "zh-tw" "繁" "en" "EN" "ja" "日" "ko" "한" "fr" "FR" "de" "DE" }}
-        {{ range .Site.Languages }}
-          {{ $lang := . }}
-          {{ $isCurrent := eq $lang.Lang $current.Site.Language.Lang }}
-          {{ $href := "" }}
-          {{ if $isCurrent }}
-            {{ $href = $current.Permalink }}
-          {{ else }}
-            {{ with (where $current.AllTranslations "Language.Lang" $lang.Lang) }}
-              {{ $href = (index . 0).Permalink }}
+      {{ $current := . }}
+      {{ $labels := dict "zh-tw" "繁" "en" "EN" "ja" "日" "ko" "한" "fr" "FR" "de" "DE" }}
+      {{ $currentLabel := index $labels (lower $current.Site.Language.Lang) | default ($current.Site.Language.Lang | upper) }}
+      <details class="lang-switch" id="js-lang-switch">
+        <summary class="lang-current" aria-label="Language" title="{{ $current.Site.Language.LanguageName }}">
+          <span class="lang-current-glyph">{{ $currentLabel }}</span>
+          <span class="lang-current-name">{{ $current.Site.Language.LanguageName }}</span>
+          <span class="lang-caret" aria-hidden="true">▾</span>
+        </summary>
+        <div class="lang-menu" role="menu">
+          {{ range .Site.Languages }}
+            {{ $lang := . }}
+            {{ $isCurrent := eq $lang.Lang $current.Site.Language.Lang }}
+            {{ $href := "" }}
+            {{ if $isCurrent }}
+              {{ $href = $current.Permalink }}
             {{ else }}
-              {{ $href = printf "%s%s/" $current.Site.BaseURL $lang.Lang }}
+              {{ with (where $current.AllTranslations "Language.Lang" $lang.Lang) }}
+                {{ $href = (index . 0).Permalink }}
+              {{ else }}
+                {{ $href = printf "%s%s/" $current.Site.BaseURL $lang.Lang }}
+              {{ end }}
             {{ end }}
+            {{ $label := index $labels (lower $lang.Lang) | default ($lang.Lang | upper) }}
+            <a href="{{ $href }}" role="menuitem" class="lang-option {{ if $isCurrent }}is-active{{ end }}" hreflang="{{ $lang.LanguageCode }}">
+              <span class="lang-option-glyph">{{ $label }}</span>
+              <span class="lang-option-name">{{ $lang.LanguageName }}</span>
+            </a>
           {{ end }}
-          {{ $label := index $labels (lower $lang.Lang) | default ($lang.Lang | upper) }}
-          <a href="{{ $href }}" class="lang-link {{ if $isCurrent }}is-active{{ end }}" hreflang="{{ $lang.LanguageCode }}" title="{{ $lang.LanguageName }}">{{ $label }}</a>
-        {{ end }}
-      </div>
+        </div>
+      </details>
 
       <span class="nav-divider"></span>
       <button class="nav-toggle" id="js-theme" type="button" aria-label="Toggle theme">{{ i18n "toggle_theme_light" }}</button>
@@ -90,6 +101,17 @@
     btn.addEventListener('click', function () {
       var isLight = root.classList.toggle('theme-light');
       btn.textContent = isLight ? darkLabel : lightLabel;
+    });
+  })();
+
+  (function () {
+    var dd = document.getElementById('js-lang-switch');
+    if (!dd) return;
+    document.addEventListener('click', function (e) {
+      if (dd.open && !dd.contains(e.target)) dd.open = false;
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && dd.open) dd.open = false;
     });
   })();
 </script>
