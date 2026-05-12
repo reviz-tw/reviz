@@ -53,3 +53,18 @@ ct_heading          = "課題、予算、<br>あるいは好奇心とともに�
 ct_body             = "つくりたいものを 1–2 文でお聞かせください。通常 48 時間以内に返信します（週末を除く）。すべてのプロジェクトは 30 分の無料相談から始めます。"
 ct_response_value   = "≤ 48h (平日)"
 ct_news_placeholder = "you@somewhere.org"
+
+# Blog
+nav_blog              = "ブログ"
+page_blog_title       = "ワーキングノート"
+page_blog_sub         = "エンジニアリング、デザイン、AI、オープンデータ——日々の制作現場からのフィールドノート。"
+blog_posts_count      = "件"
+blog_related          = "関連記事"
+blog_back_to_list     = "← 記事一覧へ戻る"
+blog_author_label     = "著者"
+blog_published_label  = "公開日"
+blog_read_label       = "所要時間"
+blog_by               = "by"
+blog_body_intro       = "これはサンプル記事本文です。本番環境では Hugo が <code>content/blog/&lt;slug&gt;.md</code> から本文を読み込み HTML に変換します。著者は通常の Markdown と Hugo ショートコードを利用できます。"
+blog_body_sample_h2   = "以下、サンプル本文"
+blog_body_quote       = "「検査できるものだけが信頼を得る。」"

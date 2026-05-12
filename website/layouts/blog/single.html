@@ -1,0 +1,81 @@
+{{ define "title" }}{{ .Title }} | reviz{{ end }}
+
+{{ define "main" }}
+
+<div class="post-head">
+  <div class="ph-crumb">
+    <a href="{{ "" | relLangURL }}" class="ph-tilde">~</a>
+    <span class="ph-slash">/</span>
+    <a href="{{ "blog/" | relLangURL }}" class="ph-slash">blog</a>
+    <span class="ph-slash">/</span>
+    <span class="ph-section">{{ .File.BaseFileName }}</span>
+  </div>
+
+  <div class="post-meta-top">
+    <span class="post-tag">#{{ .Params.tag }}</span>
+    <span class="post-meta-sep">·</span>
+    <span>{{ .Date.Format "2006-01-02" }}</span>
+    <span class="post-meta-sep">·</span>
+    <span>{{ .Params.read }}</span>
+    <span class="post-meta-sep">·</span>
+    <span>{{ i18n "blog_by" }} {{ .Params.author }}</span>
+  </div>
+
+  <h1 class="post-title">{{ .Title }}</h1>
+  <p class="post-excerpt">{{ .Params.excerpt }}</p>
+</div>
+
+<section class="post-body-wrap">
+  <article class="post-body">
+    {{ if .Content }}
+      {{ .Content }}
+    {{ else }}
+      <p class="post-intro">{{ i18n "blog_body_intro" | safeHTML }}</p>
+      <h2 class="post-h2">{{ i18n "blog_body_sample_h2" }}</h2>
+      <p>{{ .Params.excerpt }}</p>
+      <p>{{ .Params.excerpt }}</p>
+      <blockquote class="post-quote">{{ i18n "blog_body_quote" }}</blockquote>
+      <p>{{ .Params.excerpt }}</p>
+      <pre class="post-pre"><span class="syn-cmt">// example</span>
+<span class="syn-key">const</span> reviz = <span class="syn-fn">createStudio</span>({
+  team: <span class="syn-num">6</span>,
+  open: <span class="syn-key">true</span>,
+});</pre>
+      <p>{{ .Params.excerpt }}</p>
+    {{ end }}
+  </article>
+
+  <aside class="post-aside">
+    <div class="post-aside-inner">
+      <div class="post-meta-label">// meta</div>
+      <div><span class="post-meta-k">{{ i18n "blog_author_label" }}     :</span> {{ .Params.author }}</div>
+      <div><span class="post-meta-k">{{ i18n "blog_published_label" }}  :</span> {{ .Date.Format "2006-01-02" }}</div>
+      <div><span class="post-meta-k">{{ i18n "blog_read_label" }}   :</span> {{ .Params.read }}</div>
+      <div><span class="post-meta-k">tag       :</span> <span class="post-meta-tag">#{{ .Params.tag }}</span></div>
+      <div class="post-back-wrap">
+        <a class="post-back" href="{{ "blog/" | relLangURL }}">{{ i18n "blog_back_to_list" }}</a>
+      </div>
+    </div>
+  </aside>
+</section>
+
+{{ $related := where (where .Site.RegularPages "Section" "blog") "Permalink" "ne" .Permalink }}
+{{ $related = where $related "Language" .Language }}
+{{ if $related }}
+<section class="post-related">
+  <div class="post-related-label">// {{ i18n "blog_related" }}</div>
+  <div class="post-related-grid">
+    {{ range first 3 $related.ByDate.Reverse }}
+    <a class="post-related-card" href="{{ .RelPermalink }}">
+      <div class="post-related-meta">
+        <span>{{ .Date.Format "2006-01-02" }}</span>
+        <span class="post-related-tag">#{{ .Params.tag }}</span>
+      </div>
+      <div class="post-related-title">{{ .Title }}</div>
+    </a>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
+{{ end }}

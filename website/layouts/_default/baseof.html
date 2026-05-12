@@ -32,11 +32,14 @@
       <a href="{{ "portfolio/" | relLangURL }}" class="nav-link {{ if eq .Section "portfolio" }}is-active{{ end }}">
         <span class="nav-num">02</span><span>{{ i18n "nav_work" }}</span><kbd>W</kbd>
       </a>
+      <a href="{{ "blog/" | relLangURL }}" class="nav-link {{ if eq .Section "blog" }}is-active{{ end }}">
+        <span class="nav-num">03</span><span>{{ i18n "nav_blog" }}</span><kbd>B</kbd>
+      </a>
       <a href="{{ "about/" | relLangURL }}" class="nav-link {{ if eq .Section "about" }}is-active{{ end }}">
-        <span class="nav-num">03</span><span>{{ i18n "nav_about" }}</span><kbd>A</kbd>
+        <span class="nav-num">04</span><span>{{ i18n "nav_about" }}</span><kbd>A</kbd>
       </a>
       <a href="{{ "contact/" | relLangURL }}" class="nav-link {{ if eq .Section "contact" }}is-active{{ end }}">
-        <span class="nav-num">04</span><span>{{ i18n "nav_contact" }}</span><kbd>C</kbd>
+        <span class="nav-num">05</span><span>{{ i18n "nav_contact" }}</span><kbd>C</kbd>
       </a>
 
       <span class="nav-divider"></span>
