@@ -788,6 +788,19 @@ html.theme-light .bg-scan { display: none; }
   cursor: pointer;
 }
 
+/* ── FOOTER ──────────────────────────────────────────────── */
+.footer {
+  padding: 1.2rem var(--pad-x);
+  display: flex;
+  justify-content: center;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink2);
+  background: var(--bg2);
+  border-top: 1px solid var(--rule);
+}
+
 @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
 @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
 
