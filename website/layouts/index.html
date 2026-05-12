@@ -1,323 +1,139 @@
-{{ define "title" }}ReViz — 打造驅動成長的數位體驗{{ end }}
+{{ define "title" }}reviz — 數位接案工作室{{ end }}
 
 {{ define "main" }}
 
-<!-- ══════════════════════════════════════════
-     HERO
-══════════════════════════════════════════ -->
+<!-- ── HERO ────────────────────────────────────────────────── -->
 <section class="hero">
-  <!-- Subtle background watermark -->
-  <div class="hero-watermark" aria-hidden="true">
-    <svg viewBox="0 0 200 124" style="width:100%;overflow:visible">
-      <use href="#mark-color"/>
-    </svg>
+  <div class="hero-cmd">
+    <span class="cmd-prompt">$</span> hugo serve <span class="cmd-arg">--port 1313</span>
   </div>
 
-  <div class="hero-inner">
-    <span class="hero-tag">Digital Experience Studio · Taiwan</span>
-    <h1 class="hero-h1">
-      打造驅動<span class="accent">成長</span>的<br>數位體驗
-    </h1>
-    <p class="hero-desc">
-      從品牌策略到系統架構，ReViz 為企業打造精準、美觀、高效能的數位解決方案。
-    </p>
-    <div class="hero-actions">
-      <a href="{{ "portfolio/" | relURL }}" class="btn-pill">查看作品集 →</a>
-      <a href="mailto:hello@reviz.tw" class="btn-link">聯絡我們</a>
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <h1 class="hero-h1">
+        我們做<span class="accent">數位產品</span>、<br>
+        品牌、互動、AI 落地；<br>
+        工具預設開源，<br>
+        <em>過程隨時可被檢查<span class="caret"></span></em>
+      </h1>
+
+      <div class="hero-actions">
+        <a href="{{ "portfolio/" | relURL }}" class="btn-primary">► 查看作品 (6)</a>
+        <a href="mailto:hello@reviz.tw" class="btn-ghost">$ 寄信給我們</a>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <div class="card-label">// ./config.toml</div>
+      <div class="card-frame">
+        <div class="card-lights" aria-hidden="true">
+          <span class="lt lt-r"></span><span class="lt lt-y"></span><span class="lt lt-g"></span>
+        </div>
+        <pre class="card-code"><span class="syn-cmt"># 六人團隊 · 2018 起接案</span>
+<span class="syn-key">[studio]</span>
+title    = <span class="syn-str">"reviz"</span>
+since    = <span class="syn-num">2018</span>
+location = <span class="syn-str">"Taipei, TW"</span>
+baseURL  = <span class="syn-str">"https://reviz.tw"</span>
+
+<span class="syn-key">[params]</span>
+theme    = <span class="syn-str">"reviz-mono"</span>
+email    = <span class="syn-str">"hello@reviz.tw"</span></pre>
+      </div>
     </div>
   </div>
 
-  <div class="hero-scroll" aria-hidden="true">Scroll</div>
-</section>
-
-
-<!-- ══════════════════════════════════════════
-     MARQUEE
-══════════════════════════════════════════ -->
-<div class="marquee-wrap" aria-hidden="true">
-  <div class="marquee-track">
-    <span>網站開發</span><span class="sep">✦</span>
-    <span>數位轉型</span><span class="sep">✦</span>
-    <span>科技顧問</span><span class="sep">✦</span>
-    <span>UI / UX 設計</span><span class="sep">✦</span>
-    <span>效能優化</span><span class="sep">✦</span>
-    <span>品牌策略</span><span class="sep">✦</span>
-    <span>Web Development</span><span class="sep">✦</span>
-    <span>Digital Transformation</span><span class="sep">✦</span>
-    <span>Tech Consulting</span><span class="sep">✦</span>
-    <span>網站開發</span><span class="sep">✦</span>
-    <span>數位轉型</span><span class="sep">✦</span>
-    <span>科技顧問</span><span class="sep">✦</span>
-    <span>UI / UX 設計</span><span class="sep">✦</span>
-    <span>效能優化</span><span class="sep">✦</span>
-    <span>品牌策略</span><span class="sep">✦</span>
-    <span>Web Development</span><span class="sep">✦</span>
-    <span>Digital Transformation</span><span class="sep">✦</span>
-    <span>Tech Consulting</span><span class="sep">✦</span>
-  </div>
-</div>
-
-
-<!-- ══════════════════════════════════════════
-     SERVICES
-══════════════════════════════════════════ -->
-<section class="services-section">
-  <div class="wrap">
-    <div class="services-header">
-      <div>
-        <span class="section-label">What We Do</span>
-        <h2 class="section-h2">我們提供的<br>核心服務</h2>
-      </div>
-      <a href="{{ "services/" | relURL }}" class="more-link">所有服務 →</a>
+  <!-- Live ticker -->
+  <div class="ticker">
+    <div class="ticker-cell">
+      <div class="tk-key">// 進行中</div>
+      <div class="tk-val">4</div>
+      <div class="tk-sub">專案</div>
     </div>
-
-    <div class="svc-grid">
-      <div class="svc-card rv">
-        <div class="svc-card-num">01</div>
-        <h3 class="svc-card-title">網站開發</h3>
-        <p class="svc-card-body">從靜態官網到複雜的 Web 應用，使用現代技術棧打造快速、安全、易維護的數位產品。</p>
-        <div class="svc-card-tags">
-          <span class="svc-tag">Hugo</span>
-          <span class="svc-tag">Next.js</span>
-          <span class="svc-tag">React</span>
-          <span class="svc-tag">TypeScript</span>
-        </div>
-      </div>
-
-      <div class="svc-card rv rv-d1">
-        <div class="svc-card-num">02</div>
-        <h3 class="svc-card-title">數位轉型</h3>
-        <p class="svc-card-body">協助傳統企業導入數位工具與流程，系統性地提升效率、降低成本、創造新的競爭優勢。</p>
-        <div class="svc-card-tags">
-          <span class="svc-tag">流程優化</span>
-          <span class="svc-tag">系統整合</span>
-          <span class="svc-tag">數據分析</span>
-        </div>
-      </div>
-
-      <div class="svc-card rv rv-d2">
-        <div class="svc-card-num">03</div>
-        <h3 class="svc-card-title">科技顧問</h3>
-        <p class="svc-card-body">從技術架構評估到供應商選型，提供客觀、專業的科技顧問服務，協助企業做出正確的技術決策。</p>
-        <div class="svc-card-tags">
-          <span class="svc-tag">架構設計</span>
-          <span class="svc-tag">技術評估</span>
-          <span class="svc-tag">顧問諮詢</span>
-        </div>
-      </div>
-
-      <div class="svc-card rv rv-d3">
-        <div class="svc-card-num">04</div>
-        <h3 class="svc-card-title">UI / UX 設計</h3>
-        <p class="svc-card-body">以使用者為中心的設計思維，打造直覺易用的介面體驗，讓產品既美觀又能達成商業目標。</p>
-        <div class="svc-card-tags">
-          <span class="svc-tag">Figma</span>
-          <span class="svc-tag">原型設計</span>
-          <span class="svc-tag">用戶研究</span>
-        </div>
-      </div>
+    <div class="ticker-cell">
+      <div class="tk-key">// 本月發佈</div>
+      <div class="tk-val">12</div>
+      <div class="tk-sub">commits</div>
+    </div>
+    <div class="ticker-cell">
+      <div class="tk-key">// 年資</div>
+      <div class="tk-val">8</div>
+      <div class="tk-sub">運作中</div>
+    </div>
+    <div class="ticker-cell">
+      <div class="tk-key">// 伺服器時間</div>
+      <div class="tk-val tk-val--live" id="js-ticker-clock">--:--:--</div>
+      <div class="tk-sub">asia/taipei</div>
     </div>
   </div>
 </section>
 
 
-<!-- ══════════════════════════════════════════
-     SELECTED WORK
-══════════════════════════════════════════ -->
-<section class="work-section">
-  <div class="wrap">
-    <div class="services-header">
-      <div>
-        <span class="section-label">Selected Work</span>
-        <h2 class="section-h2">精選<br>作品案例</h2>
-      </div>
-      <a href="{{ "portfolio/" | relURL }}" class="more-link">所有作品 →</a>
+<!-- ── SECTION PREVIEWS ────────────────────────────────────── -->
+<section class="previews">
+  <a href="{{ "services/" | relURL }}" class="prev-card">
+    <div class="prev-head">
+      <span>§01 · /services/</span>
+      <span class="prev-arrow">→</span>
     </div>
+    <h3 class="prev-title">七項服務</h3>
+    <div class="prev-list">
+      <div class="prev-row"><span class="prev-dot" style="--c:#ff7eb6"></span><span class="prev-n">01</span><span class="prev-name">網站開發</span><span class="prev-en">· Web Engineering</span></div>
+      <div class="prev-row"><span class="prev-dot" style="--c:#82aaff"></span><span class="prev-n">02</span><span class="prev-name">互動開發</span><span class="prev-en">· Interactive</span></div>
+      <div class="prev-row"><span class="prev-dot" style="--c:#82e0aa"></span><span class="prev-n">03</span><span class="prev-name">視覺設計</span><span class="prev-en">· Visual Design</span></div>
+      <div class="prev-row"><span class="prev-dot" style="--c:#ffcb6b"></span><span class="prev-n">04</span><span class="prev-name">資料分析</span><span class="prev-en">· Data Analysis</span></div>
+      <div class="prev-row"><span class="prev-dot" style="--c:#c792ea"></span><span class="prev-n">05</span><span class="prev-name">資料新聞</span><span class="prev-en">· Data Journalism</span></div>
+      <div class="prev-row"><span class="prev-dot" style="--c:#5dd6c5"></span><span class="prev-n">06</span><span class="prev-name">AI 顧問</span><span class="prev-en">· AI Advisory</span></div>
+      <div class="prev-row"><span class="prev-dot" style="--c:#ff9e64"></span><span class="prev-n">07</span><span class="prev-name">數位轉型</span><span class="prev-en">· Digital Transformation</span></div>
+    </div>
+  </a>
 
+  <a href="{{ "portfolio/" | relURL }}" class="prev-card">
+    <div class="prev-head">
+      <span>§02 · /work/</span>
+      <span class="prev-arrow">→</span>
+    </div>
+    <h3 class="prev-title">近期六個案例</h3>
     <div class="work-list">
-      <div class="work-row rv">
-        <span class="wr-num">01</span>
-        <span class="wr-title">某科技集團品牌官網重塑</span>
-        <span class="wr-cat">網站開發</span>
-        <span class="wr-arrow">→</span>
+      <div class="work-row">
+        <span class="wk-year">2025</span>
+        <span class="wk-title">財富管理顧問儀表板系統</span>
+        <span class="wk-cat">網站開發</span>
       </div>
-      <div class="work-row rv rv-d1">
-        <span class="wr-num">02</span>
-        <span class="wr-title">傳產製造業系統數位化</span>
-        <span class="wr-cat">數位轉型</span>
-        <span class="wr-arrow">→</span>
+      <div class="work-row">
+        <span class="wk-year">2024</span>
+        <span class="wk-title">品牌官網改版與設計系統</span>
+        <span class="wk-cat">視覺設計</span>
       </div>
-      <div class="work-row rv rv-d2">
-        <span class="wr-num">03</span>
-        <span class="wr-title">新創公司技術架構規劃</span>
-        <span class="wr-cat">科技顧問</span>
-        <span class="wr-arrow">→</span>
+      <div class="work-row">
+        <span class="wk-year">2024</span>
+        <span class="wk-title">門市管理系統與儀表板</span>
+        <span class="wk-cat">數位轉型</span>
       </div>
-      <div class="work-row rv rv-d3">
-        <span class="wr-num">04</span>
-        <span class="wr-title">電商平台效能優化專案</span>
-        <span class="wr-cat">效能優化</span>
-        <span class="wr-arrow">→</span>
+      <div class="work-row">
+        <span class="wk-year">2023</span>
+        <span class="wk-title">互動式調查報導《關稅戰》</span>
+        <span class="wk-cat">互動開發</span>
       </div>
-      <div class="work-row rv rv-d4">
-        <span class="wr-num">05</span>
-        <span class="wr-title">零售連鎖品牌 App 重新設計</span>
-        <span class="wr-cat">UI / UX 設計</span>
-        <span class="wr-arrow">→</span>
-      </div>
+      <div class="work-more">+ 2 more →</div>
     </div>
-  </div>
+  </a>
 </section>
 
-
-<!-- ══════════════════════════════════════════
-     STATS
-══════════════════════════════════════════ -->
-<section class="stats-section">
-  <div class="wrap">
-    <div class="stats-grid">
-      <div class="stat-item rv">
-        <span class="stat-num">50+</span>
-        <span class="stat-label">成功交付專案</span>
-      </div>
-      <div class="stat-item rv rv-d1">
-        <span class="stat-num">98%</span>
-        <span class="stat-label">客戶滿意度</span>
-      </div>
-      <div class="stat-item rv rv-d2">
-        <span class="stat-num">8×</span>
-        <span class="stat-label">平均效能提升</span>
-      </div>
-      <div class="stat-item rv rv-d3">
-        <span class="stat-num">5yr</span>
-        <span class="stat-label">業界深耕經驗</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ══════════════════════════════════════════
-     最新消息 (NEWS)
-══════════════════════════════════════════ -->
-<section class="news-section">
-  <div class="wrap">
-    <div class="services-header">
-      <div>
-        <span class="section-label">News &amp; Insights</span>
-        <h2 class="section-h2">最新<br>消息</h2>
-      </div>
-      <a href="{{ "news/" | relURL }}" class="more-link">所有消息 →</a>
-    </div>
-
-    <div class="news-grid">
-      <div class="news-card rv">
-        <span class="news-card-tag">公司動態</span>
-        <span class="news-card-date">2025 / 01 / 12</span>
-        <h3 class="news-card-title">ReViz 正式成立，開始承接數位轉型專案</h3>
-        <p class="news-card-excerpt">我們很高興宣布 ReViz 正式成立。我們專注於為台灣企業提供高品質的數位解決方案，從網站開發到全面數位轉型。</p>
-        <a href="{{ "news/" | relURL }}" class="news-card-link">閱讀更多</a>
-      </div>
-
-      <div class="news-card rv rv-d1">
-        <span class="news-card-tag">業界洞察</span>
-        <span class="news-card-date">2024 / 09 / 08</span>
-        <h3 class="news-card-title">從傳統網站到 JAMstack：一個製造業的轉型案例</h3>
-        <p class="news-card-excerpt">深入探討一家傳統製造業如何透過 JAMstack 架構，將網站載入速度提升 8 倍，並大幅降低維護成本。</p>
-        <a href="{{ "news/" | relURL }}" class="news-card-link">閱讀更多</a>
-      </div>
-
-      <div class="news-card rv rv-d2">
-        <span class="news-card-tag">趨勢分析</span>
-        <span class="news-card-date">2024 / 06 / 20</span>
-        <h3 class="news-card-title">如何選擇適合您企業的 CMS 系統？</h3>
-        <p class="news-card-excerpt">市面上 CMS 系統琳瑯滿目，本文從維護成本、技術彈性、擴充性三個維度，協助您做出正確選擇。</p>
-        <a href="{{ "news/" | relURL }}" class="news-card-link">閱讀更多</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ══════════════════════════════════════════
-     部落格 (BLOG)
-══════════════════════════════════════════ -->
-<section class="blog-section">
-  <div class="wrap">
-    <div class="services-header">
-      <div>
-        <span class="section-label">Blog &amp; Articles</span>
-        <h2 class="section-h2">部落格</h2>
-      </div>
-      <a href="{{ "blog/" | relURL }}" class="more-link">所有文章 →</a>
-    </div>
-
-    <div class="blog-layout">
-      <!-- Featured post -->
-      <a href="{{ "blog/" | relURL }}" class="blog-featured rv">
-        <div class="blog-featured-thumb" aria-hidden="true">
-          <svg viewBox="0 0 200 124" style="width:55%;overflow:visible">
-            <use href="#mark-white"/>
-          </svg>
-        </div>
-        <div class="blog-featured-body">
-          <span class="blog-featured-tag">精選文章</span>
-          <h3 class="blog-featured-title">2025 企業數位轉型趨勢展望：AI、自動化與新世代 CX 的交匯點</h3>
-          <p class="blog-featured-excerpt">隨著 AI 工具日益普及，企業的數位轉型已不再只是「有沒有網站」的問題，而是如何善用技術創造真實的商業價值——從客戶體驗到內部流程優化，全面重新思考數位策略。</p>
-          <span class="blog-featured-meta">2025 / 01 / 12 · 8 分鐘閱讀</span>
-        </div>
-      </a>
-
-      <!-- Right column list -->
-      <div class="blog-list">
-        <a href="{{ "blog/" | relURL }}" class="blog-item rv rv-d1">
-          <span class="blog-item-dot"></span>
-          <div class="blog-item-body">
-            <h4 class="blog-item-title">選擇技術棧前，你應該問自己的 5 個問題</h4>
-            <span class="blog-item-meta">2024 / 11 / 03 · 5 分鐘閱讀</span>
-          </div>
-        </a>
-
-        <a href="{{ "blog/" | relURL }}" class="blog-item rv rv-d2">
-          <span class="blog-item-dot"></span>
-          <div class="blog-item-body">
-            <h4 class="blog-item-title">Core Web Vitals 完整指南：從理解到實戰優化</h4>
-            <span class="blog-item-meta">2024 / 09 / 22 · 10 分鐘閱讀</span>
-          </div>
-        </a>
-
-        <a href="{{ "blog/" | relURL }}" class="blog-item rv rv-d3">
-          <span class="blog-item-dot"></span>
-          <div class="blog-item-body">
-            <h4 class="blog-item-title">設計系統 (Design System) 的建立與維護：中小型團隊的最佳實踐</h4>
-            <span class="blog-item-meta">2024 / 07 / 15 · 7 分鐘閱讀</span>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ══════════════════════════════════════════
-     CTA
-══════════════════════════════════════════ -->
-<section class="cta-section">
-  <div class="cta-mark" aria-hidden="true">
-    <svg viewBox="0 0 200 124" style="width:100%;overflow:visible">
-      <use href="#mark-dark"/>
-    </svg>
-  </div>
-  <div class="wrap">
-    <div class="cta-inner rv">
-      <h2 class="cta-h2">準備好開始您的<br><em>數位轉型</em>之旅了嗎？</h2>
-      <p class="cta-sub">與我們分享您的想法，讓 ReViz 成為您最可靠的數位夥伴。</p>
-      <div class="cta-actions">
-        <a href="mailto:hello@reviz.tw" class="btn-pill-dark">立即聯繫 →</a>
-        <a href="{{ "portfolio/" | relURL }}" class="cta-email">查看更多作品</a>
-      </div>
-    </div>
-  </div>
-</section>
+<script>
+  (function () {
+    var el = document.getElementById('js-ticker-clock');
+    if (!el) return;
+    function tick() {
+      var d = new Date();
+      var hh = String(d.getHours()).padStart(2, '0');
+      var mm = String(d.getMinutes()).padStart(2, '0');
+      var ss = String(d.getSeconds()).padStart(2, '0');
+      el.textContent = hh + ':' + mm + ':' + ss;
+    }
+    tick();
+    setInterval(tick, 1000);
+  })();
+</script>
 
 {{ end }}
