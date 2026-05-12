@@ -1,0 +1,70 @@
+# UI strings — German (machine-drafted; native review recommended)
+
+nav_services = "Leistungen"
+nav_work     = "Projekte"
+nav_about    = "Über uns"
+nav_contact  = "Kontakt"
+
+tagline = "Digitalstudio · auf Anfrage"
+
+toggle_theme_light = "◐ LIGHT"
+toggle_theme_dark  = "◑ DARK"
+
+hero_h1_line1   = "Wir liefern <span class=\"accent\">Digitalprodukt</span>,"
+hero_h1_line2   = "Brand, Interaktion, KI."
+hero_h1_line3   = "Tools standardmäßig offen,"
+hero_h1_line4   = "Prozess jederzeit prüfbar"
+hero_view_work  = "► Projekte ansehen (6)"
+hero_send_mail  = "$ uns schreiben"
+config_comment  = "# sechsköpfiges Team · seit 2018"
+
+ticker_active        = "aktiv"
+ticker_active_sub    = "Projekte"
+ticker_commits       = "dieser Monat"
+ticker_years         = "Jahre"
+ticker_years_sub     = "in Betrieb"
+ticker_server_time   = "Serverzeit"
+
+prev_services_title = "Sieben Disziplinen"
+prev_work_title     = "Sechs aktuelle Projekte"
+prev_more           = "+ 2 more →"
+
+page_services_title = "Leistungen"
+page_services_sub   = "Von Design über Engineering bis zur KI-Beratung — sieben Leistungen, durchgängig betreut von einem sechsköpfigen Team. Eine Zeile anklicken für Details."
+page_work_title     = "Ausgewählte Projekte"
+page_work_sub       = "Sechs ausgewählte Projekte aus den letzten zwei Jahren. Die vollständige Liste von 52 Projekten (inkl. NDA-Fälle) gerne per Mail."
+page_about_title    = "Über uns"
+page_contact_title  = "Kontakt"
+
+svc_engagement_value   = "2–24 Wochen"
+svc_deliverables_value = "design · code · docs · training"
+svc_license_value      = "MIT · CC BY 4.0"
+svc_discuss_link       = "Besprechen →"
+
+wk_year_count    = "Projekte"
+wk_foot_comment  = "// 46 weitere auf Anfrage"
+
+ab_heading = "Offen arbeiten,<br>Kunden als Partner."
+ab_body_p1 = "reviz ist ein kleines Studio in Taipeh — Ingenieurinnen, Designer und Analysten, die seit 2018 Aufträge annehmen. Wir glauben, dass gute Projekte nicht geliefert, sondern gemeinsam gebaut werden."
+ab_body_p2 = "Unsere Tools sind standardmäßig Open Source. Unsere Prozessdokumente sind für den Kunden jederzeit einsehbar. Jedes Projekt erhält ein für den Kunden öffentliches Changelog. Nur was geprüft werden kann, wird auch vertraut."
+ab_body_p3 = "Wir übernehmen Projekte zwischen 500 K und 8 M NT$ — vom zweiwöchigen Design-Sprint bis zur einjährigen Transformationsbegleitung. Jede Zusammenarbeit beginnt mit einem kostenlosen 30-minütigen Gespräch."
+
+ct_heading          = "Bringen Sie eine Frage,<br>ein Budget oder Neugier."
+ct_body             = "Schreiben Sie uns ein, zwei Sätze zu Ihrem Vorhaben. Wir antworten in der Regel innerhalb von 48 Stunden (außer am Wochenende). Jedes Projekt beginnt mit einem kostenlosen 30-Minuten-Gespräch."
+ct_response_value   = "≤ 48h (Werktage)"
+ct_news_placeholder = "sie@irgendwo.org"
+
+# Blog
+nav_blog              = "Blog"
+page_blog_title       = "Werkstattnotizen"
+page_blog_sub         = "Feldnotizen zu Engineering, Design, KI und Open Data — Handwerk im Alltag."
+blog_posts_count      = "Beiträge"
+blog_related          = "Verwandte Beiträge"
+blog_back_to_list     = "← Zurück zur Liste"
+blog_author_label     = "Autor:in"
+blog_published_label  = "veröffentlicht"
+blog_read_label       = "Lesezeit"
+blog_by               = "von"
+blog_body_intro       = "Dies ist ein Beispieltext. In Produktion liefert Hugo den Inhalt aus <code>content/blog/&lt;slug&gt;.md</code> und wandelt ihn in HTML um. Autor:innen können beliebiges Markdown plus Hugo-Shortcodes verwenden."
+blog_body_sample_h2   = "Beispieltext folgt"
+blog_body_quote       = "„Nur was geprüft werden kann, wird vertraut."

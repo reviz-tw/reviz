@@ -1,0 +1,78 @@
+# UI strings — Traditional Chinese (default)
+
+nav_services = "服務"
+nav_work     = "作品"
+nav_about    = "關於"
+nav_contact  = "聯絡"
+
+tagline = "數位接案工作室"
+
+toggle_theme_light = "◐ LIGHT"
+toggle_theme_dark  = "◑ DARK"
+
+# Home — hero
+hero_h1_line1   = "我們做<span class=\"accent\">數位產品</span>、"
+hero_h1_line2   = "品牌、互動、AI 落地；"
+hero_h1_line3   = "工具預設開源，"
+hero_h1_line4   = "過程隨時可被檢查"
+hero_view_work  = "► 查看作品 (6)"
+hero_send_mail  = "$ 寄信給我們"
+config_comment  = "# 六人團隊 · 2018 起接案"
+
+# Home — ticker
+ticker_active        = "進行中"
+ticker_active_sub    = "專案"
+ticker_commits       = "本月發佈"
+ticker_years         = "年資"
+ticker_years_sub     = "運作中"
+ticker_server_time   = "伺服器時間"
+
+# Home — section previews
+prev_services_title = "七項服務"
+prev_work_title     = "近期六個案例"
+prev_more           = "+ 2 more →"
+
+# Page headers
+page_services_title = "提供服務"
+page_services_sub   = "從設計到工程到 AI 顧問，七種服務由同一支六人團隊負責到底。點開任一項目可看詳細。"
+page_work_title     = "過往作品"
+page_work_sub       = "近兩年精選六個案例。完整 52 個案例（含 NDA）請寄信索取。"
+page_about_title    = "關於我們"
+page_contact_title  = "聯絡我們"
+
+# Services
+svc_engagement_value   = "2–24 weeks"
+svc_deliverables_value = "design · code · docs · training"
+svc_license_value      = "MIT · CC BY 4.0"
+svc_discuss_link       = "寄信討論 →"
+
+# Work
+wk_year_count    = "件"
+wk_foot_comment  = "// 其餘 46 個案例請寄信索取"
+
+# About
+ab_heading      = "把工作做透明，<br>把客戶當夥伴。"
+ab_body_p1      = "reviz 是一支由工程師、設計師與分析師組成的小型工作室，自 2018 年起在台北接案。我們相信好專案不是「交付」出來，是「一起做」出來的。"
+ab_body_p2      = "我們所有工具偏好開源，所有過程文件可被客戶隨時檢視，每個專案有公開的更新日誌與決策紀錄。能被檢查的東西才會被信任。"
+ab_body_p3      = "我們接 NT$50 萬到 NT$800 萬的案子，從兩週的設計衝刺到一年期的數位轉型陪跑都做。先聊聊你的題目，再決定要不要合作。"
+
+# Contact
+ct_heading          = "帶著題目、預算<br>或單純的好奇心。"
+ct_body             = "寫一兩句話告訴我們你想做的事。我們通常 48 小時內回信（週末除外）。所有合作從 30 分鐘的免費聊聊開始。"
+ct_response_value   = "≤ 48h (weekdays)"
+ct_news_placeholder = "you@somewhere.org"
+
+# Blog
+nav_blog              = "部落格"
+page_blog_title       = "工作筆記"
+page_blog_sub         = "工程、設計、AI、開放資料的日常摸索與技術心得。"
+blog_posts_count      = "篇"
+blog_related          = "相關文章"
+blog_back_to_list     = "← 回到文章列表"
+blog_author_label     = "作者"
+blog_published_label  = "發佈"
+blog_read_label       = "閱讀時間"
+blog_by               = "作者"
+blog_body_intro       = "這是一篇示範文章內文。實際上線後內文由 Hugo 從 <code>content/blog/&lt;slug&gt;.md</code> 讀取並轉譯為 HTML。作者可以在 markdown 中使用所有標準語法，及 Hugo 的 shortcode。"
+blog_body_sample_h2   = "以下為示範內文"
+blog_body_quote       = "「能被檢查的東西才會被信任。」"

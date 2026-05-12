@@ -1,0 +1,70 @@
+# UI strings — English
+
+nav_services = "Services"
+nav_work     = "Work"
+nav_about    = "About"
+nav_contact  = "Contact"
+
+tagline = "digital studio · for hire"
+
+toggle_theme_light = "◐ LIGHT"
+toggle_theme_dark  = "◑ DARK"
+
+hero_h1_line1   = "We ship <span class=\"accent\">digital product,</span>"
+hero_h1_line2   = "brand, interactives, AI."
+hero_h1_line3   = "Tools default to open,"
+hero_h1_line4   = "process is inspectable"
+hero_view_work  = "► view work (6)"
+hero_send_mail  = "$ send mail"
+config_comment  = "# six-person team · since 2018"
+
+ticker_active        = "active"
+ticker_active_sub    = "projects"
+ticker_commits       = "this mo."
+ticker_years         = "years"
+ticker_years_sub     = "shipping"
+ticker_server_time   = "server time"
+
+prev_services_title = "Seven crafts"
+prev_work_title     = "Six recent projects"
+prev_more           = "+ 2 more →"
+
+page_services_title = "Services"
+page_services_sub   = "From design through engineering to AI advisory — seven services owned end-to-end by one six-person team. Tap any row for detail."
+page_work_title     = "Selected Work"
+page_work_sub       = "Six selected from the past two years. Full list of 52 (with NDA cases) on request."
+page_about_title    = "About"
+page_contact_title  = "Contact"
+
+svc_engagement_value   = "2–24 weeks"
+svc_deliverables_value = "design · code · docs · training"
+svc_license_value      = "MIT · CC BY 4.0"
+svc_discuss_link       = "discuss →"
+
+wk_year_count    = "projects"
+wk_foot_comment  = "// 46 more on request"
+
+ab_heading = "Work in the open.<br>Clients as partners."
+ab_body_p1 = "reviz is a small Taipei studio — engineers, designers and analysts who have been taking commissions since 2018. We think good projects are not delivered, they are made together."
+ab_body_p2 = "Our tools default to open source. Our process docs are inspectable by the client at any time. Every project ships with a public-to-the-client changelog. Only what can be checked gets trusted."
+ab_body_p3 = "We take work from NT$500K to NT$8M, from a two-week design sprint to a year-long transformation engagement. We start every collaboration with a free 30-minute call."
+
+ct_heading          = "Bring a question,<br>a budget, or curiosity."
+ct_body             = "Email a sentence or two about what you want to make. We usually reply within 48 hours (weekends aside). Every engagement begins with a free 30-min call."
+ct_response_value   = "≤ 48h (weekdays)"
+ct_news_placeholder = "you@somewhere.org"
+
+# Blog
+nav_blog              = "Blog"
+page_blog_title       = "Working Notes"
+page_blog_sub         = "Field notes on engineering, design, AI and open data — the day-to-day craft."
+blog_posts_count      = "posts"
+blog_related          = "Related posts"
+blog_back_to_list     = "← Back to all posts"
+blog_author_label     = "author"
+blog_published_label  = "published"
+blog_read_label       = "read time"
+blog_by               = "by"
+blog_body_intro       = "This is sample article body. In production, content is rendered by Hugo from <code>content/blog/&lt;slug&gt;.md</code> and converted to HTML. Authors can use any standard markdown plus Hugo shortcodes."
+blog_body_sample_h2   = "Sample body follows"
+blog_body_quote       = "“Only what can be checked gets trusted.”"

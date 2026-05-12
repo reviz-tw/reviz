@@ -1,43 +1,49 @@
-{{ define "title" }}聯絡我們 | reviz{{ end }}
+{{ define "title" }}{{ i18n "page_contact_title" }} | reviz{{ end }}
 
 {{ define "main" }}
+{{ $d := index .Site.Data (.Site.Language.Lang | lower) }}
 
 <div class="page-head">
   <div class="ph-crumb">
-    <a href="{{ "" | relURL }}" class="ph-tilde">~</a>
+    <a href="{{ "" | relLangURL }}" class="ph-tilde">~</a>
     <span class="ph-slash">/</span>
     <span class="ph-section">contact</span>
     <span class="ph-slash">·</span>
-    <span>§04</span>
+    <span>§05</span>
   </div>
-  <h1 class="ph-title">聯絡我們<span class="ph-dot">.</span></h1>
+  <h1 class="ph-title">{{ i18n "page_contact_title" }}<span class="ph-dot">.</span></h1>
 </div>
 
 <section class="contact-page">
   <div class="contact-grid">
     <div>
-      <h2 class="ct-heading">帶著題目、預算<br>或單純的好奇心。</h2>
-      <p class="ct-body">寫一兩句話告訴我們你想做的事。我們通常 48 小時內回信（週末除外）。所有合作從 30 分鐘的免費聊聊開始。</p>
+      <h2 class="ct-heading">{{ i18n "ct_heading" | safeHTML }}</h2>
+      <p class="ct-body">{{ i18n "ct_body" }}</p>
       <div class="ct-response">
         <span class="ct-prompt">$</span> echo $RESPONSE_TIME<br>
-        <span class="ct-response-v">≤ 48h (weekdays)</span>
+        <span class="ct-response-v">{{ i18n "ct_response_value" }}</span>
       </div>
     </div>
     <div>
       <div class="ct-card-label">// $ cat contact.yaml</div>
       <div class="ct-card">
-        <pre class="ct-yaml"><span class="syn-key">email:</span>     <a class="ct-link" href="mailto:hello@reviz.tw">hello@reviz.tw</a>
-<span class="syn-key">github:</span>    <span class="ct-val">github.com/reviz-tw</span>
-<span class="syn-key">linkedin:</span>  <span class="ct-val">linkedin.com/reviz</span>
-<span class="syn-key">newsletter:</span><span class="ct-val">newsletter.reviz.tw</span>
-<span class="syn-key">phone:</span>     <span class="ct-val">+886 2 2345 6789</span></pre>
+        <pre class="ct-yaml">{{- range $i, $s := $d.socials -}}
+{{- $pad := sub 11 (len $s.k) -}}
+<span class="syn-key">{{ $s.k }}:</span>{{ "" }}
+{{- range seq 1 $pad }} {{ end }}
+{{- if $s.link -}}
+<a class="ct-link" href="{{ $s.link }}">{{ $s.v }}</a>
+{{- else -}}
+<span class="ct-val">{{ $s.v }}</span>
+{{- end }}
+{{ end -}}</pre>
       </div>
       <form class="ct-newsletter" onsubmit="event.preventDefault();">
         <div class="ct-news-label">
           <span class="ct-prompt">$</span> subscribe --newsletter
         </div>
         <div class="ct-news-row">
-          <input type="email" placeholder="you@somewhere.org" class="ct-input" />
+          <input type="email" placeholder="{{ i18n "ct_news_placeholder" }}" class="ct-input" />
           <button class="ct-submit" type="submit">SUBSCRIBE ↵</button>
         </div>
       </form>

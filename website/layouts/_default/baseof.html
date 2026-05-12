@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="{{ .Site.Language.LanguageCode }}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ block "title" . }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
-  <meta name="description" content="{{ .Site.Params.description }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,700&family=Noto+Sans+TC:wght@400;500;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+  {{ range .AllTranslations }}
+  <link rel="alternate" hreflang="{{ .Language.LanguageCode }}" href="{{ .Permalink }}">
+  {{ end }}
 </head>
 <body>
 
@@ -18,26 +20,53 @@
 <div class="shell">
 
   <nav class="nav">
-    <a href="{{ "" | relURL }}" class="nav-logo" aria-label="ReViz">
+    <a href="{{ "" | relLangURL }}" class="nav-logo" aria-label="ReViz">
       <span class="wordmark">ReV<span class="wm-i">i<span class="wm-dot"></span></span>z</span>
-      <span class="nav-tag">// 數位接案工作室</span>
+      <span class="nav-tag">// {{ i18n "tagline" }}</span>
     </a>
 
     <div class="nav-links">
-      <a href="{{ "services/" | relURL }}" class="nav-link {{ if eq .Section "services" }}is-active{{ end }}">
-        <span class="nav-num">01</span><span>服務</span><kbd>S</kbd>
+      <a href="{{ "services/" | relLangURL }}" class="nav-link {{ if eq .Section "services" }}is-active{{ end }}">
+        <span class="nav-num">01</span><span>{{ i18n "nav_services" }}</span><kbd>S</kbd>
       </a>
-      <a href="{{ "portfolio/" | relURL }}" class="nav-link {{ if eq .Section "portfolio" }}is-active{{ end }}">
-        <span class="nav-num">02</span><span>作品</span><kbd>W</kbd>
+      <a href="{{ "portfolio/" | relLangURL }}" class="nav-link {{ if eq .Section "portfolio" }}is-active{{ end }}">
+        <span class="nav-num">02</span><span>{{ i18n "nav_work" }}</span><kbd>W</kbd>
       </a>
-      <a href="{{ "about/" | relURL }}" class="nav-link {{ if eq .Section "about" }}is-active{{ end }}">
-        <span class="nav-num">03</span><span>關於</span><kbd>A</kbd>
+      <a href="{{ "blog/" | relLangURL }}" class="nav-link {{ if eq .Section "blog" }}is-active{{ end }}">
+        <span class="nav-num">03</span><span>{{ i18n "nav_blog" }}</span><kbd>B</kbd>
       </a>
-      <a href="{{ "contact/" | relURL }}" class="nav-link {{ if eq .Section "contact" }}is-active{{ end }}">
-        <span class="nav-num">04</span><span>聯絡</span><kbd>C</kbd>
+      <a href="{{ "about/" | relLangURL }}" class="nav-link {{ if eq .Section "about" }}is-active{{ end }}">
+        <span class="nav-num">04</span><span>{{ i18n "nav_about" }}</span><kbd>A</kbd>
       </a>
+      <a href="{{ "contact/" | relLangURL }}" class="nav-link {{ if eq .Section "contact" }}is-active{{ end }}">
+        <span class="nav-num">05</span><span>{{ i18n "nav_contact" }}</span><kbd>C</kbd>
+      </a>
+
       <span class="nav-divider"></span>
-      <button class="nav-toggle" id="js-theme" type="button" aria-label="Toggle theme">◐ LIGHT</button>
+
+      <div class="lang-switch">
+        {{ $current := . }}
+        {{ $labels := dict "zh-tw" "繁" "en" "EN" "ja" "日" "ko" "한" "fr" "FR" "de" "DE" }}
+        {{ range .Site.Languages }}
+          {{ $lang := . }}
+          {{ $isCurrent := eq $lang.Lang $current.Site.Language.Lang }}
+          {{ $href := "" }}
+          {{ if $isCurrent }}
+            {{ $href = $current.Permalink }}
+          {{ else }}
+            {{ with (where $current.AllTranslations "Language.Lang" $lang.Lang) }}
+              {{ $href = (index . 0).Permalink }}
+            {{ else }}
+              {{ $href = printf "%s%s/" $current.Site.BaseURL $lang.Lang }}
+            {{ end }}
+          {{ end }}
+          {{ $label := index $labels (lower $lang.Lang) | default ($lang.Lang | upper) }}
+          <a href="{{ $href }}" class="lang-link {{ if $isCurrent }}is-active{{ end }}" hreflang="{{ $lang.LanguageCode }}" title="{{ $lang.LanguageName }}">{{ $label }}</a>
+        {{ end }}
+      </div>
+
+      <span class="nav-divider"></span>
+      <button class="nav-toggle" id="js-theme" type="button" aria-label="Toggle theme">{{ i18n "toggle_theme_light" }}</button>
     </div>
   </nav>
 
@@ -56,9 +85,11 @@
     var btn = document.getElementById('js-theme');
     if (!btn) return;
     var root = document.documentElement;
+    var lightLabel = {{ i18n "toggle_theme_light" }};
+    var darkLabel  = {{ i18n "toggle_theme_dark" }};
     btn.addEventListener('click', function () {
       var isLight = root.classList.toggle('theme-light');
-      btn.textContent = isLight ? '◑ DARK' : '◐ LIGHT';
+      btn.textContent = isLight ? darkLabel : lightLabel;
     });
   })();
 </script>

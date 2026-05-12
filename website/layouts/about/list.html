@@ -1,16 +1,17 @@
-{{ define "title" }}關於我們 | reviz{{ end }}
+{{ define "title" }}{{ i18n "page_about_title" }} | reviz{{ end }}
 
 {{ define "main" }}
+{{ $d := index .Site.Data (.Site.Language.Lang | lower) }}
 
 <div class="page-head">
   <div class="ph-crumb">
-    <a href="{{ "" | relURL }}" class="ph-tilde">~</a>
+    <a href="{{ "" | relLangURL }}" class="ph-tilde">~</a>
     <span class="ph-slash">/</span>
     <span class="ph-section">about</span>
     <span class="ph-slash">·</span>
-    <span>§03</span>
+    <span>§04</span>
   </div>
-  <h1 class="ph-title">關於我們<span class="ph-dot">.</span></h1>
+  <h1 class="ph-title">{{ i18n "page_about_title" }}<span class="ph-dot">.</span></h1>
 </div>
 
 <section class="about-page">
@@ -40,36 +41,20 @@
     </aside>
 
     <div class="ab-body">
-      <h2 class="ab-heading">把工作做透明，<br>把客戶當夥伴。</h2>
-      <p class="ab-p">reviz 是一支由工程師、設計師與分析師組成的小型工作室，自 2018 年起在台北接案。我們相信好專案不是「交付」出來，是「一起做」出來的。</p>
-      <p class="ab-p">我們所有工具偏好開源，所有過程文件可被客戶隨時檢視，每個專案有公開的更新日誌與決策紀錄。能被檢查的東西才會被信任。</p>
-      <p class="ab-p">我們接 NT$50 萬到 NT$800 萬的案子，從兩週的設計衝刺到一年期的數位轉型陪跑都做。先聊聊你的題目，再決定要不要合作。</p>
+      <h2 class="ab-heading">{{ i18n "ab_heading" | safeHTML }}</h2>
+      <p class="ab-p">{{ i18n "ab_body_p1" }}</p>
+      <p class="ab-p">{{ i18n "ab_body_p2" }}</p>
+      <p class="ab-p">{{ i18n "ab_body_p3" }}</p>
 
       <div class="ab-values">
+        {{ range $i, $v := $d.values }}
         <div class="ab-value">
-          <span class="ab-value-num">01</span>
-          <div class="ab-value-k">--open-source</div>
-          <div class="ab-value-v">預設開源</div>
-          <div class="ab-value-d">可釋出的工具與函式庫一律 GitHub 公開。</div>
+          <span class="ab-value-num">0{{ add $i 1 }}</span>
+          <div class="ab-value-k">--{{ $v.k }}</div>
+          <div class="ab-value-v">{{ $v.v }}</div>
+          <div class="ab-value-d">{{ $v.d }}</div>
         </div>
-        <div class="ab-value">
-          <span class="ab-value-num">02</span>
-          <div class="ab-value-k">--open-data</div>
-          <div class="ab-value-v">資料公共化</div>
-          <div class="ab-value-d">經客戶同意的清理資料集附公開連結。</div>
-        </div>
-        <div class="ab-value">
-          <span class="ab-value-num">03</span>
-          <div class="ab-value-k">--open-process</div>
-          <div class="ab-value-v">過程透明</div>
-          <div class="ab-value-d">每個專案有共用看板、決策紀錄、週報。</div>
-        </div>
-        <div class="ab-value">
-          <span class="ab-value-num">04</span>
-          <div class="ab-value-k">--with-readers</div>
-          <div class="ab-value-v">與讀者共做</div>
-          <div class="ab-value-d">產品與內容歡迎讀者協作、回報、貢獻。</div>
-        </div>
+        {{ end }}
       </div>
     </div>
   </div>

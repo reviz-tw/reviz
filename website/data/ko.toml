@@ -1,0 +1,148 @@
+# Structured page content — Korean (machine-drafted; native review recommended)
+
+[[services]]
+n     = "01"
+name  = "웹 개발"
+en    = "Web Engineering"
+desc  = "정적 사이트, CMS, 전자상거래, 웹 앱. Next.js, Hugo, 엣지 함수——출시 후에도 안정적으로 유지보수할 수 있는 시스템을 구축합니다."
+dot   = "#ff7eb6"
+tags  = ["Next.js", "TypeScript", "Hugo", "Edge"]
+
+[[services]]
+n     = "02"
+name  = "인터랙티브"
+en    = "Interactive"
+desc  = "프로덕트 프로토타입, 스크롤리텔링, 대시보드, 지도, 시뮬레이터——사용자가 «읽는» 것이 아니라 «만지는» 경험을."
+dot   = "#82aaff"
+tags  = ["React", "D3", "WebGL", "Three"]
+
+[[services]]
+n     = "03"
+name  = "비주얼 디자인"
+en    = "Visual Design"
+desc  = "브랜드 시스템, 디자인 시스템, 인포그래픽, UI/UX——명확한 메시지를 좋은 리듬으로."
+dot   = "#82e0aa"
+tags  = ["Figma", "브랜드", "디자인 시스템"]
+
+[[services]]
+n     = "04"
+name  = "데이터 분석"
+en    = "Data Analysis"
+desc  = "이벤트 계측, 대시보드, 예측 모델, A/B 테스트——감이 아닌 숫자로 의사결정을 뒷받침합니다."
+dot   = "#ffcb6b"
+tags  = ["Python", "SQL", "BI", "Looker"]
+
+[[services]]
+n     = "05"
+name  = "데이터 저널리즘"
+en    = "Data Journalism"
+desc  = "언론사와 NGO 의 탐사 보도: 스크래핑, 데이터 정리, 검증, 시각화, 내러티브."
+dot   = "#c792ea"
+tags  = ["scraping", "검증", "내러티브"]
+
+[[services]]
+n     = "06"
+name  = "AI 자문"
+en    = "AI Advisory"
+desc  = "워크플로우 감사, RAG, 에이전트 도입, 평가. LLM 이 프로덕션에서 «할 수 있는 것·없는 것»에 현실적으로 접근합니다."
+dot   = "#5dd6c5"
+tags  = ["RAG", "eval", "LLMOps"]
+
+[[services]]
+n     = "07"
+name  = "디지털 전환"
+en    = "Digital Transformation"
+desc  = "레거시 조직의 클라우드 이전, 문서 디지털화, 지식 구조화. 묵묵하지만 오래 가는 작업."
+dot   = "#ff9e64"
+tags  = ["프로세스", "시스템 통합", "교육"]
+
+[[work]]
+year     = "2025"
+idx      = 1
+client   = "금융 지주 · 디지털"
+title    = "자산 운용 어드바이저 대시보드"
+cat      = "웹 개발"
+catSlug  = "web-engineering"
+kpi      = "일일 1,200 명 어드바이저"
+
+[[work]]
+year     = "2024"
+idx      = 2
+client   = "상장 바이오 기업"
+title    = "사이트 리브랜딩과 디자인 시스템"
+cat      = "비주얼 디자인"
+catSlug  = "visual-design"
+kpi      = "LCP 1.1s · A+ Lighthouse"
+
+[[work]]
+year     = "2024"
+idx      = 3
+client   = "유통 체인 그룹"
+title    = "매장 운영 플랫폼과 대시보드"
+cat      = "디지털 전환"
+catSlug  = "digital-transformation"
+kpi      = "480 개 매장 · 9 개국"
+
+[[work]]
+year     = "2023"
+idx      = 4
+client   = "전국 일간지"
+title    = "인터랙티브 탐사 보도 «관세 전쟁»"
+cat      = "인터랙티브"
+catSlug  = "interactive"
+kpi      = "230 만 인터랙션"
+
+[[work]]
+year     = "2023"
+idx      = 5
+client   = "정부 기관"
+title    = "AI 헬프 데스크와 사내 지식 베이스"
+cat      = "AI 자문"
+catSlug  = "ai-advisory"
+kpi      = "응답 시간 -67%"
+
+[[work]]
+year     = "2022"
+idx      = 6
+client   = "이커머스 스타트업"
+title    = "데이터 웨어하우스 & BI 스택"
+cat      = "데이터 분석"
+catSlug  = "data-analysis"
+kpi      = "GMV +34%"
+
+[[values]]
+k = "open-source"
+v = "오픈소스"
+d = "공개 가능한 도구와 라이브러리는 GitHub 에 공개합니다."
+
+[[values]]
+k = "open-data"
+v = "오픈 데이터"
+d = "클라이언트 동의 하에 정리한 데이터셋을 공개 링크로 제공합니다."
+
+[[values]]
+k = "open-process"
+v = "오픈 프로세스"
+d = "프로젝트마다 공유 보드, 의사결정 기록, 주간 노트를 운영합니다."
+
+[[values]]
+k = "with-readers"
+v = "독자와 함께"
+d = "프로덕트와 콘텐츠에 사용자의 협력·제보·기여를 환영합니다."
+
+[[socials]]
+k = "email"
+v = "hello@reviz.tw"
+link = "mailto:hello@reviz.tw"
+[[socials]]
+k = "github"
+v = "github.com/reviz-tw"
+[[socials]]
+k = "linkedin"
+v = "linkedin.com/reviz"
+[[socials]]
+k = "newsletter"
+v = "newsletter.reviz.tw"
+[[socials]]
+k = "phone"
+v = "+886 2 2345 6789"

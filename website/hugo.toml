@@ -1,8 +1,40 @@
 baseURL = 'https://reviz-tw.github.io/reviz/'
-languageCode = 'zh-TW'
-title = 'Reviz'
-# We are building our own custom layout, no theme needed
+title = 'reviz'
+
+defaultContentLanguage = 'zh-TW'
+defaultContentLanguageInSubdir = false
+
+[languages]
+  [languages.zh-TW]
+    languageName = '繁體中文'
+    languageCode = 'zh-TW'
+    weight = 1
+    title = 'reviz'
+  [languages.en]
+    languageName = 'English'
+    languageCode = 'en'
+    weight = 2
+    title = 'reviz'
+  [languages.ja]
+    languageName = '日本語'
+    languageCode = 'ja'
+    weight = 3
+    title = 'reviz'
+  [languages.ko]
+    languageName = '한국어'
+    languageCode = 'ko'
+    weight = 4
+    title = 'reviz'
+  [languages.fr]
+    languageName = 'Français'
+    languageCode = 'fr'
+    weight = 5
+    title = 'reviz'
+  [languages.de]
+    languageName = 'Deutsch'
+    languageCode = 'de'
+    weight = 6
+    title = 'reviz'
 
 [params]
-  description = "Reviz — 網站開發、數位轉型與科技顧問。打造卓越數位體驗，讓您的品牌在數位時代脫穎而出。"
-  author = "Reviz Team"
+  author = "reviz studio"

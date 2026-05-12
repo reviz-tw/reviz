@@ -1,0 +1,148 @@
+# Structured page content — German (machine-drafted; native review recommended)
+
+[[services]]
+n     = "01"
+name  = "Web-Entwicklung"
+en    = "Web Engineering"
+desc  = "Statische Sites, CMS, E-Commerce, Web-Apps. Next.js, Hugo, Edge Functions — wartbare Systeme, die nach dem Launch ruhig bleiben."
+dot   = "#ff7eb6"
+tags  = ["Next.js", "TypeScript", "Hugo", "Edge"]
+
+[[services]]
+n     = "02"
+name  = "Interaktiv"
+en    = "Interactive"
+desc  = "Produktprototypen, Scrollytelling, Dashboards, Karten, Simulatoren — Nutzerinnen hören auf zu lesen und fangen an zu probieren."
+dot   = "#82aaff"
+tags  = ["React", "D3", "WebGL", "Three"]
+
+[[services]]
+n     = "03"
+name  = "Visuelles Design"
+en    = "Visual Design"
+desc  = "Markensysteme, Design Systems, Infografiken, UI/UX — klare Botschaften mit gutem Rhythmus."
+dot   = "#82e0aa"
+tags  = ["Figma", "Marke", "Systeme"]
+
+[[services]]
+n     = "04"
+name  = "Datenanalyse"
+en    = "Data Analysis"
+desc  = "Tracking, Dashboards, Vorhersagemodelle, A/B-Tests — Entscheidungen auf Basis von Zahlen, nicht Bauchgefühl."
+dot   = "#ffcb6b"
+tags  = ["Python", "SQL", "BI", "Looker"]
+
+[[services]]
+n     = "05"
+name  = "Datenjournalismus"
+en    = "Data Journalism"
+desc  = "Recherche-Arbeiten für Redaktionen und NGOs: Scraping, Bereinigung, Verifikation, Visualisierung, Narrativ."
+dot   = "#c792ea"
+tags  = ["scraping", "Verifikation", "Narrativ"]
+
+[[services]]
+n     = "06"
+name  = "KI-Beratung"
+en    = "AI Advisory"
+desc  = "Workflow-Audit, RAG, Agent-Deployments, Evaluierungen. Pragmatisch dazu, was LLMs in Produktion leisten — und was nicht."
+dot   = "#5dd6c5"
+tags  = ["RAG", "eval", "LLMOps"]
+
+[[services]]
+n     = "07"
+name  = "Digitale Transformation"
+en    = "Digital Transformation"
+desc  = "Legacy-Organisationen in die Cloud — Prozesse offen, Dokumente digital, Wissen strukturiert. Langsame, echte Arbeit."
+dot   = "#ff9e64"
+tags  = ["Prozess", "Integration", "Training"]
+
+[[work]]
+year     = "2025"
+idx      = 1
+client   = "Finanzholding · Digital"
+title    = "Vermögensberater-Dashboard"
+cat      = "Web-Entwicklung"
+catSlug  = "web-engineering"
+kpi      = "1.200 Berater täglich"
+
+[[work]]
+year     = "2024"
+idx      = 2
+client   = "Gelistete Biotech"
+title    = "Site-Relaunch & Design System"
+cat      = "Visuelles Design"
+catSlug  = "visual-design"
+kpi      = "LCP 1,1 s · A+ Lighthouse"
+
+[[work]]
+year     = "2024"
+idx      = 3
+client   = "Einzelhandelskette"
+title    = "Filial-Betriebsplattform & Dashboards"
+cat      = "Digitale Transformation"
+catSlug  = "digital-transformation"
+kpi      = "480 Filialen · 9 Länder"
+
+[[work]]
+year     = "2023"
+idx      = 4
+client   = "Nationale Tageszeitung"
+title    = "Interaktive Recherche · Zölle"
+cat      = "Interaktiv"
+catSlug  = "interactive"
+kpi      = "2,3 Mio. Interaktionen"
+
+[[work]]
+year     = "2023"
+idx      = 5
+client   = "Behörde"
+title    = "KI-Helpdesk und Wissensdatenbank"
+cat      = "KI-Beratung"
+catSlug  = "ai-advisory"
+kpi      = "Antwortzeit −67 %"
+
+[[work]]
+year     = "2022"
+idx      = 6
+client   = "E-Commerce-Startup"
+title    = "Data Warehouse & BI-Stack"
+cat      = "Datenanalyse"
+catSlug  = "data-analysis"
+kpi      = "GMV +34 %"
+
+[[values]]
+k = "open-source"
+v = "Open Source"
+d = "Veröffentlichbare Tools und Bibliotheken landen auf GitHub."
+
+[[values]]
+k = "open-data"
+v = "Open Data"
+d = "Bereinigte Datensätze bekommen einen öffentlichen Link, wenn erlaubt."
+
+[[values]]
+k = "open-process"
+v = "Open Process"
+d = "Gemeinsames Board, Entscheidungs-Log, wöchentliche Notiz pro Projekt."
+
+[[values]]
+k = "with-readers"
+v = "Mit Leserinnen"
+d = "Wir laden Nutzerinnen zur Mitarbeit am Produkt ein."
+
+[[socials]]
+k = "email"
+v = "hello@reviz.tw"
+link = "mailto:hello@reviz.tw"
+[[socials]]
+k = "github"
+v = "github.com/reviz-tw"
+[[socials]]
+k = "linkedin"
+v = "linkedin.com/reviz"
+[[socials]]
+k = "newsletter"
+v = "newsletter.reviz.tw"
+[[socials]]
+k = "phone"
+v = "+886 2 2345 6789"
