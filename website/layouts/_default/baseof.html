@@ -43,7 +43,7 @@
 
       <div class="lang-switch">
         {{ $current := . }}
-        {{ $labels := dict "zh-tw" "繁" "en" "EN" "ja" "日" "ko" "한" }}
+        {{ $labels := dict "zh-tw" "繁" "en" "EN" "ja" "日" "ko" "한" "fr" "FR" "de" "DE" }}
         {{ range .Site.Languages }}
           {{ $lang := . }}
           {{ $isCurrent := eq $lang.Lang $current.Site.Language.Lang }}

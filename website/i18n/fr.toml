@@ -1,0 +1,55 @@
+# UI strings — French (machine-drafted; native review recommended)
+
+nav_services = "Services"
+nav_work     = "Projets"
+nav_about    = "À propos"
+nav_contact  = "Contact"
+
+tagline = "studio numérique · sur commande"
+
+toggle_theme_light = "◐ LIGHT"
+toggle_theme_dark  = "◑ DARK"
+
+hero_h1_line1   = "Nous livrons <span class=\"accent\">du produit numérique</span>,"
+hero_h1_line2   = "de la marque, de l'interactif, de l'IA."
+hero_h1_line3   = "Outils ouverts par défaut,"
+hero_h1_line4   = "processus toujours inspectable"
+hero_view_work  = "► voir les projets (6)"
+hero_send_mail  = "$ nous écrire"
+config_comment  = "# équipe de six · depuis 2018"
+
+ticker_active        = "actifs"
+ticker_active_sub    = "projets"
+ticker_commits       = "ce mois"
+ticker_years         = "années"
+ticker_years_sub     = "en activité"
+ticker_server_time   = "heure serveur"
+
+prev_services_title = "Sept métiers"
+prev_work_title     = "Six projets récents"
+prev_more           = "+ 2 more →"
+
+page_services_title = "Services"
+page_services_sub   = "De la conception à l'ingénierie en passant par le conseil en IA — sept services pris en charge de bout en bout par une équipe de six personnes. Cliquez sur une ligne pour le détail."
+page_work_title     = "Projets sélectionnés"
+page_work_sub       = "Six projets retenus sur les deux dernières années. La liste complète des 52 cas (NDA inclus) est disponible sur demande."
+page_about_title    = "À propos"
+page_contact_title  = "Contact"
+
+svc_engagement_value   = "2–24 semaines"
+svc_deliverables_value = "design · code · docs · training"
+svc_license_value      = "MIT · CC BY 4.0"
+svc_discuss_link       = "en discuter →"
+
+wk_year_count    = "projets"
+wk_foot_comment  = "// 46 autres sur demande"
+
+ab_heading = "Travailler à découvert,<br>clients en partenaires."
+ab_body_p1 = "reviz est un petit studio de Taipei — ingénieurs, designers et analystes qui acceptent des commandes depuis 2018. Nous pensons qu'un bon projet ne se livre pas, il se construit ensemble."
+ab_body_p2 = "Nos outils sont open source par défaut. Notre documentation de processus reste consultable par le client à tout moment. Chaque projet est livré avec un changelog public pour le client. Seul ce qui peut être vérifié devient digne de confiance."
+ab_body_p3 = "Nous prenons des projets entre 500 K et 8 M NT$, du sprint de design de deux semaines à l'accompagnement de transformation sur un an. Chaque collaboration commence par un appel gratuit de 30 minutes."
+
+ct_heading          = "Apportez une question,<br>un budget ou la curiosité."
+ct_body             = "Envoyez-nous une ou deux phrases sur ce que vous voulez créer. Nous répondons généralement sous 48 heures (hors week-end). Toute collaboration commence par un appel gratuit de 30 minutes."
+ct_response_value   = "≤ 48h (jours ouvrés)"
+ct_news_placeholder = "vous@quelquepart.org"

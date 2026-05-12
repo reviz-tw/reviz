@@ -25,6 +25,16 @@ defaultContentLanguageInSubdir = false
     languageCode = 'ko'
     weight = 4
     title = 'reviz'
+  [languages.fr]
+    languageName = 'Français'
+    languageCode = 'fr'
+    weight = 5
+    title = 'reviz'
+  [languages.de]
+    languageName = 'Deutsch'
+    languageCode = 'de'
+    weight = 6
+    title = 'reviz'
 
 [params]
   author = "reviz studio"
