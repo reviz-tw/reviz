@@ -7,151 +7,93 @@
   <meta name="description" content="{{ .Site.Params.description }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,700&family=Syne:wght@700;800&family=M+PLUS+Rounded+1c:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,700&family=Noto+Sans+TC:wght@400;500;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
 </head>
 <body>
 
-<!-- ═══════════════════════════════════════════════════════
-     SHARED SVG DEFS — ReViz Wave Mark (4-wave flat design)
-     viewBox: 0 0 200 124
-     4 parallel waves, all same length & phase, no clipping
-     Amplitude ±8 | Period 94 | stroke-width 10 | round caps
-     W1 #2B5F75 · W2 #81C7D4 · W3 #EEA9A9 · W4 #F7D94C
-═══════════════════════════════════════════════════════ -->
-<svg class="svg-defs" aria-hidden="true">
-<defs>
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="bg-scan" aria-hidden="true"></div>
 
-  <!-- ── COLOR MARK ─────────────────────────────────── -->
-  <g id="mark-color">
-    <!-- W1 · Deep Teal · #2B5F75 -->
-    <path fill="none" stroke="#2B5F75" stroke-width="10" stroke-linecap="round"
-      d="M 6,24 C 23,24 36,8 53,8 C 70,8 83,24 100,24 C 117,24 130,8 147,8 C 164,8 177,24 194,24"/>
-    <!-- W2 · Sky Teal · #81C7D4 -->
-    <path fill="none" stroke="#81C7D4" stroke-width="10" stroke-linecap="round"
-      d="M 6,54 C 23,54 36,38 53,38 C 70,38 83,54 100,54 C 117,54 130,38 147,38 C 164,38 177,54 194,54"/>
-    <!-- W3 · Sakura Pink · #EEA9A9 -->
-    <path fill="none" stroke="#EEA9A9" stroke-width="10" stroke-linecap="round"
-      d="M 6,84 C 23,84 36,68 53,68 C 70,68 83,84 100,84 C 117,84 130,68 147,68 C 164,68 177,84 194,84"/>
-    <!-- W4 · Citrine Yellow · #F7D94C -->
-    <path fill="none" stroke="#F7D94C" stroke-width="10" stroke-linecap="round"
-      d="M 6,114 C 23,114 36,98 53,98 C 70,98 83,114 100,114 C 117,114 130,98 147,98 C 164,98 177,114 194,114"/>
-  </g>
+<div class="shell">
 
-  <!-- ── WHITE MARK (for dark/teal backgrounds) ────── -->
-  <g id="mark-white">
-    <path fill="none" stroke="rgba(255,255,255,.90)" stroke-width="10" stroke-linecap="round"
-      d="M 6,24 C 23,24 36,8 53,8 C 70,8 83,24 100,24 C 117,24 130,8 147,8 C 164,8 177,24 194,24"/>
-    <path fill="none" stroke="rgba(255,255,255,.65)" stroke-width="10" stroke-linecap="round"
-      d="M 6,54 C 23,54 36,38 53,38 C 70,38 83,54 100,54 C 117,54 130,38 147,38 C 164,38 177,54 194,54"/>
-    <path fill="none" stroke="rgba(255,255,255,.45)" stroke-width="10" stroke-linecap="round"
-      d="M 6,84 C 23,84 36,68 53,68 C 70,68 83,84 100,84 C 117,84 130,68 147,68 C 164,68 177,84 194,84"/>
-    <path fill="none" stroke="rgba(255,255,255,.22)" stroke-width="10" stroke-linecap="round"
-      d="M 6,114 C 23,114 36,98 53,98 C 70,98 83,114 100,114 C 117,114 130,98 147,98 C 164,98 177,114 194,114"/>
-  </g>
-
-  <!-- ── DARK MARK (for yellow CTA section) ─────────── -->
-  <g id="mark-dark">
-    <path fill="none" stroke="rgba(0,0,0,.75)" stroke-width="10" stroke-linecap="round"
-      d="M 6,24 C 23,24 36,8 53,8 C 70,8 83,24 100,24 C 117,24 130,8 147,8 C 164,8 177,24 194,24"/>
-    <path fill="none" stroke="rgba(0,0,0,.55)" stroke-width="10" stroke-linecap="round"
-      d="M 6,54 C 23,54 36,38 53,38 C 70,38 83,54 100,54 C 117,54 130,38 147,38 C 164,38 177,54 194,54"/>
-    <path fill="none" stroke="rgba(0,0,0,.38)" stroke-width="10" stroke-linecap="round"
-      d="M 6,84 C 23,84 36,68 53,68 C 70,68 83,84 100,84 C 117,84 130,68 147,68 C 164,68 177,84 194,84"/>
-    <path fill="none" stroke="rgba(0,0,0,.18)" stroke-width="10" stroke-linecap="round"
-      d="M 6,114 C 23,114 36,98 53,98 C 70,98 83,114 100,114 C 117,114 130,98 147,98 C 164,98 177,114 194,114"/>
-  </g>
-
-</defs>
-</svg>
-
-<!-- ── NAV ──────────────────────────────────────────────── -->
-<nav class="nav">
-  <a href="{{ "" | relURL }}" class="nav-logo">
-    <svg width="60" height="37" viewBox="0 0 200 124" style="overflow:visible;display:block" aria-hidden="true">
-      <use href="#mark-color"/>
-    </svg>
-    <span class="nav-wordmark">Re<em>Viz</em></span>
-  </a>
-
-  <div class="nav-links">
-    <a href="{{ "services/" | relURL }}">服務</a>
-    <a href="{{ "portfolio/" | relURL }}">作品</a>
-    <a href="{{ "news/" | relURL }}">動態</a>
-    <a href="{{ "blog/" | relURL }}">部落格</a>
-    <a href="{{ "about/" | relURL }}">關於</a>
+  <div class="topstrip">
+    <span class="topstrip-left">
+      <span class="t-path">
+        <span class="t-user">reviz</span><span class="t-at">@</span><span class="t-host">taipei</span><span class="t-colon">:</span><span class="t-cwd">{{ if .IsHome }}~/site/content/_index.md{{ else }}~/site/content/{{ .Section }}/_index.md{{ end }}</span><span class="t-prompt"> $</span>
+      </span>
+      <span class="t-build">hugo v.0.142.0 · 已建置</span>
+    </span>
+    <span class="topstrip-right">
+      <span class="t-status">
+        <span class="t-dot"></span>
+        accepting commissions
+      </span>
+      <span class="t-clock" id="js-clock">--:--:<span class="t-ss">--</span> tpe</span>
+      <span class="t-sep">·</span>
+      <span>load 0.42</span>
+    </span>
   </div>
 
-  <a href="mailto:hello@reviz.tw" class="nav-cta">聯絡我們</a>
-</nav>
+  <nav class="nav">
+    <a href="{{ "" | relURL }}" class="nav-logo" aria-label="ReViz">
+      <span class="wordmark">ReV<span class="wm-i">i<span class="wm-dot"></span></span>z</span>
+      <span class="nav-tag">// 數位接案工作室</span>
+    </a>
 
-<!-- ── MAIN ─────────────────────────────────────────────── -->
-<main>
-  {{ block "main" . }}{{ end }}
-</main>
-
-<!-- ── FOOTER ───────────────────────────────────────────── -->
-<footer class="footer">
-  <div class="footer-top">
-    <div class="footer-brand">
-      <a href="{{ "" | relURL }}" class="footer-logo">
-        <svg width="52" height="32" viewBox="0 0 200 124" style="overflow:visible;display:block" aria-hidden="true">
-          <use href="#mark-color"/>
-        </svg>
-        <span class="footer-wordmark">Re<em>Viz</em></span>
+    <div class="nav-links">
+      <a href="{{ "services/" | relURL }}" class="nav-link {{ if eq .Section "services" }}is-active{{ end }}">
+        <span class="nav-num">01</span><span>服務</span><kbd>S</kbd>
       </a>
-      <p class="footer-tagline">
-        打造驅動成長的數位體驗——從網站開發到數位轉型，讓您的品牌在數位時代脫穎而出。
-      </p>
+      <a href="{{ "portfolio/" | relURL }}" class="nav-link {{ if eq .Section "portfolio" }}is-active{{ end }}">
+        <span class="nav-num">02</span><span>作品</span><kbd>W</kbd>
+      </a>
+      <a href="{{ "about/" | relURL }}" class="nav-link {{ if eq .Section "about" }}is-active{{ end }}">
+        <span class="nav-num">03</span><span>關於</span><kbd>A</kbd>
+      </a>
+      <a href="mailto:hello@reviz.tw" class="nav-link">
+        <span class="nav-num">04</span><span>聯絡</span><kbd>C</kbd>
+      </a>
+      <span class="nav-divider"></span>
+      <button class="nav-toggle" id="js-theme" type="button" aria-label="Toggle theme">◐ LIGHT</button>
     </div>
-    <div class="footer-col">
-      <h5>服務</h5>
-      <ul>
-        <li><a href="{{ "services/" | relURL }}">網站開發</a></li>
-        <li><a href="{{ "services/" | relURL }}">數位轉型</a></li>
-        <li><a href="{{ "services/" | relURL }}">科技顧問</a></li>
-        <li><a href="{{ "services/" | relURL }}">UI / UX 設計</a></li>
-        <li><a href="{{ "blog/" | relURL }}">部落格</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h5>公司</h5>
-      <ul>
-        <li><a href="{{ "about/" | relURL }}">關於我們</a></li>
-        <li><a href="{{ "portfolio/" | relURL }}">作品集</a></li>
-        <li><a href="{{ "news/" | relURL }}">最新消息</a></li>
-        <li><a href="{{ "about/" | relURL }}">聯絡我們</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h5>聯繫</h5>
-      <ul>
-        <li><a href="mailto:hello@reviz.tw">hello@reviz.tw</a></li>
-        <li><a href="#">台灣，台北市</a></li>
-        <li><a href="#">LinkedIn</a></li>
-        <li><a href="#">GitHub</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span class="footer-copy">© {{ now.Year }} ReViz. All rights reserved.</span>
-    <span class="footer-badge">Taiwan · Based</span>
-  </div>
-</footer>
+  </nav>
+
+  <main>
+    {{ block "main" . }}{{ end }}
+  </main>
+
+  <footer class="footer">
+    <span>© {{ now.Year }} reviz studio · 內容 CC BY 4.0、程式碼 MIT</span>
+    <span>generated by hugo · 台北市中正區 · No.42 開放路 4F</span>
+  </footer>
+
+</div>
 
 <script>
-// ── Scroll reveal ──
-const obs = new IntersectionObserver(
-  entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); }),
-  { threshold: 0.08 }
-);
-document.querySelectorAll('.rv').forEach(el => obs.observe(el));
+  (function () {
+    var el = document.getElementById('js-clock');
+    if (!el) return;
+    function tick() {
+      var d = new Date();
+      var hh = String(d.getHours()).padStart(2, '0');
+      var mm = String(d.getMinutes()).padStart(2, '0');
+      var ss = String(d.getSeconds()).padStart(2, '0');
+      el.innerHTML = hh + ':' + mm + ':<span class="t-ss">' + ss + '</span> tpe';
+    }
+    tick();
+    setInterval(tick, 1000);
+  })();
 
-// ── Nav backdrop on scroll ──
-const nav = document.querySelector('.nav');
-window.addEventListener('scroll', () => {
-  nav?.classList.toggle('scrolled', window.scrollY > 60);
-}, { passive: true });
+  (function () {
+    var btn = document.getElementById('js-theme');
+    if (!btn) return;
+    var root = document.documentElement;
+    btn.addEventListener('click', function () {
+      var isLight = root.classList.toggle('theme-light');
+      btn.textContent = isLight ? '◑ DARK' : '◐ LIGHT';
+    });
+  })();
 </script>
 </body>
 </html>
