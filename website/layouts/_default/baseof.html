@@ -33,7 +33,7 @@
       <a href="{{ "about/" | relURL }}" class="nav-link {{ if eq .Section "about" }}is-active{{ end }}">
         <span class="nav-num">03</span><span>關於</span><kbd>A</kbd>
       </a>
-      <a href="mailto:hello@reviz.tw" class="nav-link">
+      <a href="{{ "contact/" | relURL }}" class="nav-link {{ if eq .Section "contact" }}is-active{{ end }}">
         <span class="nav-num">04</span><span>聯絡</span><kbd>C</kbd>
       </a>
       <span class="nav-divider"></span>
