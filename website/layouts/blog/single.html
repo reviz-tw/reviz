@@ -27,22 +27,7 @@
 
 <section class="post-body-wrap">
   <article class="post-body">
-    {{ if .Content }}
-      {{ .Content }}
-    {{ else }}
-      <p class="post-intro">{{ i18n "blog_body_intro" | safeHTML }}</p>
-      <h2 class="post-h2">{{ i18n "blog_body_sample_h2" }}</h2>
-      <p>{{ .Params.excerpt }}</p>
-      <p>{{ .Params.excerpt }}</p>
-      <blockquote class="post-quote">{{ i18n "blog_body_quote" }}</blockquote>
-      <p>{{ .Params.excerpt }}</p>
-      <pre class="post-pre"><span class="syn-cmt">// example</span>
-<span class="syn-key">const</span> reviz = <span class="syn-fn">createStudio</span>({
-  team: <span class="syn-num">6</span>,
-  open: <span class="syn-key">true</span>,
-});</pre>
-      <p>{{ .Params.excerpt }}</p>
-    {{ end }}
+    {{ .Content }}
   </article>
 
   <aside class="post-aside">

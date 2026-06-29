@@ -27,6 +27,11 @@
       <span class="bl-read">{{ .Params.read }}</span>
       <span class="bl-arrow">→</span>
     </a>
+    {{ else }}
+    <div class="blog-empty">
+      <div class="blog-empty-label">{{ i18n "blog_empty_label" }}</div>
+      <p class="blog-empty-body">{{ i18n "blog_empty_body" }}</p>
+    </div>
     {{ end }}
   </div>
 
