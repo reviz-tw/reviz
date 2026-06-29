@@ -37,7 +37,6 @@ page_work_sub       = "制作実績は現在整理中です。関連する経験
 page_about_title    = "会社情報"
 page_contact_title  = "お問い合わせ"
 
-svc_engagement_value   = "2–24 週間"
 svc_deliverables_value = "design · code · docs · training"
 svc_license_value      = "MIT · CC BY 4.0"
 svc_discuss_link       = "メールで相談 →"

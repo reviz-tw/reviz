@@ -37,7 +37,6 @@ page_work_sub       = "Case studies are being prepared. Email us if you want to 
 page_about_title    = "About"
 page_contact_title  = "Contact"
 
-svc_engagement_value   = "2–24 weeks"
 svc_deliverables_value = "design · code · docs · training"
 svc_license_value      = "MIT · CC BY 4.0"
 svc_discuss_link       = "discuss →"

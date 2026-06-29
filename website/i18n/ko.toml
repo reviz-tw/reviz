@@ -37,7 +37,6 @@ page_work_sub       = "작업 사례를 정리 중입니다. 관련 경험을 �
 page_about_title    = "회사 소개"
 page_contact_title  = "문의하기"
 
-svc_engagement_value   = "2–24 주"
 svc_deliverables_value = "design · code · docs · training"
 svc_license_value      = "MIT · CC BY 4.0"
 svc_discuss_link       = "메일로 논의 →"
