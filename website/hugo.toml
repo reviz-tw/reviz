@@ -1,4 +1,4 @@
-baseURL = 'https://reviz-tw.github.io/reviz/'
+baseURL = 'http://www.reviz.tw/'
 title = 'reviz'
 
 defaultContentLanguage = 'zh-TW'
