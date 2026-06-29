@@ -87,12 +87,7 @@ html.theme-light .bg-scan { display: none; }
   justify-content: space-between;
   background: var(--bg);
 }
-.nav-logo { display: inline-flex; align-items: center; gap: 14px; }
-.nav-tag {
-  color: var(--ink2);
-  font-size: 11px;
-  font-family: var(--f-mono);
-}
+.nav-logo { display: inline-flex; align-items: center; }
 
 .wordmark {
   font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -1121,7 +1116,6 @@ html.theme-light .lang-menu { box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12); }
   body { font-size: 13px; }
   .nav { flex-wrap: wrap; gap: 14px; padding: 1rem var(--pad-x); }
   .nav-links { gap: 14px; flex-wrap: wrap; }
-  .nav-tag { display: none; }
   .hero { padding: 2rem var(--pad-x); }
   .hero-h1 { font-size: clamp(36px, 8vw, 56px); }
   .ticker { grid-template-columns: 1fr 1fr; }

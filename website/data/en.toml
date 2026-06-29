@@ -132,8 +132,8 @@ d = "We invite users into the product as collaborators."
 
 [[socials]]
 k = "email"
-v = "hello@reviz.tw"
-link = "mailto:hello@reviz.tw"
+v = "hcchien@reviz.tw"
+link = "mailto:hcchien@reviz.tw"
 [[socials]]
 k = "github"
 v = "github.com/reviz-tw"
@@ -143,6 +143,3 @@ v = "linkedin.com/reviz"
 [[socials]]
 k = "newsletter"
 v = "newsletter.reviz.tw"
-[[socials]]
-k = "phone"
-v = "+886 2 2345 6789"
