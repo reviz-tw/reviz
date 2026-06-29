@@ -343,44 +343,6 @@ html.theme-light .lang-menu { box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12); }
 .syn-num { color: var(--syn-num); }
 .syn-fn  { color: var(--syn-fn);  }
 
-/* ── TICKER ──────────────────────────────────────────────── */
-.ticker {
-  margin-top: 44px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  border: 1px solid var(--rule);
-  background: var(--bg2);
-}
-.ticker-cell {
-  padding: 16px 20px;
-  border-right: 1px solid var(--rule);
-}
-.ticker-cell:last-child { border-right: 0; }
-.tk-key {
-  font-size: 9px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--ink2);
-  margin-bottom: 6px;
-}
-.tk-val {
-  font-family: var(--f-disp);
-  font-size: 30px;
-  color: var(--ink);
-  font-weight: 600;
-  line-height: 1;
-}
-.tk-val--live {
-  font-size: 22px;
-  color: var(--accent);
-}
-.tk-sub {
-  font-size: 10px;
-  color: var(--ink3);
-  margin-top: 6px;
-  font-family: var(--f-mono);
-}
-
 /* ══════════════════════════════════════════════════════════
    HOME · SECTION PREVIEWS
    ══════════════════════════════════════════════════════════ */
@@ -1116,9 +1078,6 @@ html.theme-light .lang-menu { box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12); }
   :root { --pad-x: 2.4rem; }
   .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .previews { grid-template-columns: 1fr; gap: 2rem; }
-  .ticker { grid-template-columns: 1fr 1fr; }
-  .ticker-cell:nth-child(2) { border-right: 0; }
-  .ticker-cell:nth-child(-n+2) { border-bottom: 1px solid var(--rule); }
 
   .svc-header,
   .svc-summary { grid-template-columns: 50px 1fr 50px; }
@@ -1148,7 +1107,6 @@ html.theme-light .lang-menu { box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12); }
   .nav-links { gap: 14px; flex-wrap: wrap; }
   .hero { padding: 2rem var(--pad-x); }
   .hero-h1 { font-size: clamp(36px, 8vw, 56px); }
-  .ticker { grid-template-columns: 1fr 1fr; }
 
   .ph-title { font-size: clamp(40px, 12vw, 64px); }
   .wordmark--lg { font-size: 80px; }

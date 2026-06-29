@@ -19,14 +19,6 @@ hero_view_work  = "► 查看作品"
 hero_send_mail  = "$ 寄信給我們"
 config_comment  = "# 六人團隊 · 2026 起接案"
 
-# Home — ticker
-ticker_active        = "進行中"
-ticker_active_sub    = "專案"
-ticker_commits       = "本月發佈"
-ticker_years         = "年資"
-ticker_years_sub     = "運作中"
-ticker_server_time   = "伺服器時間"
-
 # Home — section previews
 prev_services_title = "七項服務"
 prev_work_title     = "作品整理中"

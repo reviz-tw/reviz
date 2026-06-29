@@ -18,13 +18,6 @@ hero_view_work  = "► voir les projets"
 hero_send_mail  = "$ nous écrire"
 config_comment  = "# équipe de six · commandes depuis 2026"
 
-ticker_active        = "actifs"
-ticker_active_sub    = "projets"
-ticker_commits       = "ce mois"
-ticker_years         = "années"
-ticker_years_sub     = "en activité"
-ticker_server_time   = "heure serveur"
-
 prev_services_title = "Sept métiers"
 prev_work_title     = "Projets en préparation"
 prev_more           = "Voir la page projets →"

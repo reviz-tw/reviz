@@ -18,13 +18,6 @@ hero_view_work  = "► 작업 보기"
 hero_send_mail  = "$ 메일 보내기"
 config_comment  = "# 6 인 팀 · 2026 년부터 의뢰 진행"
 
-ticker_active        = "진행 중"
-ticker_active_sub    = "프로젝트"
-ticker_commits       = "이번 달 커밋"
-ticker_years         = "업력"
-ticker_years_sub     = "운영 중"
-ticker_server_time   = "서버 시간"
-
 prev_services_title = "일곱 가지 서비스"
 prev_work_title     = "작업 준비 중"
 prev_more           = "작업 페이지 보기 →"

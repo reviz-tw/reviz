@@ -18,13 +18,6 @@ hero_view_work  = "► view work"
 hero_send_mail  = "$ send mail"
 config_comment  = "# six-person team · taking commissions since 2026"
 
-ticker_active        = "active"
-ticker_active_sub    = "projects"
-ticker_commits       = "this mo."
-ticker_years         = "years"
-ticker_years_sub     = "shipping"
-ticker_server_time   = "server time"
-
 prev_services_title = "Seven crafts"
 prev_work_title     = "Work in progress"
 prev_more           = "View work page →"

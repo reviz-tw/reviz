@@ -18,13 +18,6 @@ hero_view_work  = "► 制作実績を見る"
 hero_send_mail  = "$ メールを送る"
 config_comment  = "# 6 名チーム · 2026 年から受託"
 
-ticker_active        = "進行中"
-ticker_active_sub    = "プロジェクト"
-ticker_commits       = "今月のコミット"
-ticker_years         = "業歴"
-ticker_years_sub     = "稼働中"
-ticker_server_time   = "サーバー時刻"
-
 prev_services_title = "7 つのサービス"
 prev_work_title     = "制作実績を準備中"
 prev_more           = "制作実績ページへ →"
