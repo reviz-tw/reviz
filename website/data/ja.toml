@@ -4,7 +4,7 @@
 n     = "01"
 name  = "ウェブ開発"
 en    = "Web Engineering"
-desc  = "静的サイト、CMS、EC、ウェブアプリ。Next.js、Hugo、エッジ関数——リリース後も穏やかに運用できる、保守性の高いシステムを構築します。"
+desc  = "ウェブサイト開発、システム分析、システム最適化。"
 dot   = "#ff7eb6"
 tags  = ["Next.js", "TypeScript", "Hugo", "Edge"]
 
@@ -28,7 +28,7 @@ tags  = ["Figma", "ブランド", "デザインシステム"]
 n     = "04"
 name  = "データ分析"
 en    = "Data Analysis"
-desc  = "計測、ダッシュボード、予測モデル、A/B テスト——勘ではなく数字で意思決定を支えます。"
+desc  = "データ分析はレポート作成だけではありません。データから有用な情報や発見を見つけ、事業判断を支援します。"
 dot   = "#ffcb6b"
 tags  = ["Python", "SQL", "BI", "Looker"]
 
@@ -55,60 +55,6 @@ en    = "Digital Transformation"
 desc  = "レガシー組織のクラウド移行、業務プロセス・文書のデジタル化、知識の構造化。地道な仕事を、長く積み上げます。"
 dot   = "#ff9e64"
 tags  = ["プロセス", "システム統合", "トレーニング"]
-
-[[work]]
-year     = "2025"
-idx      = 1
-client   = "金融ホールディングス · デジタル"
-title    = "資産運用アドバイザーダッシュボード"
-cat      = "ウェブ開発"
-catSlug  = "web-engineering"
-kpi      = "1日 1,200 アドバイザー"
-
-[[work]]
-year     = "2024"
-idx      = 2
-client   = "上場バイオテック企業"
-title    = "サイトリブランディングとデザインシステム"
-cat      = "ビジュアルデザイン"
-catSlug  = "visual-design"
-kpi      = "LCP 1.1s · A+ Lighthouse"
-
-[[work]]
-year     = "2024"
-idx      = 3
-client   = "小売チェーングループ"
-title    = "店舗運営プラットフォームとダッシュボード"
-cat      = "デジタル変革"
-catSlug  = "digital-transformation"
-kpi      = "480 店舗 · 9 ヶ国"
-
-[[work]]
-year     = "2023"
-idx      = 4
-client   = "全国紙メディア"
-title    = "インタラクティブ調査報道「関税戦」"
-cat      = "インタラクティブ"
-catSlug  = "interactive"
-kpi      = "230 万インタラクション"
-
-[[work]]
-year     = "2023"
-idx      = 5
-client   = "政府機関"
-title    = "AI ヘルプデスクと社内ナレッジベース"
-cat      = "AI コンサルティング"
-catSlug  = "ai-advisory"
-kpi      = "応答時間 -67%"
-
-[[work]]
-year     = "2022"
-idx      = 6
-client   = "EC スタートアップ"
-title    = "データウェアハウス & BI スタック"
-cat      = "データ分析"
-catSlug  = "data-analysis"
-kpi      = "GMV +34%"
 
 [[values]]
 k = "open-source"

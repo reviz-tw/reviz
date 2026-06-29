@@ -14,7 +14,7 @@ hero_h1_line1   = "우리는 <span class=\"accent\">디지털 프로덕트</span
 hero_h1_line2   = "브랜드, 인터랙션, AI 도입을 만듭니다;"
 hero_h1_line3   = "도구는 기본적으로 오픈소스,"
 hero_h1_line4   = "과정은 언제든 검증할 수 있습니다"
-hero_view_work  = "► 작업 보기 (6)"
+hero_view_work  = "► 작업 보기"
 hero_send_mail  = "$ 메일 보내기"
 config_comment  = "# 6 인 팀 · 2018 년부터"
 
@@ -26,13 +26,14 @@ ticker_years_sub     = "운영 중"
 ticker_server_time   = "서버 시간"
 
 prev_services_title = "일곱 가지 서비스"
-prev_work_title     = "최근 여섯 건"
-prev_more           = "+ 2 more →"
+prev_work_title     = "작업 준비 중"
+prev_more           = "작업 페이지 보기 →"
+prev_work_empty     = "작업 사례를 정리 중입니다. 관련 경험을 알고 싶다면 메일로 문의해 주세요."
 
 page_services_title = "서비스"
 page_services_sub   = "디자인부터 엔지니어링, AI 자문까지——일곱 가지 서비스를 6 인 팀이 처음부터 끝까지 책임집니다. 항목을 클릭하면 상세 내용을 볼 수 있습니다."
 page_work_title     = "작업"
-page_work_sub       = "최근 2 년 중 엄선한 여섯 건. NDA 사례를 포함한 전체 52 건 리스트는 메일로 요청해 주세요."
+page_work_sub       = "작업 사례를 정리 중입니다. 관련 경험을 알고 싶다면 메일로 문의해 주세요."
 page_about_title    = "회사 소개"
 page_contact_title  = "문의하기"
 
@@ -42,7 +43,9 @@ svc_license_value      = "MIT · CC BY 4.0"
 svc_discuss_link       = "메일로 논의 →"
 
 wk_year_count    = "건"
-wk_foot_comment  = "// 나머지 46 건은 메일로 요청해 주세요"
+wk_foot_comment  = "// 작업 사례 정리 중"
+wk_empty_label   = "// 공개 사례 없음"
+wk_empty_body    = "작업 사례를 정리 중입니다. 관련 경험을 알고 싶다면 메일로 문의해 주세요."
 
 ab_heading = "일은 투명하게,<br>클라이언트는 파트너로."
 ab_body_p1 = "reviz 는 엔지니어, 디자이너, 분석가로 구성된 작은 타이베이 스튜디오입니다. 2018 년부터 의뢰를 받아 왔습니다. 좋은 프로젝트는 «납품» 되는 것이 아니라 «함께 만들어가는» 것이라 믿습니다."

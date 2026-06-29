@@ -14,7 +14,7 @@ hero_h1_line1   = "つくるのは <span class=\"accent\">デジタルプロダ�
 hero_h1_line2   = "ブランド、インタラクション、AI 実装；"
 hero_h1_line3   = "ツールは標準でオープンソース、"
 hero_h1_line4   = "プロセスはいつでも検査可能"
-hero_view_work  = "► 制作実績を見る (6)"
+hero_view_work  = "► 制作実績を見る"
 hero_send_mail  = "$ メールを送る"
 config_comment  = "# 6 名チーム · 2018 年創業"
 
@@ -26,13 +26,14 @@ ticker_years_sub     = "稼働中"
 ticker_server_time   = "サーバー時刻"
 
 prev_services_title = "7 つのサービス"
-prev_work_title     = "最近の 6 件"
-prev_more           = "+ 2 more →"
+prev_work_title     = "制作実績を準備中"
+prev_more           = "制作実績ページへ →"
+prev_work_empty     = "制作実績は現在整理中です。関連する経験についてはメールでお問い合わせください。"
 
 page_services_title = "サービス"
 page_services_sub   = "デザインから開発、AI コンサルティングまで——7 種類のサービスを 6 名のチームが一貫して担当します。項目をクリックして詳細をご覧ください。"
 page_work_title     = "制作実績"
-page_work_sub       = "直近 2 年から厳選した 6 件。NDA 案件を含む全 52 件のリストはメールでお問い合わせください。"
+page_work_sub       = "制作実績は現在整理中です。関連する経験についてはメールでお問い合わせください。"
 page_about_title    = "会社情報"
 page_contact_title  = "お問い合わせ"
 
@@ -42,7 +43,9 @@ svc_license_value      = "MIT · CC BY 4.0"
 svc_discuss_link       = "メールで相談 →"
 
 wk_year_count    = "件"
-wk_foot_comment  = "// 残り 46 件はメールでお問い合わせください"
+wk_foot_comment  = "// 制作実績を整理中"
+wk_empty_label   = "// 公開実績はまだありません"
+wk_empty_body    = "制作実績は現在整理中です。関連する経験についてはメールでお問い合わせください。"
 
 ab_heading = "仕事をオープンに、<br>クライアントをパートナーに。"
 ab_body_p1 = "reviz は、エンジニア・デザイナー・アナリストで構成される台北の小さなスタジオです。2018 年から受託開発を行ってきました。良いプロジェクトは「納品される」のではなく「一緒につくる」ものだと考えています。"

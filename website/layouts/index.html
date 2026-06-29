@@ -2,6 +2,7 @@
 
 {{ define "main" }}
 {{ $d := index .Site.Data (.Site.Language.Lang | lower) }}
+{{ $work := default (slice) $d.work }}
 
 <section class="hero">
   <div class="hero-cmd">
@@ -94,7 +95,8 @@ email    = <span class="syn-str">"hcchien@reviz.tw"</span></pre>
     </div>
     <h3 class="prev-title">{{ i18n "prev_work_title" }}</h3>
     <div class="work-list">
-      {{ range first 4 $d.work }}
+      {{ if gt (len $work) 0 }}
+      {{ range first 4 $work }}
       <div class="work-row">
         <span class="wk-year">{{ .year }}</span>
         <span class="wk-title">{{ .title }}</span>
@@ -102,6 +104,9 @@ email    = <span class="syn-str">"hcchien@reviz.tw"</span></pre>
       </div>
       {{ end }}
       <div class="work-more">{{ i18n "prev_more" }}</div>
+      {{ else }}
+      <div class="work-empty">{{ i18n "prev_work_empty" }}</div>
+      {{ end }}
     </div>
   </a>
 </section>

@@ -4,7 +4,7 @@
 n     = "01"
 name  = "웹 개발"
 en    = "Web Engineering"
-desc  = "정적 사이트, CMS, 전자상거래, 웹 앱. Next.js, Hugo, 엣지 함수——출시 후에도 안정적으로 유지보수할 수 있는 시스템을 구축합니다."
+desc  = "웹사이트 개발, 시스템 분석, 시스템 최적화."
 dot   = "#ff7eb6"
 tags  = ["Next.js", "TypeScript", "Hugo", "Edge"]
 
@@ -28,7 +28,7 @@ tags  = ["Figma", "브랜드", "디자인 시스템"]
 n     = "04"
 name  = "데이터 분석"
 en    = "Data Analysis"
-desc  = "이벤트 계측, 대시보드, 예측 모델, A/B 테스트——감이 아닌 숫자로 의사결정을 뒷받침합니다."
+desc  = "데이터 분석은 보고서를 만드는 데 그치지 않습니다. 데이터에서 유용한 정보와 발견을 찾아 비즈니스 의사결정을 돕습니다."
 dot   = "#ffcb6b"
 tags  = ["Python", "SQL", "BI", "Looker"]
 
@@ -55,60 +55,6 @@ en    = "Digital Transformation"
 desc  = "레거시 조직의 클라우드 이전, 문서 디지털화, 지식 구조화. 묵묵하지만 오래 가는 작업."
 dot   = "#ff9e64"
 tags  = ["프로세스", "시스템 통합", "교육"]
-
-[[work]]
-year     = "2025"
-idx      = 1
-client   = "금융 지주 · 디지털"
-title    = "자산 운용 어드바이저 대시보드"
-cat      = "웹 개발"
-catSlug  = "web-engineering"
-kpi      = "일일 1,200 명 어드바이저"
-
-[[work]]
-year     = "2024"
-idx      = 2
-client   = "상장 바이오 기업"
-title    = "사이트 리브랜딩과 디자인 시스템"
-cat      = "비주얼 디자인"
-catSlug  = "visual-design"
-kpi      = "LCP 1.1s · A+ Lighthouse"
-
-[[work]]
-year     = "2024"
-idx      = 3
-client   = "유통 체인 그룹"
-title    = "매장 운영 플랫폼과 대시보드"
-cat      = "디지털 전환"
-catSlug  = "digital-transformation"
-kpi      = "480 개 매장 · 9 개국"
-
-[[work]]
-year     = "2023"
-idx      = 4
-client   = "전국 일간지"
-title    = "인터랙티브 탐사 보도 «관세 전쟁»"
-cat      = "인터랙티브"
-catSlug  = "interactive"
-kpi      = "230 만 인터랙션"
-
-[[work]]
-year     = "2023"
-idx      = 5
-client   = "정부 기관"
-title    = "AI 헬프 데스크와 사내 지식 베이스"
-cat      = "AI 자문"
-catSlug  = "ai-advisory"
-kpi      = "응답 시간 -67%"
-
-[[work]]
-year     = "2022"
-idx      = 6
-client   = "이커머스 스타트업"
-title    = "데이터 웨어하우스 & BI 스택"
-cat      = "데이터 분석"
-catSlug  = "data-analysis"
-kpi      = "GMV +34%"
 
 [[values]]
 k = "open-source"

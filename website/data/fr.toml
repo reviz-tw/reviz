@@ -4,7 +4,7 @@
 n     = "01"
 name  = "Ingénierie web"
 en    = "Web Engineering"
-desc  = "Sites statiques, CMS, e-commerce, applications web. Next.js, Hugo, edge functions — des systèmes maintenables qui restent calmes après la mise en ligne."
+desc  = "Développement de sites web, analyse système et optimisation système."
 dot   = "#ff7eb6"
 tags  = ["Next.js", "TypeScript", "Hugo", "Edge"]
 
@@ -28,7 +28,7 @@ tags  = ["Figma", "marque", "systèmes"]
 n     = "04"
 name  = "Analyse de données"
 en    = "Data Analysis"
-desc  = "Instrumentation, tableaux de bord, modèles prédictifs, A/B testing — des décisions basées sur des chiffres, pas sur l'intuition."
+desc  = "L'analyse de données ne se limite pas aux rapports : elle consiste à trouver dans les données des informations et des découvertes utiles pour soutenir les décisions métier."
 dot   = "#ffcb6b"
 tags  = ["Python", "SQL", "BI", "Looker"]
 
@@ -55,60 +55,6 @@ en    = "Digital Transformation"
 desc  = "Migration des organisations legacy vers le cloud — processus ouverts, documents numériques, connaissances structurées. Du travail patient, du vrai travail."
 dot   = "#ff9e64"
 tags  = ["processus", "intégration", "formation"]
-
-[[work]]
-year     = "2025"
-idx      = 1
-client   = "Holding financière · Digital"
-title    = "Tableau de bord conseiller en patrimoine"
-cat      = "Ingénierie web"
-catSlug  = "web-engineering"
-kpi      = "1 200 conseillers / jour"
-
-[[work]]
-year     = "2024"
-idx      = 2
-client   = "Biotech cotée"
-title    = "Refonte du site et design system"
-cat      = "Design visuel"
-catSlug  = "visual-design"
-kpi      = "LCP 1,1 s · A+ Lighthouse"
-
-[[work]]
-year     = "2024"
-idx      = 3
-client   = "Groupe de retail"
-title    = "Plateforme d'exploitation des magasins"
-cat      = "Transformation numérique"
-catSlug  = "digital-transformation"
-kpi      = "480 magasins · 9 pays"
-
-[[work]]
-year     = "2023"
-idx      = 4
-client   = "Média national"
-title    = "Enquête interactive · droits de douane"
-cat      = "Interactif"
-catSlug  = "interactive"
-kpi      = "2,3 M d'interactions"
-
-[[work]]
-year     = "2023"
-idx      = 5
-client   = "Agence gouvernementale"
-title    = "Service d'assistance IA et base de connaissances"
-cat      = "Conseil IA"
-catSlug  = "ai-advisory"
-kpi      = "temps de réponse −67 %"
-
-[[work]]
-year     = "2022"
-idx      = 6
-client   = "Startup e-commerce"
-title    = "Entrepôt de données et stack BI"
-cat      = "Analyse de données"
-catSlug  = "data-analysis"
-kpi      = "GMV +34 %"
 
 [[values]]
 k = "open-source"

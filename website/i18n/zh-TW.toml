@@ -15,7 +15,7 @@ hero_h1_line1   = "我們做<span class=\"accent\">數位產品</span>、"
 hero_h1_line2   = "品牌、互動、AI 落地；"
 hero_h1_line3   = "工具預設開源，"
 hero_h1_line4   = "過程隨時可被檢查"
-hero_view_work  = "► 查看作品 (6)"
+hero_view_work  = "► 查看作品"
 hero_send_mail  = "$ 寄信給我們"
 config_comment  = "# 六人團隊 · 2018 起接案"
 
@@ -29,14 +29,15 @@ ticker_server_time   = "伺服器時間"
 
 # Home — section previews
 prev_services_title = "七項服務"
-prev_work_title     = "近期六個案例"
-prev_more           = "+ 2 more →"
+prev_work_title     = "作品整理中"
+prev_more           = "查看作品頁 →"
+prev_work_empty     = "案例內容整理中，請直接來信了解相關經驗。"
 
 # Page headers
 page_services_title = "提供服務"
 page_services_sub   = "從設計到工程到 AI 顧問，七種服務由同一支六人團隊負責到底。點開任一項目可看詳細。"
 page_work_title     = "過往作品"
-page_work_sub       = "近兩年精選六個案例。完整 52 個案例（含 NDA）請寄信索取。"
+page_work_sub       = "作品案例正在整理中。若需要了解相關經驗，歡迎直接來信討論。"
 page_about_title    = "關於我們"
 page_contact_title  = "聯絡我們"
 
@@ -48,7 +49,9 @@ svc_discuss_link       = "寄信討論 →"
 
 # Work
 wk_year_count    = "件"
-wk_foot_comment  = "// 其餘 46 個案例請寄信索取"
+wk_foot_comment  = "// 作品資料整理中"
+wk_empty_label   = "// 尚無公開案例"
+wk_empty_body    = "作品案例正在整理中。若需要了解相關經驗，歡迎直接來信討論。"
 
 # About
 ab_heading      = "把工作做透明，<br>把客戶當夥伴。"

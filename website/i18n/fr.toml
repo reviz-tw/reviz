@@ -14,7 +14,7 @@ hero_h1_line1   = "Nous livrons <span class=\"accent\">du produit numérique</sp
 hero_h1_line2   = "de la marque, de l'interactif, de l'IA."
 hero_h1_line3   = "Outils ouverts par défaut,"
 hero_h1_line4   = "processus toujours inspectable"
-hero_view_work  = "► voir les projets (6)"
+hero_view_work  = "► voir les projets"
 hero_send_mail  = "$ nous écrire"
 config_comment  = "# équipe de six · depuis 2018"
 
@@ -26,13 +26,14 @@ ticker_years_sub     = "en activité"
 ticker_server_time   = "heure serveur"
 
 prev_services_title = "Sept métiers"
-prev_work_title     = "Six projets récents"
-prev_more           = "+ 2 more →"
+prev_work_title     = "Projets en préparation"
+prev_more           = "Voir la page projets →"
+prev_work_empty     = "Les études de cas sont en préparation. Écrivez-nous pour discuter d'expériences pertinentes."
 
 page_services_title = "Services"
 page_services_sub   = "De la conception à l'ingénierie en passant par le conseil en IA — sept services pris en charge de bout en bout par une équipe de six personnes. Cliquez sur une ligne pour le détail."
 page_work_title     = "Projets sélectionnés"
-page_work_sub       = "Six projets retenus sur les deux dernières années. La liste complète des 52 cas (NDA inclus) est disponible sur demande."
+page_work_sub       = "Les études de cas sont en préparation. Écrivez-nous pour discuter d'expériences pertinentes."
 page_about_title    = "À propos"
 page_contact_title  = "Contact"
 
@@ -42,7 +43,9 @@ svc_license_value      = "MIT · CC BY 4.0"
 svc_discuss_link       = "en discuter →"
 
 wk_year_count    = "projets"
-wk_foot_comment  = "// 46 autres sur demande"
+wk_foot_comment  = "// études de cas en préparation"
+wk_empty_label   = "// aucun cas public"
+wk_empty_body    = "Les études de cas sont en préparation. Écrivez-nous pour discuter d'expériences pertinentes."
 
 ab_heading = "Travailler à découvert,<br>clients en partenaires."
 ab_body_p1 = "reviz est un petit studio de Taipei — ingénieurs, designers et analystes qui acceptent des commandes depuis 2018. Nous pensons qu'un bon projet ne se livre pas, il se construit ensemble."

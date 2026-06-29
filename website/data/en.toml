@@ -4,7 +4,7 @@
 n     = "01"
 name  = "Web Engineering"
 en    = "網站開發"
-desc  = "Static sites, CMSes, e-commerce, web apps. Next.js, Hugo, edge functions — maintainable systems that stay calm after launch."
+desc  = "Website development, systems analysis, and systems optimization."
 dot   = "#ff7eb6"
 tags  = ["Next.js", "TypeScript", "Hugo", "Edge"]
 
@@ -28,7 +28,7 @@ tags  = ["Figma", "brand", "systems"]
 n     = "04"
 name  = "Data Analysis"
 en    = "資料分析"
-desc  = "Instrumentation, dashboards, predictive models, A/B testing — decisions backed by numbers, not gut."
+desc  = "Data analysis is not just report generation; it is finding useful signals and discoveries in data to support business decisions."
 dot   = "#ffcb6b"
 tags  = ["Python", "SQL", "BI", "Looker"]
 
@@ -55,60 +55,6 @@ en    = "數位轉型"
 desc  = "Legacy orgs onto cloud — processes open, documents digital, knowledge structured. Slow work, real work."
 dot   = "#ff9e64"
 tags  = ["process", "systems", "training"]
-
-[[work]]
-year     = "2025"
-idx      = 1
-client   = "Financial Holdings · Digital"
-title    = "Wealth Advisor Dashboard"
-cat      = "Web Engineering"
-catSlug  = "web-engineering"
-kpi      = "1,200 daily advisors"
-
-[[work]]
-year     = "2024"
-idx      = 2
-client   = "Listed Biotech"
-title    = "Site Rebrand & Design System"
-cat      = "Visual Design"
-catSlug  = "visual-design"
-kpi      = "LCP 1.1s · A+ Lighthouse"
-
-[[work]]
-year     = "2024"
-idx      = 3
-client   = "Retail Chain Group"
-title    = "Store Ops Platform & Dashboards"
-cat      = "Digital Transformation"
-catSlug  = "digital-transformation"
-kpi      = "480 stores · 9 countries"
-
-[[work]]
-year     = "2023"
-idx      = 4
-client   = "National News Outlet"
-title    = "Interactive Investigation · Tariffs"
-cat      = "Interactive"
-catSlug  = "interactive"
-kpi      = "2.3M interactions"
-
-[[work]]
-year     = "2023"
-idx      = 5
-client   = "Government Agency"
-title    = "AI Help Desk & Knowledge Base"
-cat      = "AI Advisory"
-catSlug  = "ai-advisory"
-kpi      = "response time -67%"
-
-[[work]]
-year     = "2022"
-idx      = 6
-client   = "E-commerce Startup"
-title    = "Data Warehouse & BI Stack"
-cat      = "Data Analysis"
-catSlug  = "data-analysis"
-kpi      = "GMV +34%"
 
 [[values]]
 k = "open-source"

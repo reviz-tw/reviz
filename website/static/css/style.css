@@ -468,6 +468,17 @@ html.theme-light .lang-menu { box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12); }
   font-family: var(--f-mono);
   margin-top: 6px;
 }
+.work-empty {
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  border-left: 2px solid var(--rule);
+  padding-left: 12px;
+  color: var(--ink2);
+  font-size: 12px;
+  line-height: 1.6;
+  font-family: var(--f-mono);
+}
 
 /* ══════════════════════════════════════════════════════════
    SHARED PAGE HEADER (§01–§04)
@@ -626,6 +637,25 @@ html.theme-light .lang-menu { box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12); }
 .wk-row:hover { background: var(--bg2); }
 .wk-row:hover .wk-title { color: var(--accent); }
 .wk-row:hover .wk-arrow { transform: translateX(6px); }
+.wk-empty {
+  max-width: 760px;
+  padding: 36px 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+.wk-empty-k {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--accent);
+  font-family: var(--f-mono);
+  font-size: 11px;
+}
+.wk-empty p {
+  margin: 0;
+  color: var(--ink2);
+  font-size: 18px;
+  line-height: 1.7;
+}
 .wk-hex {
   font-size: 11px;
   color: var(--ink3);

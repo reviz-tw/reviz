@@ -16,11 +16,12 @@
 </div>
 
 <section class="work-page">
-  {{ $items := $d.work }}
+  {{ $items := default (slice) $d.work }}
+
+  {{ if gt (len $items) 0 }}
   {{ $years := slice }}
   {{ range $items }}{{ $years = $years | append .year }}{{ end }}
   {{ $years = uniq $years }}
-
   {{ range $year := $years }}
     {{ $byYear := where $items "year" $year }}
     <div class="wk-year-group">
@@ -44,10 +45,16 @@
       {{ end }}
     </div>
   {{ end }}
+  {{ else }}
+  <div class="wk-empty">
+    <span class="wk-empty-k">{{ i18n "wk_empty_label" }}</span>
+    <p>{{ i18n "wk_empty_body" }}</p>
+  </div>
+  {{ end }}
 
   <div class="wk-foot">
-    <span class="wk-prompt">$</span> ls content/work/ | wc -l<br>
-    <span class="wk-foot-v">52</span>    <span class="wk-foot-c">{{ i18n "wk_foot_comment" }}</span>
+    <span class="wk-prompt">$</span> len data.work<br>
+    <span class="wk-foot-v">{{ len $items }}</span>    <span class="wk-foot-c">{{ i18n "wk_foot_comment" }}</span>
   </div>
 </section>
 

@@ -4,7 +4,7 @@
 n     = "01"
 name  = "網站開發"
 en    = "Web Engineering"
-desc  = "從靜態官網、CMS、電商到 Web App。Next.js、Hugo、edge functions——可維護、可擴充、上線後不會痛。"
+desc  = "網站開發，系統分析，系統優化"
 dot   = "#ff7eb6"
 tags  = ["Next.js", "TypeScript", "Hugo", "Edge"]
 
@@ -28,7 +28,7 @@ tags  = ["Figma", "品牌", "設計系統"]
 n     = "04"
 name  = "資料分析"
 en    = "Data Analysis"
-desc  = "埋點、儀表板、預測模型、A/B testing——讓決策不靠直覺，靠數字回答問題。"
+desc  = "資料分析不只在於產生報表，更多在於從資料找到有用的資訊與發現，協助商業決策"
 dot   = "#ffcb6b"
 tags  = ["Python", "SQL", "BI", "Looker"]
 
@@ -55,60 +55,6 @@ en    = "Digital Transformation"
 desc  = "陪傳統組織把流程搬上雲端、文件數位化、知識結構化。慢工，但長期累積。"
 dot   = "#ff9e64"
 tags  = ["流程", "系統整合", "訓練"]
-
-[[work]]
-year     = "2025"
-idx      = 1
-client   = "某金控數位金融部"
-title    = "財富管理顧問儀表板系統"
-cat      = "網站開發"
-catSlug  = "web-engineering"
-kpi      = "日活 1,200 顧問"
-
-[[work]]
-year     = "2024"
-idx      = 2
-client   = "上市生技公司"
-title    = "品牌官網改版與設計系統"
-cat      = "視覺設計"
-catSlug  = "visual-design"
-kpi      = "LCP 1.1s · A+ Lighthouse"
-
-[[work]]
-year     = "2024"
-idx      = 3
-client   = "連鎖零售集團"
-title    = "門市管理系統與儀表板"
-cat      = "數位轉型"
-catSlug  = "digital-transformation"
-kpi      = "480 間門市 · 9 國"
-
-[[work]]
-year     = "2023"
-idx      = 4
-client   = "某全國性媒體"
-title    = "互動式調查報導《關稅戰》"
-cat      = "互動開發"
-catSlug  = "interactive"
-kpi      = "230 萬次互動"
-
-[[work]]
-year     = "2023"
-idx      = 5
-client   = "某政府機關"
-title    = "AI 客服與內部知識庫"
-cat      = "AI 顧問"
-catSlug  = "ai-advisory"
-kpi      = "回應時間 -67%"
-
-[[work]]
-year     = "2022"
-idx      = 6
-client   = "電商新創"
-title    = "資料倉儲與 BI 系統建置"
-cat      = "資料分析"
-catSlug  = "data-analysis"
-kpi      = "GMV +34%"
 
 [[values]]
 k = "open-source"
